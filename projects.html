@@ -1,0 +1,225 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Portfolio - Abhii Builds</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
+<script id="tailwind-config">
+  tailwind.config = {
+    darkMode: "class",
+    theme: {
+      extend: {
+        colors: {
+          "surface-container": "#efeeeb", "secondary-fixed-dim": "#c8c6c5", "inverse-on-surface": "#f2f1ee",
+          "secondary-fixed": "#e5e2e1", "surface-dim": "#dbdad7", "primary-fixed-dim": "#8ed79a",
+          "surface": "#faf9f6", "on-background": "#1a1c1a", "primary": "#005123", "inverse-primary": "#8ed79a",
+          "on-surface": "#1a1c1a", "surface-container-high": "#e9e8e5", "outline": "#707a6f",
+          "tertiary-fixed-dim": "#d3c5ad", "on-secondary-container": "#636262", "on-primary-fixed-variant": "#005223",
+          "surface-variant": "#e3e2df", "on-secondary": "#ffffff", "tertiary-fixed": "#f0e0c8",
+          "outline-variant": "#c0c9bd", "surface-tint": "#246b39", "secondary": "#5f5e5e",
+          "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#e4d5bd",
+          "on-tertiary-fixed": "#221b0b", "surface-container-low": "#f4f3f0", "error-container": "#ffdad6",
+          "on-error-container": "#93000a", "primary-fixed": "#aaf4b4", "error": "#ba1a1a",
+          "on-primary-fixed": "#00210a", "secondary-container": "#e2dfde", "background": "#faf9f6",
+          "surface-container-highest": "#e3e2df", "on-tertiary-fixed-variant": "#4f4533",
+          "on-primary-container": "#9ee8a9", "surface-bright": "#faf9f6", "on-secondary-fixed-variant": "#474746",
+          "on-secondary-fixed": "#1b1b1c", "inverse-surface": "#2f312f", "primary-container": "#236a38",
+          "on-surface-variant": "#404940", "on-error": "#ffffff", "on-primary": "#ffffff",
+          "tertiary-container": "#675c49", "tertiary": "#4e4532"
+        },
+        borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
+        spacing: { "unit": "8px", "margin-mobile": "20px", "container-max": "1280px", "section-gap": "120px", "margin-desktop": "64px", "gutter": "24px" },
+        fontFamily: { "nav-link": ["Hanken Grotesk"], "display-lg": ["EB Garamond"], "display-lg-mobile": ["EB Garamond"], "headline-md": ["EB Garamond"], "body-lg": ["Hanken Grotesk"], "label-caps": ["Hanken Grotesk"], "headline-lg": ["EB Garamond"], "body-md": ["Hanken Grotesk"] },
+        fontSize: {
+          "nav-link": ["14px", { lineHeight: "1.0", letterSpacing: "0.02em", fontWeight: "500" }],
+          "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "500" }],
+          "display-lg-mobile": ["40px", { lineHeight: "1.2", fontWeight: "500" }],
+          "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
+          "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+          "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "600" }],
+          "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "500" }],
+          "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }]
+        }
+      }
+    }
+  }
+</script>
+<style>
+  .luxury-transition { transition: all 400ms cubic-bezier(0.4,0,0.2,1); }
+  .masonry-grid { column-count: 1; column-gap: 24px; }
+  @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
+  .masonry-item { break-inside: avoid; margin-bottom: 24px; }
+</style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+
+<!-- Nav -->
+<nav class="bg-surface w-full top-0 sticky border-b border-outline-variant z-50">
+  <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+    <a class="flex items-center gap-4 group" href="index.html">
+      <img alt="Abhii Builds" class="h-12 w-auto object-contain rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvBaKbEN3g8Ym6KHlwgMuL1K0mc3C22WUK2BuQt9YLuNiU8iyEn5k1UWyN9bLRM4EvyvvsWt5Dm_8Zcbwt8EfVeDQSvENn3mU2CQiXCD7r4kgnDrJzqMQFZ21Aup-afS41ONA-topRm8vhurO7ONRqLAsw4zrwHmuxfRt2rtR7aJYMR3HxDeiVl743CJ931jizO9ANvPOLlj34zk6iIuzqz2Nd7_3MiiClO6L1iyDJ8A50NfWsFwukEHjDUr6pWuRsEBfEPUL4Uw">
+    </a>
+    <div class="hidden md:flex items-center gap-8">
+      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="index.html">Home</a>
+      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="services.html">Services</a>
+      <a class="text-primary border-b-2 border-primary pb-1 font-nav-link text-nav-link opacity-80" href="projects.html">Projects</a>
+      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="about.html">About</a>
+      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="contact.html">Contact</a>
+    </div>
+    <div class="hidden md:block">
+      <a class="inline-flex items-center justify-center px-6 py-3 bg-primary-container text-on-primary rounded-lg font-nav-link text-nav-link hover:bg-surface-tint transition-colors duration-300" href="contact.html">Free Consultation</a>
+    </div>
+    <button id="mobile-menu-btn" class="md:hidden text-on-surface p-2"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0;">menu</span></button>
+  </div>
+  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant px-margin-mobile py-4 flex flex-col gap-4">
+    <a class="text-secondary font-nav-link text-nav-link" href="index.html">Home</a>
+    <a class="text-secondary font-nav-link text-nav-link" href="services.html">Services</a>
+    <a class="text-primary font-nav-link text-nav-link" href="projects.html">Projects</a>
+    <a class="text-secondary font-nav-link text-nav-link" href="about.html">About</a>
+    <a class="text-secondary font-nav-link text-nav-link" href="contact.html">Contact</a>
+    <a class="inline-flex items-center justify-center px-6 py-3 bg-primary-container text-on-primary rounded-lg font-nav-link text-nav-link mt-2" href="contact.html">Free Consultation</a>
+  </div>
+</nav>
+
+<!-- Page Header -->
+<header class="pt-section-gap pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+  <div class="max-w-3xl">
+    <h1 class="font-headline-lg text-headline-lg text-on-surface mb-6">Our Portfolio</h1>
+    <div class="w-24 h-px bg-tertiary-fixed-dim mb-6"></div>
+    <p class="font-body-lg text-body-lg text-secondary">A curated selection of our finest residential projects across Montreal. We specialize in bespoke renovations, custom carpentry, and architectural transformations that define quiet luxury.</p>
+  </div>
+</header>
+
+<!-- Masonry Gallery -->
+<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-section-gap">
+  <div class="masonry-grid">
+    <!-- Kitchen -->
+    <article class="masonry-item group cursor-pointer relative overflow-hidden rounded-lg bg-surface-container-lowest border border-surface-variant shadow-[0_4px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)]">
+      <div class="relative overflow-hidden">
+        <img alt="Luxury modern kitchen renovation in Montreal" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdaZerNwMkiG0H0x5Dxnc8Si4dKBm6G4lFTtLNPUdSzTvIov636L0FWnvqYpWbi2yF-EvKuZIF6lNTQwySXfzPqEx1AyLtlyRdXi2Lvxf_dFhHBQWcAAR7KQBK-04O22BtFBL0CXGCMAL8MG1Ipyz4g22j14zzsLEqobrYqPwIaQuQyDMMEKd2hvVKma4ZTLJ9G4EDBLPc9ztAK316JtibSnv7WJTkk5oBCFm4BRfYH1OIRfOdNXyXsARyVLZkabDlO41h3gA2qQ">
+        <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      </div>
+      <div class="p-8">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <span class="inline-block bg-tertiary-fixed px-2 py-1 rounded font-label-caps text-label-caps text-on-background mb-3">KITCHEN</span>
+            <h2 class="font-headline-md text-headline-md text-on-surface">The Westmount Estate</h2>
+          </div>
+          <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0;">arrow_outward</span>
+        </div>
+        <p class="font-body-md text-body-md text-secondary mb-4">Complete structural redesign featuring custom dark wood cabinetry, calacatta marble countertops, and integrated smart appliances. A seamless blend of classic architecture and modern functionality.</p>
+        <div class="flex items-center text-secondary-fixed-dim font-nav-link text-nav-link gap-2">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 0;">location_on</span>
+          <span>Westmount, Montreal</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Carpentry -->
+    <article class="masonry-item group cursor-pointer relative overflow-hidden rounded-lg bg-surface-container-lowest border border-surface-variant shadow-[0_4px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)]">
+      <div class="relative overflow-hidden">
+        <img alt="Custom carpentry built-in cabinetry" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAb3dtV54gutP7tENQBOgGiutk3-cZQQi9JkB-EBWs-eBXU5wRcF6h_EALmsz4Qrz_4VZcY1UiYd55_rHCHgAid-HmRavprNV2xS_38h17BOoqbzUGkOGvK-fvoVgnYhPasNiwXafUtDjEbSjbQibXJUmpIY7UrXknEA9tzc6iZVYfLxvl2cwMUpGWNHbUVHsLmeAZ2RR_oxZHuEDMTReVMdylYuiyorzO3onaB7CAX_-nO5AD2ouB209jLzKUhNxKcTjkRVNTDw">
+        <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      </div>
+      <div class="p-8">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <span class="inline-block bg-tertiary-fixed px-2 py-1 rounded font-label-caps text-label-caps text-on-background mb-3">CARPENTRY</span>
+            <h2 class="font-headline-md text-headline-md text-on-surface">Outremont Heritage Library</h2>
+          </div>
+          <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0;">arrow_outward</span>
+        </div>
+        <p class="font-body-md text-body-md text-secondary mb-4">Bespoke millwork and custom built-in shelving with intricate wainscoting. Crafted from premium white oak to match the home's historic 1920s aesthetic.</p>
+        <div class="flex items-center text-secondary-fixed-dim font-nav-link text-nav-link gap-2">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 0;">location_on</span>
+          <span>Outremont, Montreal</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Bathroom -->
+    <article class="masonry-item group cursor-pointer relative overflow-hidden rounded-lg bg-surface-container-lowest border border-surface-variant shadow-[0_4px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)]">
+      <div class="relative overflow-hidden">
+        <img alt="High-end modern bathroom renovation" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlbaenopFueSHtnr0cabrgEVZ0gNuVNuOWemhi5f3wa8SaOsT6pVcRRgjPgbfeklOR7eeq-nbxRFjrTnl8YwAxrk8EaR0poRfXIGDtQpgbdSaQ6wMf9jTIe3hOuNakrsbqWYS1F626ek4VNTMZrrg52RilOhOWrDLL6tS4gSKfRmCBBpR9XCmHVEXRqOOXAQlqHjnjNeWs05XxHweNAuf2WrtZkTNkcFdtbpyGpx5gQjfpulLmJ5JA8syWdFpY7Mc_l-xA41BOiA">
+        <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      </div>
+      <div class="p-8">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <span class="inline-block bg-tertiary-fixed px-2 py-1 rounded font-label-caps text-label-caps text-on-background mb-3">BATHROOM</span>
+            <h2 class="font-headline-md text-headline-md text-on-surface">Le Plateau Spa Retreat</h2>
+          </div>
+          <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0;">arrow_outward</span>
+        </div>
+        <p class="font-body-md text-body-md text-secondary mb-4">A master en-suite transformation featuring a freestanding soaking tub, curbless glass shower with dual rain heads, and floating teak vanity.</p>
+        <div class="flex items-center text-secondary-fixed-dim font-nav-link text-nav-link gap-2">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 0;">location_on</span>
+          <span>Le Plateau, Montreal</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- Basement -->
+    <article class="masonry-item group cursor-pointer relative overflow-hidden rounded-lg bg-surface-container-lowest border border-surface-variant shadow-[0_4px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)]">
+      <div class="relative overflow-hidden">
+        <img alt="Finished luxury basement transformation" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8II47SmhFRCz7Kq07tYmigH53c-vMQwefpoY8v4dqUf7QcCy4v1afH8nYPT-JHA36mX7GZ6RHgz4KFBfAt-MRuvPrADSbsfncU_zKMTA3DQ-PflceFY7wy3o8RduknaIfnwhBbfQm5ZfYLuc1i3mahjk4_MhvNwzp6HrnayTRQlBJsJXShdbjNWMEQOPEDAaofl1ktBx90laR4mmxnYln2CF28Dt5mp83BDSDnPFJWcMAEuGZoOTvR2lN8U5nHR7Pfx2eQnbwZA">
+        <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+      </div>
+      <div class="p-8">
+        <div class="flex justify-between items-start mb-4">
+          <div>
+            <span class="inline-block bg-tertiary-fixed px-2 py-1 rounded font-label-caps text-label-caps text-on-background mb-3">BASEMENT</span>
+            <h2 class="font-headline-md text-headline-md text-on-surface">Mount Royal Entertainment Lounge</h2>
+          </div>
+          <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0;">arrow_outward</span>
+        </div>
+        <p class="font-body-md text-body-md text-secondary mb-4">Complete underpinning and finishing of a lower level to create a state-of-the-art home theater, custom wet bar, and climate-controlled wine cellar.</p>
+        <div class="flex items-center text-secondary-fixed-dim font-nav-link text-nav-link gap-2">
+          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 0;">location_on</span>
+          <span>Town of Mount Royal, Montreal</span>
+        </div>
+      </div>
+    </article>
+
+    <!-- CTA Card -->
+    <article class="masonry-item group cursor-pointer relative overflow-hidden rounded-lg bg-surface-container-lowest border border-surface-variant shadow-[0_4px_30px_rgba(0,0,0,0.04)] flex flex-col justify-center items-center py-24 bg-gradient-to-br from-surface-container to-surface-container-low">
+      <span class="material-symbols-outlined text-outline-variant text-6xl mb-4" style="font-variation-settings:'wght' 200;">architecture</span>
+      <h3 class="font-headline-md text-headline-md text-secondary">Start Your Project</h3>
+      <p class="font-body-md text-body-md text-secondary-fixed-dim mt-2">Let's bring your vision to life</p>
+      <a class="mt-8 border border-on-background text-on-background px-6 py-2 rounded font-nav-link text-nav-link hover:bg-on-background hover:text-surface transition-colors duration-300" href="contact.html">Get A Free Consultation</a>
+    </article>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-surface-container-highest w-full border-t border-outline-variant">
+  <div class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
+    <div class="flex flex-col gap-6 col-span-1 md:col-span-2">
+      <a class="inline-block" href="index.html"><img alt="Abhii Builds Logo" class="h-16 w-auto object-contain rounded-md filter grayscale hover:grayscale-0 luxury-transition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvBaKbEN3g8Ym6KHlwgMuL1K0mc3C22WUK2BuQt9YLuNiU8iyEn5k1UWyN9bLRM4EvyvvsWt5Dm_8Zcbwt8EfVeDQSvENn3mU2CQiXCD7r4kgnDrJzqMQFZ21Aup-afS41ONA-topRm8vhurO7ONRqLAsw4zrwHmuxfRt2rtR7aJYMR3HxDeiVl743CJ931jizO9ANvPOLlj34zk6iIuzqz2Nd7_3MiiClO6L1iyDJ8A50NfWsFwukEHjDUr6pWuRsEBfEPUL4Uw"></a>
+      <p class="font-body-md text-body-md text-on-surface max-w-sm">Premium general contracting and luxury renovation services, dedicated to craftsmanship and client satisfaction in Greater Montreal.</p>
+    </div>
+    <div class="flex flex-col gap-4">
+      <h4 class="font-label-caps text-label-caps text-on-surface tracking-widest uppercase">Navigation</h4>
+      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="index.html">Home</a>
+      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="services.html">Services</a>
+      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="projects.html">Projects</a>
+      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="about.html">About</a>
+      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="contact.html">Contact</a>
+    </div>
+    <div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-outline-variant/30 flex justify-between items-center text-sm text-secondary">
+      <p>© 2024 Abhii Builds. Licensed RBQ &amp; Fully Insured.</p>
+      <div class="flex gap-4">
+        <a class="hover:text-primary luxury-transition" href="mailto:Abhiibuilds@hotmail.com"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0;">mail</span></a>
+        <a class="hover:text-primary luxury-transition" href="tel:514-867-2244"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0;">call</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+    document.getElementById('mobile-menu').classList.toggle('hidden');
+  });
+</script>
+</body></html>
