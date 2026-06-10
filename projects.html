@@ -1,225 +1,678 @@
-<!DOCTYPE html><html class="light" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Portfolio - Abhii Builds</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          "surface-container": "#efeeeb", "secondary-fixed-dim": "#c8c6c5", "inverse-on-surface": "#f2f1ee",
-          "secondary-fixed": "#e5e2e1", "surface-dim": "#dbdad7", "primary-fixed-dim": "#8ed79a",
-          "surface": "#faf9f6", "on-background": "#1a1c1a", "primary": "#005123", "inverse-primary": "#8ed79a",
-          "on-surface": "#1a1c1a", "surface-container-high": "#e9e8e5", "outline": "#707a6f",
-          "tertiary-fixed-dim": "#d3c5ad", "on-secondary-container": "#636262", "on-primary-fixed-variant": "#005223",
-          "surface-variant": "#e3e2df", "on-secondary": "#ffffff", "tertiary-fixed": "#f0e0c8",
-          "outline-variant": "#c0c9bd", "surface-tint": "#246b39", "secondary": "#5f5e5e",
-          "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#e4d5bd",
-          "on-tertiary-fixed": "#221b0b", "surface-container-low": "#f4f3f0", "error-container": "#ffdad6",
-          "on-error-container": "#93000a", "primary-fixed": "#aaf4b4", "error": "#ba1a1a",
-          "on-primary-fixed": "#00210a", "secondary-container": "#e2dfde", "background": "#faf9f6",
-          "surface-container-highest": "#e3e2df", "on-tertiary-fixed-variant": "#4f4533",
-          "on-primary-container": "#9ee8a9", "surface-bright": "#faf9f6", "on-secondary-fixed-variant": "#474746",
-          "on-secondary-fixed": "#1b1b1c", "inverse-surface": "#2f312f", "primary-container": "#236a38",
-          "on-surface-variant": "#404940", "on-error": "#ffffff", "on-primary": "#ffffff",
-          "tertiary-container": "#675c49", "tertiary": "#4e4532"
-        },
-        borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
-        spacing: { "unit": "8px", "margin-mobile": "20px", "container-max": "1280px", "section-gap": "120px", "margin-desktop": "64px", "gutter": "24px" },
-        fontFamily: { "nav-link": ["Hanken Grotesk"], "display-lg": ["EB Garamond"], "display-lg-mobile": ["EB Garamond"], "headline-md": ["EB Garamond"], "body-lg": ["Hanken Grotesk"], "label-caps": ["Hanken Grotesk"], "headline-lg": ["EB Garamond"], "body-md": ["Hanken Grotesk"] },
-        fontSize: {
-          "nav-link": ["14px", { lineHeight: "1.0", letterSpacing: "0.02em", fontWeight: "500" }],
-          "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "500" }],
-          "display-lg-mobile": ["40px", { lineHeight: "1.2", fontWeight: "500" }],
-          "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
-          "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
-          "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "600" }],
-          "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "500" }],
-          "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }]
-        }
-      }
-    }
-  }
-</script>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Réalisations — ABHII Rénovations Inc.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
-  .luxury-transition { transition: all 400ms cubic-bezier(0.4,0,0.2,1); }
-  .masonry-grid { column-count: 1; column-gap: 24px; }
-  @media (min-width: 768px) { .masonry-grid { column-count: 2; } }
-  .masonry-item { break-inside: avoid; margin-bottom: 24px; }
+  :root {
+    --navy:#102A56; --navy-2:#1E3D72; --navy-dark:#0C1730;
+    --white:#FFFFFF; --gray:#F3F4F7; --gray-line:#E2E5EC;
+    --ink:#1A2438; --muted:#5C6577; --gold:#B89968;
+    --serif:"Cormorant Garamond",Georgia,serif;
+    --sans:"Mulish",-apple-system,system-ui,sans-serif;
+    --ease:cubic-bezier(0.22,1,0.36,1); --maxw:1240px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--sans);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px;}
+  .eyebrow{font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:14px;}
+  .eyebrow::before{content:"";width:32px;height:1px;background:var(--gold);display:inline-block;}
+  .eyebrow.center::after{content:"";width:32px;height:1px;background:var(--gold);display:inline-block;}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-0.01em;text-wrap:balance;}
+  .section-title{font-size:clamp(34px,4.2vw,56px);color:var(--navy);}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;padding:17px 32px;border:1px solid transparent;cursor:pointer;transition:all 0.4s var(--ease);white-space:nowrap;}
+  .btn-gold{background:var(--gold);color:var(--navy-dark);border-color:var(--gold);}
+  .btn-gold:hover{background:#a9885a;border-color:#a9885a;}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,0.5);}
+  .btn-ghost:hover{background:#fff;color:var(--navy);border-color:#fff;}
+
+  /* ---- Header ---- */
+  header{position:relative;z-index:100;}
+  .topbar{background:var(--navy-dark);color:rgba(255,255,255,0.78);font-size:13px;}
+  .topbar .wrap{display:flex;justify-content:flex-end;align-items:center;height:44px;}
+  .topbar-inner{display:flex;align-items:center;gap:16px;}
+  .tb-item{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,0.82);font-weight:600;letter-spacing:0.02em;transition:color .3s var(--ease);}
+  .tb-item svg{width:15px;height:15px;color:var(--gold);}
+  .tb-item:hover{color:#fff;}
+  .tb-sep{color:rgba(255,255,255,0.25);}
+  .tb-socials{display:inline-flex;align-items:center;gap:9px;margin-left:6px;padding-left:16px;border-left:1px solid rgba(255,255,255,0.16);}
+  .tb-socials a{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.2);transition:all .3s var(--ease);}
+  .tb-socials a:hover{background:var(--gold);color:var(--navy-dark);border-color:var(--gold);}
+  .tb-socials svg{width:15px;height:15px;}
+  .navbar{background:#fff;border-bottom:1px solid var(--gray-line);position:sticky;top:0;z-index:90;transition:box-shadow .4s var(--ease);}
+  .navbar .wrap{display:flex;align-items:center;justify-content:space-between;height:88px;}
+  header.scrolled .navbar{box-shadow:0 8px 30px rgba(16,42,86,0.08);}
+  .brand{display:flex;flex-direction:row;align-items:center;gap:14px;}
+  .brand-logo img{height:48px;width:auto;}
+  .brand-text{display:flex;flex-direction:column;line-height:1;white-space:nowrap;}
+  .brand-name{font-family:var(--serif);font-weight:600;font-size:23px;letter-spacing:0.02em;color:var(--navy);}
+  .brand-sub{font-family:var(--sans);font-weight:700;font-size:9.5px;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold);margin-top:7px;}
+  nav.menu{display:flex;align-items:center;gap:32px;white-space:nowrap;}
+  .nav-item{position:relative;}
+  .nav-item>a{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:0.04em;color:var(--ink);display:inline-flex;align-items:center;gap:7px;padding:8px 0;transition:color .3s var(--ease);position:relative;}
+  .nav-item>a::after{content:"";position:absolute;left:0;bottom:2px;width:0;height:1px;background:var(--gold);transition:width .3s var(--ease);}
+  .nav-item:hover>a{color:var(--navy);}
+  .nav-item:hover>a::after{width:100%;}
+  .nav-item.active>a{color:var(--navy);}
+  .nav-item.active>a::after{width:100%;background:var(--gold);}
+  .nav-item .caret{width:11px;height:11px;transition:transform .3s var(--ease);}
+  .nav-item.has-dd:hover .caret{transform:rotate(180deg);}
+  .dd-panel{position:absolute;top:calc(100% + 16px);left:50%;transform:translateX(-50%) translateY(8px);min-width:520px;background:#fff;border:1px solid var(--gray-line);box-shadow:0 24px 50px rgba(16,42,86,0.16);padding:12px;display:grid;grid-template-columns:1fr 1fr;opacity:0;visibility:hidden;transition:all .28s var(--ease);z-index:60;}
+  .dd-panel::before{content:"";position:absolute;top:-7px;left:50%;transform:translateX(-50%) rotate(45deg);width:12px;height:12px;background:#fff;border-left:1px solid var(--gray-line);border-top:1px solid var(--gray-line);}
+  .nav-item.has-dd:hover .dd-panel{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+  .dd-panel a{display:flex;align-items:center;gap:14px;padding:12px 16px;font-size:14px;font-weight:600;color:var(--ink);transition:all .25s var(--ease);}
+  .dd-panel a .dd-num{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--gold);width:18px;}
+  .dd-panel a:hover{background:var(--gray);color:var(--navy);}
+  .nav-right{display:flex;align-items:center;gap:18px;}
+  .lang{display:inline-flex;align-items:center;border:1px solid var(--gray-line);border-radius:999px;padding:4px;}
+  .lang button{background:none;border:none;cursor:pointer;font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:0.04em;color:var(--muted);padding:6px 15px;border-radius:999px;transition:all .3s var(--ease);}
+  .lang button.active{background:var(--navy);color:#fff;}
+  .btn-header{padding:14px 28px;font-size:12px;background:var(--gold);color:var(--navy-dark);border-color:var(--gold);}
+  .btn-header:hover{background:#a9885a;border-color:#a9885a;}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+  .menu-toggle span{display:block;width:26px;height:2px;background:var(--navy);margin:5px 0;}
+
+  /* ---- Mobile menu ---- */
+  .mobile-menu{position:fixed;inset:0;background:var(--navy-dark);z-index:200;display:flex;flex-direction:column;padding:30px 40px;transform:translateX(100%);transition:transform 0.45s var(--ease);overflow-y:auto;overflow-x:hidden;pointer-events:none;}
+  .mobile-menu.open{transform:translateX(0);pointer-events:auto;}
+  .mobile-menu-head{display:flex;justify-content:space-between;align-items:center;}
+  .mobile-menu-head img{height:44px;}
+  .mobile-menu-head .close{background:none;border:none;color:#fff;font-size:34px;cursor:pointer;line-height:1;}
+  .mobile-menu nav{display:flex;flex-direction:column;gap:6px;margin-top:50px;}
+  .mobile-menu nav>a{color:#fff;font-family:var(--serif);font-size:30px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+  .mobile-menu nav .mob-acc-panel a{color:rgba(255,255,255,0.72);font-family:var(--sans);font-size:13.5px;padding:11px 0 11px 14px;border-bottom:1px solid rgba(255,255,255,0.06);font-weight:600;letter-spacing:0.06em;}
+  .mobile-menu .mobile-cta{width:100%;margin-top:34px;}
+  .mobile-menu .mobile-lang{margin-top:auto;display:flex;gap:8px;align-items:center;}
+  .mobile-menu .mobile-lang button{background:none;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);padding:10px 20px;font-weight:700;cursor:pointer;font-family:var(--sans);}
+  .mobile-menu .mobile-lang button.active{background:var(--gold);color:var(--navy-dark);border-color:var(--gold);}
+  .mob-acc-toggle{width:100%;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1);color:#fff;font-family:var(--serif);font-size:30px;text-align:left;}
+  .mob-acc svg.mob-caret{width:20px;height:20px;flex:none;transition:transform 0.35s var(--ease);color:rgba(255,255,255,0.45);stroke-width:2.5;}
+  .mob-acc.open svg.mob-caret{transform:rotate(180deg);}
+  .mob-acc-panel{max-height:0;overflow:hidden;transition:max-height 0.45s var(--ease);display:flex;flex-direction:column;}
+  .mob-acc.open .mob-acc-panel{max-height:700px;}
+  .mob-acc-panel .mn{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:14px;min-width:18px;flex:none;}
+  .mob-acc-panel .pin{width:13px;height:13px;color:var(--gold);flex:none;}
+
+  /* ---- Page Hero ---- */
+  .page-hero{background:var(--navy-dark);position:relative;overflow:hidden;padding:90px 0 80px;}
+  .page-hero-bg{position:absolute;inset:0;background-image:url("uploads/IMG_2197.jpeg");background-size:cover;background-position:center;opacity:0.18;}
+  .page-hero .wrap{position:relative;z-index:2;}
+  .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.5);margin-bottom:28px;}
+  .breadcrumb a{color:rgba(255,255,255,0.5);transition:color .3s;}
+  .breadcrumb a:hover{color:var(--gold);}
+  .breadcrumb span{color:rgba(255,255,255,0.25);}
+  .breadcrumb .current{color:var(--gold);}
+  .page-hero h1{font-size:clamp(42px,5.5vw,70px);color:#fff;margin:18px 0 20px;}
+  .page-hero p{font-size:19px;color:rgba(255,255,255,0.75);max-width:600px;font-weight:400;}
+
+  /* ---- Filters ---- */
+  .filters{background:var(--gray);border-bottom:1px solid var(--gray-line);padding:0;}
+  .filters .wrap{display:flex;align-items:center;gap:0;overflow-x:auto;scrollbar-width:none;height:68px;}
+  .filters .wrap::-webkit-scrollbar{display:none;}
+  .filter-btn{display:inline-flex;align-items:center;gap:8px;padding:0 26px;height:68px;font-size:13px;font-weight:700;letter-spacing:0.08em;text-transform:uppercase;color:var(--muted);border:none;background:none;cursor:pointer;white-space:nowrap;border-bottom:2px solid transparent;transition:all .25s var(--ease);flex:none;font-family:var(--sans);}
+  .filter-btn .count{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--gold);}
+  .filter-btn:hover{color:var(--navy);}
+  .filter-btn.active{color:var(--navy);border-bottom-color:var(--navy);}
+
+  /* ---- Gallery ---- */
+  .gallery-section{padding:80px 0 120px;background:var(--white);}
+  .gallery-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:3px;}
+  .gallery-item{position:relative;overflow:hidden;cursor:pointer;aspect-ratio:4/3;background:var(--navy-dark);}
+  .gallery-item img{width:100%;height:100%;object-fit:cover;transition:transform 0.7s var(--ease);}
+  .gallery-item:hover img{transform:scale(1.06);}
+  .gallery-item .overlay{position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,rgba(12,23,48,0.88) 100%);opacity:0;transition:opacity 0.4s var(--ease);}
+  .gallery-item:hover .overlay{opacity:1;}
+  .gallery-item .info{position:absolute;bottom:0;left:0;right:0;padding:24px 22px;color:#fff;transform:translateY(8px);opacity:0;transition:all 0.4s var(--ease);}
+  .gallery-item:hover .info{transform:none;opacity:1;}
+  .info-cat{font-size:11px;letter-spacing:0.18em;text-transform:uppercase;color:var(--gold);font-weight:700;margin-bottom:6px;}
+  .info-title{font-family:var(--serif);font-size:22px;font-weight:500;}
+  .gallery-item .zoom-icon{position:absolute;top:16px;right:16px;width:38px;height:38px;background:rgba(255,255,255,0.12);border:1px solid rgba(255,255,255,0.3);display:flex;align-items:center;justify-content:center;opacity:0;transition:opacity 0.4s var(--ease);backdrop-filter:blur(4px);}
+  .gallery-item:hover .zoom-icon{opacity:1;}
+  .zoom-icon svg{width:18px;height:18px;color:#fff;}
+  .gallery-item.hidden{display:none;}
+
+  /* ---- Lightbox ---- */
+  .lightbox{position:fixed;inset:0;background:rgba(12,23,48,0.96);z-index:500;display:flex;align-items:center;justify-content:center;opacity:0;visibility:hidden;transition:all 0.35s var(--ease);}
+  .lightbox.open{opacity:1;visibility:visible;}
+  .lb-inner{position:relative;max-width:90vw;max-height:90vh;display:flex;align-items:center;justify-content:center;}
+  .lb-img{max-width:90vw;max-height:85vh;object-fit:contain;display:block;opacity:0;transition:opacity 0.3s var(--ease);border:1px solid rgba(255,255,255,0.08);}
+  .lb-img.loaded{opacity:1;}
+  .lb-close{position:fixed;top:24px;right:28px;width:48px;height:48px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s var(--ease);}
+  .lb-close:hover{background:var(--gold);}
+  .lb-close svg{width:22px;height:22px;color:#fff;}
+  .lb-nav{position:fixed;top:50%;transform:translateY(-50%);width:52px;height:52px;background:rgba(255,255,255,0.08);border:1px solid rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s var(--ease);}
+  .lb-nav:hover{background:var(--gold);}
+  .lb-nav svg{width:24px;height:24px;color:#fff;}
+  .lb-prev{left:20px;}
+  .lb-next{right:20px;}
+  .lb-caption{position:fixed;bottom:28px;left:50%;transform:translateX(-50%);text-align:center;color:#fff;}
+  .lb-caption .lb-cat{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+  .lb-caption .lb-title{font-family:var(--serif);font-size:22px;margin-top:4px;}
+  .lb-counter{font-size:13px;color:rgba(255,255,255,0.5);margin-top:6px;letter-spacing:0.06em;}
+
+  /* ---- CTA ---- */
+  .cta-band{background:var(--navy);padding:80px 0;}
+  .cta-band .wrap{display:flex;align-items:center;justify-content:space-between;gap:40px;flex-wrap:wrap;}
+  .cta-band h2{font-size:clamp(30px,3.5vw,46px);color:#fff;max-width:560px;}
+  .cta-band p{color:rgba(255,255,255,0.72);font-size:17px;max-width:440px;margin-top:12px;}
+  .cta-band-btns{display:flex;gap:16px;flex-wrap:wrap;flex:none;}
+
+  /* ---- Footer ---- */
+  footer{background:var(--navy-dark);color:rgba(255,255,255,0.6);}
+  .footer-top{padding:80px 0 64px;}
+  .footer-grid{display:grid;grid-template-columns:210px 1fr 1fr 280px;gap:60px;}
+  .foot-logo{height:72px;width:auto;margin-bottom:22px;display:block;}
+  .footer-brand p{font-size:14.5px;line-height:1.85;max-width:240px;color:rgba(255,255,255,0.6);}
+  .footer-col h5{font-family:var(--sans);font-size:11.5px;letter-spacing:0.18em;text-transform:uppercase;color:#fff;font-weight:700;margin-bottom:22px;}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:13px;}
+  .footer-col ul a{font-size:14.5px;color:rgba(255,255,255,0.6);transition:color 0.3s var(--ease);}
+  .footer-col ul a:hover{color:rgba(255,255,255,0.95);}
+  .footer-col-zones{display:flex;flex-direction:column;gap:38px;}
+  .fci{display:flex;align-items:center;gap:15px;margin-bottom:14px;}
+  .fci-icon{width:36px;height:36px;border-radius:50%;background:rgba(184,153,104,0.18);border:1px solid rgba(184,153,104,0.3);display:flex;align-items:center;justify-content:center;flex:none;}
+  .fci-icon svg{width:16px;height:16px;color:var(--gold);}
+  .fci a,.fci span{font-size:14.5px;font-weight:600;color:rgba(255,255,255,0.82);transition:color .3s var(--ease);}
+  .fci a:hover{color:var(--gold);}
+  .foot-cta{display:block;width:100%;margin-top:26px;text-align:center;padding:16px 24px;background:var(--gold);color:var(--navy-dark);font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;transition:background .3s var(--ease);}
+  .foot-cta:hover{background:#a9885a;color:var(--navy-dark);}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding:22px 0;font-size:13px;}
+  .footer-bottom .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;}
+  .foot-bottom-right{justify-self:end;display:flex;align-items:center;gap:20px;}
+  .foot-socials{display:flex;align-items:center;gap:12px;}
+  .foot-socials a{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);transition:all .3s var(--ease);}
+  .foot-socials a:hover{background:var(--gold);border-color:var(--gold);color:var(--navy-dark);}
+  .foot-socials svg{width:15px;height:15px;}
+
+  /* ---- Reveal ---- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.9s var(--ease),transform 0.9s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---- Responsive ---- */
+  @media(max-width:1080px){nav.menu,.nav-right .btn-header{display:none;}.menu-toggle{display:block;}}
+  @media(max-width:900px){.gallery-grid{grid-template-columns:1fr 1fr;}.footer-grid{grid-template-columns:1fr 1fr;gap:36px;}.cta-band .wrap{flex-direction:column;text-align:center;}.cta-band-btns{justify-content:center;}}
+  @media(max-width:720px){.wrap{padding:0 24px;}.brand-text{display:none;}.topbar .wrap{justify-content:center;}.gallery-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}.footer-bottom .wrap{grid-template-columns:1fr;text-align:center;}.foot-bottom-right{justify-self:center;}.lb-nav{display:none;}}
 </style>
 </head>
-<body class="bg-surface text-on-surface antialiased">
+<body>
 
-<!-- Nav -->
-<nav class="bg-surface w-full top-0 sticky border-b border-outline-variant z-50">
-  <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-    <a class="flex items-center gap-4 group" href="index.html">
-      <img alt="Abhii Builds" class="h-12 w-auto object-contain rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvBaKbEN3g8Ym6KHlwgMuL1K0mc3C22WUK2BuQt9YLuNiU8iyEn5k1UWyN9bLRM4EvyvvsWt5Dm_8Zcbwt8EfVeDQSvENn3mU2CQiXCD7r4kgnDrJzqMQFZ21Aup-afS41ONA-topRm8vhurO7ONRqLAsw4zrwHmuxfRt2rtR7aJYMR3HxDeiVl743CJ931jizO9ANvPOLlj34zk6iIuzqz2Nd7_3MiiClO6L1iyDJ8A50NfWsFwukEHjDUr6pWuRsEBfEPUL4Uw">
-    </a>
-    <div class="hidden md:flex items-center gap-8">
-      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="index.html">Home</a>
-      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="services.html">Services</a>
-      <a class="text-primary border-b-2 border-primary pb-1 font-nav-link text-nav-link opacity-80" href="projects.html">Projects</a>
-      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="about.html">About</a>
-      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="contact.html">Contact</a>
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-inner">
+        <a href="tel:5148672244" class="tb-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>514-867-ABHII (2244)</span></a>
+        <span class="tb-sep">|</span>
+        <a href="mailto:Abhiibuilds@gmail.com" class="tb-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg><span>Abhiibuilds@gmail.com</span></a>
+        <span class="tb-socials">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </span>
+      </div>
     </div>
-    <div class="hidden md:block">
-      <a class="inline-flex items-center justify-center px-6 py-3 bg-primary-container text-on-primary rounded-lg font-nav-link text-nav-link hover:bg-surface-tint transition-colors duration-300" href="contact.html">Free Consultation</a>
+  </div>
+  <div class="navbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-logo"><img src="assets/logo-n.png" alt="ABHII Rénovations" /></span>
+        <span class="brand-text"><span class="brand-name">ABHII Rénovations Inc.</span><span class="brand-sub">Entrepreneur Général</span></span>
+      </a>
+      <nav class="menu">
+        <div class="nav-item"><a href="index.html" data-i18n="navHome">Accueil</a></div>
+        <div class="nav-item has-dd">
+          <a href="services.html"><span data-i18n="navServices">Services</span><svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="dd-panel">
+            <a href="services.html#cuisine"><span class="dd-num">01</span><span data-i18n="serv1t">Rénovation de cuisine</span></a>
+            <a href="services.html#sdb"><span class="dd-num">02</span><span data-i18n="serv2t">Rénovation de salle de bain</span></a>
+            <a href="services.html#sousol"><span class="dd-num">03</span><span data-i18n="serv3t">Finition de sous-sol</span></a>
+            <a href="services.html#planchers"><span class="dd-num">04</span><span data-i18n="serv4t">Installation de planchers</span></a>
+            <a href="services.html#ceramique"><span class="dd-num">05</span><span data-i18n="serv7t">Céramique &amp; dosseret</span></a>
+            <a href="services.html#gypse"><span class="dd-num">06</span><span data-i18n="serv5t">Gypse &amp; peinture</span></a>
+            <a href="services.html#menuiserie"><span class="dd-num">07</span><span data-i18n="serv6t">Menuiserie sur mesure</span></a>
+            <a href="services.html#construction"><span class="dd-num">08</span><span data-i18n="serv8t">Construction</span></a>
+            <a href="services.html#charpente"><span class="dd-num">09</span><span data-i18n="serv9t">Charpente</span></a>
+          </div>
+        </div>
+        <div class="nav-item has-dd">
+          <a href="zone.html"><span data-i18n="navAbout">Zone</span><svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="dd-panel" style="min-width:420px;grid-template-columns:1fr 1fr">
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Salaberry-de-Valleyfield</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Beauharnois</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Châteauguay</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Vaudreuil-Dorion</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Lazare</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Cèdres</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Hudson</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Rigaud</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Mercier</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>La Prairie</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Candiac</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Longueuil</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Brossard</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Constant</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>40+ villes</span></a>
+          </div>
+        </div>
+        <div class="nav-item active"><a href="projects.html" data-i18n="navProjects">Réalisations</a></div>
+        <div class="nav-item"><a href="contact.html" data-i18n="navContact">Contact</a></div>
+      </nav>
+      <div class="nav-right">
+        <div class="lang">
+          <button data-lang="fr" class="active" onclick="setLang('fr')">FR</button>
+          <button data-lang="en" onclick="setLang('en')">EN</button>
+        </div>
+        <a href="contact.html" class="btn btn-header" data-i18n="navQuote">Demander une soumission</a>
+        <button class="menu-toggle" onclick="toggleMobile(true)" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
-    <button id="mobile-menu-btn" class="md:hidden text-on-surface p-2"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0;">menu</span></button>
-  </div>
-  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant px-margin-mobile py-4 flex flex-col gap-4">
-    <a class="text-secondary font-nav-link text-nav-link" href="index.html">Home</a>
-    <a class="text-secondary font-nav-link text-nav-link" href="services.html">Services</a>
-    <a class="text-primary font-nav-link text-nav-link" href="projects.html">Projects</a>
-    <a class="text-secondary font-nav-link text-nav-link" href="about.html">About</a>
-    <a class="text-secondary font-nav-link text-nav-link" href="contact.html">Contact</a>
-    <a class="inline-flex items-center justify-center px-6 py-3 bg-primary-container text-on-primary rounded-lg font-nav-link text-nav-link mt-2" href="contact.html">Free Consultation</a>
-  </div>
-</nav>
-
-<!-- Page Header -->
-<header class="pt-section-gap pb-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-  <div class="max-w-3xl">
-    <h1 class="font-headline-lg text-headline-lg text-on-surface mb-6">Our Portfolio</h1>
-    <div class="w-24 h-px bg-tertiary-fixed-dim mb-6"></div>
-    <p class="font-body-lg text-body-lg text-secondary">A curated selection of our finest residential projects across Montreal. We specialize in bespoke renovations, custom carpentry, and architectural transformations that define quiet luxury.</p>
   </div>
 </header>
 
-<!-- Masonry Gallery -->
-<section class="px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto pb-section-gap">
-  <div class="masonry-grid">
-    <!-- Kitchen -->
-    <article class="masonry-item group cursor-pointer relative overflow-hidden rounded-lg bg-surface-container-lowest border border-surface-variant shadow-[0_4px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)]">
-      <div class="relative overflow-hidden">
-        <img alt="Luxury modern kitchen renovation in Montreal" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDdaZerNwMkiG0H0x5Dxnc8Si4dKBm6G4lFTtLNPUdSzTvIov636L0FWnvqYpWbi2yF-EvKuZIF6lNTQwySXfzPqEx1AyLtlyRdXi2Lvxf_dFhHBQWcAAR7KQBK-04O22BtFBL0CXGCMAL8MG1Ipyz4g22j14zzsLEqobrYqPwIaQuQyDMMEKd2hvVKma4ZTLJ9G4EDBLPc9ztAK316JtibSnv7WJTkk5oBCFm4BRfYH1OIRfOdNXyXsARyVLZkabDlO41h3gA2qQ">
-        <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-head">
+    <img src="assets/logo-w.png" alt="ABHII" />
+    <button class="close" onclick="toggleMobile(false)">&times;</button>
+  </div>
+  <nav>
+    <a href="index.html" onclick="toggleMobile(false)" data-i18n="navHome">Accueil</a>
+    <div class="mob-acc">
+      <button class="mob-acc-toggle" type="button"><span data-i18n="navServices">Services</span><svg class="mob-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mob-acc-panel">
+        <a href="services.html#cuisine" onclick="toggleMobile(false)"><span class="mn">01</span><span data-i18n="serv1t">Rénovation de cuisine</span></a>
+        <a href="services.html#sdb" onclick="toggleMobile(false)"><span class="mn">02</span><span data-i18n="serv2t">Rénovation de salle de bain</span></a>
+        <a href="services.html#sousol" onclick="toggleMobile(false)"><span class="mn">03</span><span data-i18n="serv3t">Finition de sous-sol</span></a>
+        <a href="services.html#planchers" onclick="toggleMobile(false)"><span class="mn">04</span><span data-i18n="serv4t">Installation de planchers</span></a>
+        <a href="services.html#ceramique" onclick="toggleMobile(false)"><span class="mn">05</span><span data-i18n="serv7t">Céramique &amp; dosseret</span></a>
+        <a href="services.html#gypse" onclick="toggleMobile(false)"><span class="mn">06</span><span data-i18n="serv5t">Gypse &amp; peinture</span></a>
+        <a href="services.html#menuiserie" onclick="toggleMobile(false)"><span class="mn">07</span><span data-i18n="serv6t">Menuiserie sur mesure</span></a>
+        <a href="services.html#construction" onclick="toggleMobile(false)"><span class="mn">08</span><span data-i18n="serv8t">Construction</span></a>
+        <a href="services.html#charpente" onclick="toggleMobile(false)"><span class="mn">09</span><span data-i18n="serv9t">Charpente</span></a>
       </div>
-      <div class="p-8">
-        <div class="flex justify-between items-start mb-4">
-          <div>
-            <span class="inline-block bg-tertiary-fixed px-2 py-1 rounded font-label-caps text-label-caps text-on-background mb-3">KITCHEN</span>
-            <h2 class="font-headline-md text-headline-md text-on-surface">The Westmount Estate</h2>
-          </div>
-          <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0;">arrow_outward</span>
-        </div>
-        <p class="font-body-md text-body-md text-secondary mb-4">Complete structural redesign featuring custom dark wood cabinetry, calacatta marble countertops, and integrated smart appliances. A seamless blend of classic architecture and modern functionality.</p>
-        <div class="flex items-center text-secondary-fixed-dim font-nav-link text-nav-link gap-2">
-          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 0;">location_on</span>
-          <span>Westmount, Montreal</span>
-        </div>
+    </div>
+    <div class="mob-acc">
+      <button class="mob-acc-toggle" type="button"><span data-i18n="navAbout">Zone</span><svg class="mob-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mob-acc-panel">
+        <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Salaberry-de-Valleyfield</a>
+        <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Châteauguay</a>
+        <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Vaudreuil-Dorion</a>
+        <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>La Prairie</a>
+        <a href="zone.html" onclick="toggleMobile(false)" style="color:var(--gold);font-family:var(--serif);font-style:italic;letter-spacing:0">40+ villes →</a>
       </div>
-    </article>
+    </div>
+    <a href="projects.html" onclick="toggleMobile(false)" data-i18n="navProjects">Réalisations</a>
+    <a href="contact.html" onclick="toggleMobile(false)" data-i18n="navContact">Contact</a>
+  </nav>
+  <a href="contact.html" class="btn btn-gold mobile-cta" onclick="toggleMobile(false)" data-i18n="navQuote">Demander une soumission</a>
+  <div class="mobile-lang">
+    <button data-lang="fr" class="active" onclick="setLang('fr')">FR</button>
+    <button data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+</div>
 
-    <!-- Carpentry -->
-    <article class="masonry-item group cursor-pointer relative overflow-hidden rounded-lg bg-surface-container-lowest border border-surface-variant shadow-[0_4px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)]">
-      <div class="relative overflow-hidden">
-        <img alt="Custom carpentry built-in cabinetry" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAb3dtV54gutP7tENQBOgGiutk3-cZQQi9JkB-EBWs-eBXU5wRcF6h_EALmsz4Qrz_4VZcY1UiYd55_rHCHgAid-HmRavprNV2xS_38h17BOoqbzUGkOGvK-fvoVgnYhPasNiwXafUtDjEbSjbQibXJUmpIY7UrXknEA9tzc6iZVYfLxvl2cwMUpGWNHbUVHsLmeAZ2RR_oxZHuEDMTReVMdylYuiyorzO3onaB7CAX_-nO5AD2ouB209jLzKUhNxKcTjkRVNTDw">
-        <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      </div>
-      <div class="p-8">
-        <div class="flex justify-between items-start mb-4">
-          <div>
-            <span class="inline-block bg-tertiary-fixed px-2 py-1 rounded font-label-caps text-label-caps text-on-background mb-3">CARPENTRY</span>
-            <h2 class="font-headline-md text-headline-md text-on-surface">Outremont Heritage Library</h2>
-          </div>
-          <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0;">arrow_outward</span>
-        </div>
-        <p class="font-body-md text-body-md text-secondary mb-4">Bespoke millwork and custom built-in shelving with intricate wainscoting. Crafted from premium white oak to match the home's historic 1920s aesthetic.</p>
-        <div class="flex items-center text-secondary-fixed-dim font-nav-link text-nav-link gap-2">
-          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 0;">location_on</span>
-          <span>Outremont, Montreal</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- Bathroom -->
-    <article class="masonry-item group cursor-pointer relative overflow-hidden rounded-lg bg-surface-container-lowest border border-surface-variant shadow-[0_4px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)]">
-      <div class="relative overflow-hidden">
-        <img alt="High-end modern bathroom renovation" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlbaenopFueSHtnr0cabrgEVZ0gNuVNuOWemhi5f3wa8SaOsT6pVcRRgjPgbfeklOR7eeq-nbxRFjrTnl8YwAxrk8EaR0poRfXIGDtQpgbdSaQ6wMf9jTIe3hOuNakrsbqWYS1F626ek4VNTMZrrg52RilOhOWrDLL6tS4gSKfRmCBBpR9XCmHVEXRqOOXAQlqHjnjNeWs05XxHweNAuf2WrtZkTNkcFdtbpyGpx5gQjfpulLmJ5JA8syWdFpY7Mc_l-xA41BOiA">
-        <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      </div>
-      <div class="p-8">
-        <div class="flex justify-between items-start mb-4">
-          <div>
-            <span class="inline-block bg-tertiary-fixed px-2 py-1 rounded font-label-caps text-label-caps text-on-background mb-3">BATHROOM</span>
-            <h2 class="font-headline-md text-headline-md text-on-surface">Le Plateau Spa Retreat</h2>
-          </div>
-          <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0;">arrow_outward</span>
-        </div>
-        <p class="font-body-md text-body-md text-secondary mb-4">A master en-suite transformation featuring a freestanding soaking tub, curbless glass shower with dual rain heads, and floating teak vanity.</p>
-        <div class="flex items-center text-secondary-fixed-dim font-nav-link text-nav-link gap-2">
-          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 0;">location_on</span>
-          <span>Le Plateau, Montreal</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- Basement -->
-    <article class="masonry-item group cursor-pointer relative overflow-hidden rounded-lg bg-surface-container-lowest border border-surface-variant shadow-[0_4px_30px_rgba(0,0,0,0.04)] transition-all duration-500 hover:shadow-[0_8px_40px_rgba(0,0,0,0.08)]">
-      <div class="relative overflow-hidden">
-        <img alt="Finished luxury basement transformation" class="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB8II47SmhFRCz7Kq07tYmigH53c-vMQwefpoY8v4dqUf7QcCy4v1afH8nYPT-JHA36mX7GZ6RHgz4KFBfAt-MRuvPrADSbsfncU_zKMTA3DQ-PflceFY7wy3o8RduknaIfnwhBbfQm5ZfYLuc1i3mahjk4_MhvNwzp6HrnayTRQlBJsJXShdbjNWMEQOPEDAaofl1ktBx90laR4mmxnYln2CF28Dt5mp83BDSDnPFJWcMAEuGZoOTvR2lN8U5nHR7Pfx2eQnbwZA">
-        <div class="absolute inset-0 bg-gradient-to-t from-on-background/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-      </div>
-      <div class="p-8">
-        <div class="flex justify-between items-start mb-4">
-          <div>
-            <span class="inline-block bg-tertiary-fixed px-2 py-1 rounded font-label-caps text-label-caps text-on-background mb-3">BASEMENT</span>
-            <h2 class="font-headline-md text-headline-md text-on-surface">Mount Royal Entertainment Lounge</h2>
-          </div>
-          <span class="material-symbols-outlined text-outline-variant group-hover:text-primary transition-colors" style="font-variation-settings:'FILL' 0;">arrow_outward</span>
-        </div>
-        <p class="font-body-md text-body-md text-secondary mb-4">Complete underpinning and finishing of a lower level to create a state-of-the-art home theater, custom wet bar, and climate-controlled wine cellar.</p>
-        <div class="flex items-center text-secondary-fixed-dim font-nav-link text-nav-link gap-2">
-          <span class="material-symbols-outlined text-sm" style="font-variation-settings:'FILL' 0;">location_on</span>
-          <span>Town of Mount Royal, Montreal</span>
-        </div>
-      </div>
-    </article>
-
-    <!-- CTA Card -->
-    <article class="masonry-item group cursor-pointer relative overflow-hidden rounded-lg bg-surface-container-lowest border border-surface-variant shadow-[0_4px_30px_rgba(0,0,0,0.04)] flex flex-col justify-center items-center py-24 bg-gradient-to-br from-surface-container to-surface-container-low">
-      <span class="material-symbols-outlined text-outline-variant text-6xl mb-4" style="font-variation-settings:'wght' 200;">architecture</span>
-      <h3 class="font-headline-md text-headline-md text-secondary">Start Your Project</h3>
-      <p class="font-body-md text-body-md text-secondary-fixed-dim mt-2">Let's bring your vision to life</p>
-      <a class="mt-8 border border-on-background text-on-background px-6 py-2 rounded font-nav-link text-nav-link hover:bg-on-background hover:text-surface transition-colors duration-300" href="contact.html">Get A Free Consultation</a>
-    </article>
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="index.html" data-i18n="breadHome">Accueil</a>
+      <span>›</span>
+      <span class="current" data-i18n="breadCurrent">Réalisations</span>
+    </div>
+    <span class="eyebrow" data-i18n="heroEyebrow">Nos projets</span>
+    <h1 data-i18n="heroTitle">Nos réalisations</h1>
+    <p data-i18n="heroLead">Chaque projet est unique. Découvrez quelques-unes de nos réalisations récentes sur la Rive-Sud — salles de bain, cuisines, buanderies et plus encore.</p>
   </div>
 </section>
 
-<!-- Footer -->
-<footer class="bg-surface-container-highest w-full border-t border-outline-variant">
-  <div class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
-    <div class="flex flex-col gap-6 col-span-1 md:col-span-2">
-      <a class="inline-block" href="index.html"><img alt="Abhii Builds Logo" class="h-16 w-auto object-contain rounded-md filter grayscale hover:grayscale-0 luxury-transition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvBaKbEN3g8Ym6KHlwgMuL1K0mc3C22WUK2BuQt9YLuNiU8iyEn5k1UWyN9bLRM4EvyvvsWt5Dm_8Zcbwt8EfVeDQSvENn3mU2CQiXCD7r4kgnDrJzqMQFZ21Aup-afS41ONA-topRm8vhurO7ONRqLAsw4zrwHmuxfRt2rtR7aJYMR3HxDeiVl743CJ931jizO9ANvPOLlj34zk6iIuzqz2Nd7_3MiiClO6L1iyDJ8A50NfWsFwukEHjDUr6pWuRsEBfEPUL4Uw"></a>
-      <p class="font-body-md text-body-md text-on-surface max-w-sm">Premium general contracting and luxury renovation services, dedicated to craftsmanship and client satisfaction in Greater Montreal.</p>
+<!-- ===== FILTERS ===== -->
+<div class="filters">
+  <div class="wrap">
+    <button class="filter-btn active" data-filter="all" onclick="filterGallery('all')"><span data-i18n="filterAll">Tout</span> <span class="count">13</span></button>
+    <button class="filter-btn" data-filter="sdb" onclick="filterGallery('sdb')"><span data-i18n="filterSDB">Salle de bain</span> <span class="count">8</span></button>
+    <button class="filter-btn" data-filter="cuisine" onclick="filterGallery('cuisine')"><span data-i18n="filterKitchen">Cuisine</span> <span class="count">1</span></button>
+    <button class="filter-btn" data-filter="buanderie" onclick="filterGallery('buanderie')"><span data-i18n="filterLaundry">Buanderie</span> <span class="count">3</span></button>
+    <button class="filter-btn" data-filter="sousol" onclick="filterGallery('sousol')"><span data-i18n="filterBasement">Sous-sol</span> <span class="count">1</span></button>
+  </div>
+</div>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery-section">
+  <div class="wrap" style="max-width:100%;padding:0;">
+    <div class="gallery-grid" id="gallery">
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Marbre &amp; bois" data-title-en="Bathroom — Marble &amp; wood" onclick="openLightbox(0)">
+        <img src="uploads/IMG_0106.jpeg" alt="Salle de bain marbre bois" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Marbre &amp; bois naturel</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="buanderie" data-title="Buanderie — Noir &amp; blanc" data-title-en="Laundry room — Black &amp; white" onclick="openLightbox(1)">
+        <img src="uploads/IMG_0299.jpeg" alt="Buanderie noir blanc" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterLaundry">Buanderie</div><div class="info-title">Noir &amp; blanc graphique</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Bois &amp; bain autoportant" data-title-en="Bathroom — Wood &amp; freestanding tub" onclick="openLightbox(2)">
+        <img src="uploads/IMG_0597.jpeg" alt="Salle de bain bois bain autoportant" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Bain autoportant &amp; céramique bois</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain maître — Terrazzo" data-title-en="Master bathroom — Terrazzo" onclick="openLightbox(3)">
+        <img src="uploads/IMG_0911.jpeg" alt="Salle de bain maître terrazzo" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Grande maîtresse — terrazzo</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Zellige &amp; or" data-title-en="Bathroom — Zellige &amp; gold" onclick="openLightbox(4)">
+        <img src="uploads/IMG_1039.jpeg" alt="Salle de bain zellige or" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Zellige &amp; robinetterie dorée</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Marbre noir" data-title-en="Bathroom — Black marble" onclick="openLightbox(5)">
+        <img src="uploads/IMG_1309.jpeg" alt="Salle de bain marbre noir" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Marbre noir &amp; plancher sombre</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Miroirs ronds lumineux" data-title-en="Bathroom — Round lit mirrors" onclick="openLightbox(6)">
+        <img src="uploads/IMG_1451.jpeg" alt="Salle de bain miroirs ronds lumineux" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Miroirs ronds &amp; céramique texturée</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain maître — Grande douche" data-title-en="Master bathroom — Large shower" onclick="openLightbox(7)">
+        <img src="uploads/IMG_2197.jpeg" alt="Salle de bain maître grande douche" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Maîtresse — marbre &amp; plancher noir</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="buanderie" data-title="Buanderie &amp; salle d'eau" data-title-en="Laundry &amp; powder room" onclick="openLightbox(8)">
+        <img src="uploads/IMG_2514.jpeg" alt="Buanderie salle eau moderne" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterLaundry">Buanderie</div><div class="info-title">Buanderie &amp; salle d'eau</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sousol" data-title="Salle de bain au sous-sol" data-title-en="Basement bathroom" onclick="openLightbox(9)">
+        <img src="uploads/IMG_7193.jpeg" alt="Salle de bain sous-sol" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterBasement">Sous-sol</div><div class="info-title">Salle de bain sous-sol — marbre noir</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="buanderie" data-title="Buanderie — Bois &amp; noir" data-title-en="Laundry room — Wood &amp; black" onclick="openLightbox(10)">
+        <img src="uploads/IMG_7305.jpeg" alt="Buanderie bois noir quartz" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterLaundry">Buanderie</div><div class="info-title">Armoires bois &amp; comptoir quartz</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Noir &amp; blanc" data-title-en="Kitchen — Black &amp; white" onclick="openLightbox(11)">
+        <img src="uploads/IMG_9357.jpeg" alt="Cuisine noir blanc îlot" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterKitchen">Cuisine</div><div class="info-title">Îlot central &amp; armoires bicolores</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Douche italienne" data-title-en="Bathroom — Walk-in shower" onclick="openLightbox(12)">
+        <img src="uploads/IMG_9817.jpeg" alt="Salle de bain douche italienne" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Douche italienne &amp; porte coulissante</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
     </div>
-    <div class="flex flex-col gap-4">
-      <h4 class="font-label-caps text-label-caps text-on-surface tracking-widest uppercase">Navigation</h4>
-      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="index.html">Home</a>
-      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="services.html">Services</a>
-      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="projects.html">Projects</a>
-      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="about.html">About</a>
-      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="contact.html">Contact</a>
+  </div>
+</section>
+
+<!-- ===== LIGHTBOX ===== -->
+<div class="lightbox" id="lightbox" onclick="closeLightboxOnBg(event)">
+  <button class="lb-close" onclick="closeLightbox()"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  <button class="lb-nav lb-prev" onclick="lbNav(-1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 18l-6-6 6-6"/></svg></button>
+  <button class="lb-nav lb-next" onclick="lbNav(1)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 18l6-6-6-6"/></svg></button>
+  <div class="lb-inner">
+    <img class="lb-img" id="lbImg" src="" alt="" />
+  </div>
+  <div class="lb-caption">
+    <div class="lb-cat" id="lbCat"></div>
+    <div class="lb-title" id="lbTitle"></div>
+    <div class="lb-counter" id="lbCounter"></div>
+  </div>
+</div>
+
+<!-- ===== CTA ===== -->
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--gold)" data-i18n="ctaEyebrow">Votre projet, notre expertise</span>
+      <h2 style="margin-top:16px" data-i18n="ctaTitle">Prêt à transformer<br />votre espace ?</h2>
+      <p data-i18n="ctaText">Contactez-nous pour une soumission gratuite. Nous réalisons des projets sur la Rive-Sud depuis plus de 5 ans.</p>
     </div>
-    <div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-outline-variant/30 flex justify-between items-center text-sm text-secondary">
-      <p>© 2024 Abhii Builds. Licensed RBQ &amp; Fully Insured.</p>
-      <div class="flex gap-4">
-        <a class="hover:text-primary luxury-transition" href="mailto:Abhiibuilds@hotmail.com"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0;">mail</span></a>
-        <a class="hover:text-primary luxury-transition" href="tel:514-867-2244"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0;">call</span></a>
+    <div class="cta-band-btns">
+      <a href="contact.html" class="btn btn-gold" data-i18n="ctaBtn">Demander une soumission</a>
+      <a href="tel:5148672244" class="btn btn-ghost">514-867-2244</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-top">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html"><img class="foot-logo" src="assets/logo-w.png" alt="ABHII Rénovations" /></a>
+          <p data-i18n="footAbout">Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.</p>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footServices">Services</h5>
+          <ul>
+            <li><a href="services.html#cuisine" data-i18n="serv1t">Rénovation de cuisine</a></li>
+            <li><a href="services.html#sdb" data-i18n="serv2t">Salle de bain</a></li>
+            <li><a href="services.html#sousol" data-i18n="serv3t">Finition de sous-sol</a></li>
+            <li><a href="services.html#planchers" data-i18n="serv4t">Installation de planchers</a></li>
+            <li><a href="services.html#gypse" data-i18n="serv5t">Gypse &amp; peinture</a></li>
+            <li><a href="services.html#menuiserie" data-i18n="serv6t">Menuiserie sur mesure</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-zones">
+            <div>
+              <h5 data-i18n="footNav">Navigation</h5>
+              <ul>
+                <li><a href="index.html" data-i18n="navHome">Accueil</a></li>
+                <li><a href="services.html" data-i18n="navServices">Services</a></li>
+                <li><a href="projects.html" data-i18n="navProjects">Réalisations</a></li>
+                <li><a href="zone.html" data-i18n="navAbout">Zone</a></li>
+                <li><a href="contact.html" data-i18n="navContact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footContact">Contactez-nous</h5>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><a href="tel:5148672244">514-867-ABHII (2244)</a></div>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></span><a href="mailto:Abhiibuilds@gmail.com">Abhiibuilds@gmail.com</a></div>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span><a href="https://instagram.com/abhiibuilds" target="_blank" rel="noopener">@AbhiiBuilds</a></div>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><span>RBQ 5874-7882-01</span></div>
+          <a href="contact.html" class="foot-cta" data-i18n="navQuote">Demander une soumission</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span style="color:rgba(255,255,255,0.55)">© <span id="year"></span> ABHII Rénovations Inc.</span>
+      <img src="assets/certifications.png" alt="RBQ · CCQ · APCHQ" style="height:68px;display:block;filter:brightness(0) invert(1);opacity:0.85;" />
+      <div class="foot-bottom-right">
+        <div class="foot-socials">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+        <span style="color:rgba(255,255,255,0.45)" data-i18n="footRights">Tous droits réservés.</span>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
-  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
+  // ===== i18n =====
+  const I18N = {
+    fr: {
+      navHome:'Accueil', navServices:'Services', navProjects:'Réalisations', navAbout:'Zone', navContact:'Contact', navQuote:'Demander une soumission',
+      serv1t:'Rénovation de cuisine', serv2t:'Rénovation de salle de bain', serv3t:'Finition de sous-sol',
+      serv4t:'Installation de planchers', serv5t:'Gypse &amp; peinture', serv6t:'Menuiserie sur mesure',
+      serv7t:'Céramique &amp; dosseret', serv8t:'Construction', serv9t:'Charpente',
+      footAbout:'Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.',
+      footNav:'Navigation', footServices:'Services', footContact:'Contactez-nous', footRights:'Tous droits réservés.',
+      breadHome:'Accueil', breadCurrent:'Réalisations',
+      heroEyebrow:'Nos projets', heroTitle:'Nos réalisations',
+      heroLead:'Chaque projet est unique. Découvrez quelques-unes de nos réalisations récentes sur la Rive-Sud — salles de bain, cuisines, buanderies et plus encore.',
+      filterAll:'Tout', filterSDB:'Salle de bain', filterKitchen:'Cuisine', filterLaundry:'Buanderie', filterBasement:'Sous-sol',
+      ctaEyebrow:'Votre projet, notre expertise', ctaTitle:'Prêt à transformer<br />votre espace ?',
+      ctaText:'Contactez-nous pour une soumission gratuite. Nous réalisons des projets sur la Rive-Sud depuis plus de 5 ans.', ctaBtn:'Demander une soumission'
+    },
+    en: {
+      navHome:'Home', navServices:'Services', navProjects:'Projects', navAbout:'Zone', navContact:'Contact', navQuote:'Request a Quote',
+      serv1t:'Kitchen Renovations', serv2t:'Bathroom Renovations', serv3t:'Basement Finishing',
+      serv4t:'Flooring Installation', serv5t:'Drywall &amp; Painting', serv6t:'Custom Carpentry',
+      serv7t:'Ceramics &amp; Backsplash', serv8t:'Construction', serv9t:'Framing',
+      footAbout:'Certified and insured residential general contractor, serving homeowners in the Valleyfield region and the South Shore for over 5 years.',
+      footNav:'Navigation', footServices:'Services', footContact:'Contact Us', footRights:'All rights reserved.',
+      breadHome:'Home', breadCurrent:'Projects',
+      heroEyebrow:'Our projects', heroTitle:'Our projects',
+      heroLead:'Every project is unique. Discover some of our recent work on the South Shore — bathrooms, kitchens, laundry rooms and more.',
+      filterAll:'All', filterSDB:'Bathroom', filterKitchen:'Kitchen', filterLaundry:'Laundry', filterBasement:'Basement',
+      ctaEyebrow:'Your project, our expertise', ctaTitle:'Ready to transform<br />your space?',
+      ctaText:'Contact us for a free quote. We\'ve been completing projects on the South Shore for over 5 years.', ctaBtn:'Request a Quote'
+    }
+  };
+
+  let currentLang = 'fr';
+
+  function setLang(lang) {
+    currentLang = lang;
+    document.documentElement.lang = lang;
+    const d = I18N[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (d[key] !== undefined) el.innerHTML = d[key];
+    });
+    // Update lightbox if open
+    if (lbIndex >= 0) updateLightbox(lbIndex);
+    document.querySelectorAll('.lang button, .mobile-lang button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    try { localStorage.setItem('abhii_lang', lang); } catch(e) {}
+  }
+
+  function toggleMobile(open) {
+    document.getElementById('mobileMenu').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  // ===== Gallery Filter =====
+  function filterGallery(cat) {
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.toggle('active', b.dataset.filter === cat));
+    document.querySelectorAll('.gallery-item').forEach(item => {
+      const show = cat === 'all' || item.dataset.cat === cat;
+      item.classList.toggle('hidden', !show);
+    });
+    // Update indices for lightbox
+    buildVisibleItems();
+  }
+
+  // ===== Lightbox =====
+  let visibleItems = [];
+  let lbIndex = -1;
+
+  function buildVisibleItems() {
+    visibleItems = [...document.querySelectorAll('.gallery-item:not(.hidden)')];
+  }
+
+  function openLightbox(gridIndex) {
+    buildVisibleItems();
+    const items = [...document.querySelectorAll('.gallery-item')];
+    const item = items[gridIndex];
+    const visIdx = visibleItems.indexOf(item);
+    if (visIdx < 0) return;
+    lbIndex = visIdx;
+    updateLightbox(lbIndex);
+    document.getElementById('lightbox').classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function updateLightbox(idx) {
+    if (idx < 0 || idx >= visibleItems.length) return;
+    const item = visibleItems[idx];
+    const img = item.querySelector('img');
+    const lbImg = document.getElementById('lbImg');
+    lbImg.classList.remove('loaded');
+    lbImg.src = img.src;
+    lbImg.alt = img.alt;
+    lbImg.onload = () => lbImg.classList.add('loaded');
+    if (lbImg.complete) lbImg.classList.add('loaded');
+
+    const lang = currentLang;
+    const titleKey = lang === 'en' ? 'data-title-en' : 'data-title';
+    document.getElementById('lbTitle').innerHTML = item.getAttribute(titleKey) || item.getAttribute('data-title');
+    const catEl = item.querySelector('.info-cat');
+    document.getElementById('lbCat').textContent = catEl ? catEl.textContent : '';
+    document.getElementById('lbCounter').textContent = `${idx + 1} / ${visibleItems.length}`;
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').classList.remove('open');
+    document.body.style.overflow = '';
+    lbIndex = -1;
+  }
+
+  function closeLightboxOnBg(e) {
+    if (e.target === document.getElementById('lightbox')) closeLightbox();
+  }
+
+  function lbNav(dir) {
+    lbIndex = (lbIndex + dir + visibleItems.length) % visibleItems.length;
+    updateLightbox(lbIndex);
+  }
+
+  // Keyboard nav
+  document.addEventListener('keydown', e => {
+    if (!document.getElementById('lightbox').classList.contains('open')) return;
+    if (e.key === 'Escape') closeLightbox();
+    if (e.key === 'ArrowLeft') lbNav(-1);
+    if (e.key === 'ArrowRight') lbNav(1);
   });
+
+  // ===== Init =====
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20));
+
+  document.querySelectorAll('.mob-acc-toggle').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.mob-acc').classList.toggle('open'));
+  });
+
+  buildVisibleItems();
+
+  let saved = 'fr';
+  try { saved = localStorage.getItem('abhii_lang') || 'fr'; } catch(e) {}
+  setLang(saved);
 </script>
-</body></html>
+</body>
+</html>

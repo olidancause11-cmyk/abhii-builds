@@ -1,255 +1,598 @@
-<!DOCTYPE html><html class="light" lang="en"><head>
-<meta charset="utf-8">
-<meta content="width=device-width, initial-scale=1.0" name="viewport">
-<title>Contact Abhii Builds | Request Your Free Consultation</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600&display=swap" rel="stylesheet">
-<script id="tailwind-config">
-  tailwind.config = {
-    darkMode: "class",
-    theme: {
-      extend: {
-        colors: {
-          "surface-container": "#efeeeb", "secondary-fixed-dim": "#c8c6c5", "inverse-on-surface": "#f2f1ee",
-          "secondary-fixed": "#e5e2e1", "surface-dim": "#dbdad7", "primary-fixed-dim": "#8ed79a",
-          "surface": "#faf9f6", "on-background": "#1a1c1a", "primary": "#005123", "inverse-primary": "#8ed79a",
-          "on-surface": "#1a1c1a", "surface-container-high": "#e9e8e5", "outline": "#707a6f",
-          "tertiary-fixed-dim": "#d3c5ad", "on-secondary-container": "#636262", "on-primary-fixed-variant": "#005223",
-          "surface-variant": "#e3e2df", "on-secondary": "#ffffff", "tertiary-fixed": "#f0e0c8",
-          "outline-variant": "#c0c9bd", "surface-tint": "#246b39", "secondary": "#5f5e5e",
-          "on-tertiary": "#ffffff", "surface-container-lowest": "#ffffff", "on-tertiary-container": "#e4d5bd",
-          "on-tertiary-fixed": "#221b0b", "surface-container-low": "#f4f3f0", "error-container": "#ffdad6",
-          "on-error-container": "#93000a", "primary-fixed": "#aaf4b4", "error": "#ba1a1a",
-          "on-primary-fixed": "#00210a", "secondary-container": "#e2dfde", "background": "#faf9f6",
-          "surface-container-highest": "#e3e2df", "on-tertiary-fixed-variant": "#4f4533",
-          "on-primary-container": "#9ee8a9", "surface-bright": "#faf9f6", "on-secondary-fixed-variant": "#474746",
-          "on-secondary-fixed": "#1b1b1c", "inverse-surface": "#2f312f", "primary-container": "#236a38",
-          "on-surface-variant": "#404940", "on-error": "#ffffff", "on-primary": "#ffffff",
-          "tertiary-container": "#675c49", "tertiary": "#4e4532"
-        },
-        borderRadius: { DEFAULT: "0.25rem", lg: "0.5rem", xl: "0.75rem", full: "9999px" },
-        spacing: { "unit": "8px", "margin-mobile": "20px", "container-max": "1280px", "section-gap": "120px", "margin-desktop": "64px", "gutter": "24px" },
-        fontFamily: { "nav-link": ["Hanken Grotesk"], "display-lg": ["EB Garamond"], "display-lg-mobile": ["EB Garamond"], "headline-md": ["EB Garamond"], "body-lg": ["Hanken Grotesk"], "label-caps": ["Hanken Grotesk"], "headline-lg": ["EB Garamond"], "body-md": ["Hanken Grotesk"] },
-        fontSize: {
-          "nav-link": ["14px", { lineHeight: "1.0", letterSpacing: "0.02em", fontWeight: "500" }],
-          "display-lg": ["64px", { lineHeight: "1.1", letterSpacing: "-0.02em", fontWeight: "500" }],
-          "display-lg-mobile": ["40px", { lineHeight: "1.2", fontWeight: "500" }],
-          "headline-md": ["32px", { lineHeight: "1.3", fontWeight: "500" }],
-          "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
-          "label-caps": ["12px", { lineHeight: "1.0", letterSpacing: "0.1em", fontWeight: "600" }],
-          "headline-lg": ["48px", { lineHeight: "1.2", fontWeight: "500" }],
-          "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }]
-        }
-      }
-    }
-  }
-</script>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact — ABHII Rénovations Inc.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 <style>
-  .luxury-transition { transition: all 400ms cubic-bezier(0.4,0,0.2,1); }
+  :root {
+    --navy:#102A56; --navy-2:#1E3D72; --navy-dark:#0C1730;
+    --white:#FFFFFF; --gray:#F3F4F7; --gray-line:#E2E5EC;
+    --ink:#1A2438; --muted:#5C6577; --gold:#B89968;
+    --serif:"Cormorant Garamond",Georgia,serif;
+    --sans:"Mulish",-apple-system,system-ui,sans-serif;
+    --ease:cubic-bezier(0.22,1,0.36,1); --maxw:1240px;
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{font-family:var(--sans);color:var(--ink);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+  img{display:block;max-width:100%;}
+  a{color:inherit;text-decoration:none;}
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 40px;}
+  .eyebrow{font-family:var(--sans);font-weight:700;font-size:12px;letter-spacing:0.28em;text-transform:uppercase;color:var(--gold);display:inline-flex;align-items:center;gap:14px;}
+  .eyebrow::before{content:"";width:32px;height:1px;background:var(--gold);display:inline-block;}
+  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.08;letter-spacing:-0.01em;text-wrap:balance;}
+  .section-title{font-size:clamp(34px,4.2vw,56px);color:var(--navy);}
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;padding:17px 32px;border:1px solid transparent;cursor:pointer;transition:all 0.4s var(--ease);white-space:nowrap;}
+  .btn-primary{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .btn-primary:hover{background:var(--navy-dark);border-color:var(--navy-dark);}
+  .btn-gold{background:var(--gold);color:var(--navy-dark);border-color:var(--gold);}
+  .btn-gold:hover{background:#a9885a;border-color:#a9885a;}
+  .btn-ghost{background:transparent;color:#fff;border-color:rgba(255,255,255,0.5);}
+  .btn-ghost:hover{background:#fff;color:var(--navy);border-color:#fff;}
+
+  /* ---- Header ---- */
+  header{position:relative;z-index:100;}
+  .topbar{background:var(--navy-dark);color:rgba(255,255,255,0.78);font-size:13px;}
+  .topbar .wrap{display:flex;justify-content:flex-end;align-items:center;height:44px;}
+  .topbar-inner{display:flex;align-items:center;gap:16px;}
+  .tb-item{display:inline-flex;align-items:center;gap:8px;color:rgba(255,255,255,0.82);font-weight:600;letter-spacing:0.02em;transition:color .3s var(--ease);}
+  .tb-item svg{width:15px;height:15px;color:var(--gold);}
+  .tb-item:hover{color:#fff;}
+  .tb-sep{color:rgba(255,255,255,0.25);}
+  .tb-socials{display:inline-flex;align-items:center;gap:9px;margin-left:6px;padding-left:16px;border-left:1px solid rgba(255,255,255,0.16);}
+  .tb-socials a{width:28px;height:28px;display:flex;align-items:center;justify-content:center;border-radius:50%;color:rgba(255,255,255,0.85);border:1px solid rgba(255,255,255,0.2);transition:all .3s var(--ease);}
+  .tb-socials a:hover{background:var(--gold);color:var(--navy-dark);border-color:var(--gold);}
+  .tb-socials svg{width:15px;height:15px;}
+  .navbar{background:#fff;border-bottom:1px solid var(--gray-line);position:sticky;top:0;z-index:90;transition:box-shadow .4s var(--ease);}
+  .navbar .wrap{display:flex;align-items:center;justify-content:space-between;height:88px;}
+  header.scrolled .navbar{box-shadow:0 8px 30px rgba(16,42,86,0.08);}
+  .brand{display:flex;flex-direction:row;align-items:center;gap:14px;}
+  .brand-logo img{height:48px;width:auto;}
+  .brand-text{display:flex;flex-direction:column;line-height:1;white-space:nowrap;}
+  .brand-name{font-family:var(--serif);font-weight:600;font-size:23px;letter-spacing:0.02em;color:var(--navy);}
+  .brand-sub{font-family:var(--sans);font-weight:700;font-size:9.5px;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold);margin-top:7px;}
+  nav.menu{display:flex;align-items:center;gap:32px;white-space:nowrap;}
+  .nav-item{position:relative;}
+  .nav-item>a{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:0.04em;color:var(--ink);display:inline-flex;align-items:center;gap:7px;padding:8px 0;transition:color .3s var(--ease);position:relative;}
+  .nav-item>a::after{content:"";position:absolute;left:0;bottom:2px;width:0;height:1px;background:var(--gold);transition:width .3s var(--ease);}
+  .nav-item:hover>a{color:var(--navy);}
+  .nav-item:hover>a::after{width:100%;}
+  .nav-item.active>a{color:var(--navy);}
+  .nav-item.active>a::after{width:100%;background:var(--gold);}
+  .nav-item .caret{width:11px;height:11px;transition:transform .3s var(--ease);}
+  .nav-item.has-dd:hover .caret{transform:rotate(180deg);}
+  .dd-panel{position:absolute;top:calc(100% + 16px);left:50%;transform:translateX(-50%) translateY(8px);min-width:520px;background:#fff;border:1px solid var(--gray-line);box-shadow:0 24px 50px rgba(16,42,86,0.16);padding:12px;display:grid;grid-template-columns:1fr 1fr;opacity:0;visibility:hidden;transition:all .28s var(--ease);z-index:60;}
+  .dd-panel::before{content:"";position:absolute;top:-7px;left:50%;transform:translateX(-50%) rotate(45deg);width:12px;height:12px;background:#fff;border-left:1px solid var(--gray-line);border-top:1px solid var(--gray-line);}
+  .nav-item.has-dd:hover .dd-panel{opacity:1;visibility:visible;transform:translateX(-50%) translateY(0);}
+  .dd-panel a{display:flex;align-items:center;gap:14px;padding:12px 16px;font-size:14px;font-weight:600;color:var(--ink);transition:all .25s var(--ease);}
+  .dd-panel a .dd-num{font-family:var(--serif);font-style:italic;font-size:13px;color:var(--gold);width:18px;}
+  .dd-panel a:hover{background:var(--gray);color:var(--navy);}
+  .nav-right{display:flex;align-items:center;gap:18px;}
+  .lang{display:inline-flex;align-items:center;border:1px solid var(--gray-line);border-radius:999px;padding:4px;}
+  .lang button{background:none;border:none;cursor:pointer;font-family:var(--sans);font-weight:700;font-size:12.5px;letter-spacing:0.04em;color:var(--muted);padding:6px 15px;border-radius:999px;transition:all .3s var(--ease);}
+  .lang button.active{background:var(--navy);color:#fff;}
+  .btn-header{padding:14px 28px;font-size:12px;background:var(--gold);color:var(--navy-dark);border-color:var(--gold);}
+  .btn-header:hover{background:#a9885a;border-color:#a9885a;}
+  .menu-toggle{display:none;background:none;border:none;cursor:pointer;padding:8px;}
+  .menu-toggle span{display:block;width:26px;height:2px;background:var(--navy);margin:5px 0;}
+
+  /* ---- Mobile menu ---- */
+  .mobile-menu{position:fixed;inset:0;background:var(--navy-dark);z-index:200;display:flex;flex-direction:column;padding:30px 40px;transform:translateX(100%);transition:transform 0.45s var(--ease);overflow-y:auto;overflow-x:hidden;pointer-events:none;}
+  .mobile-menu.open{transform:translateX(0);pointer-events:auto;}
+  .mobile-menu-head{display:flex;justify-content:space-between;align-items:center;}
+  .mobile-menu-head img{height:44px;}
+  .mobile-menu-head .close{background:none;border:none;color:#fff;font-size:34px;cursor:pointer;line-height:1;}
+  .mobile-menu nav{display:flex;flex-direction:column;gap:6px;margin-top:50px;}
+  .mobile-menu nav>a{color:#fff;font-family:var(--serif);font-size:30px;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1);}
+  .mobile-menu nav .mob-acc-panel a{color:rgba(255,255,255,0.72);font-family:var(--sans);font-size:13.5px;padding:11px 0 11px 14px;border-bottom:1px solid rgba(255,255,255,0.06);font-weight:600;letter-spacing:0.06em;}
+  .mobile-menu .mobile-cta{width:100%;margin-top:34px;}
+  .mobile-menu .mobile-lang{margin-top:auto;display:flex;gap:8px;align-items:center;}
+  .mobile-menu .mobile-lang button{background:none;border:1px solid rgba(255,255,255,0.3);color:rgba(255,255,255,0.7);padding:10px 20px;font-weight:700;cursor:pointer;font-family:var(--sans);}
+  .mobile-menu .mobile-lang button.active{background:var(--gold);color:var(--navy-dark);border-color:var(--gold);}
+  .mob-acc-toggle{width:100%;display:flex;justify-content:space-between;align-items:center;background:none;border:none;cursor:pointer;padding:14px 0;border-bottom:1px solid rgba(255,255,255,0.1);color:#fff;font-family:var(--serif);font-size:30px;text-align:left;}
+  .mob-acc svg.mob-caret{width:20px;height:20px;flex:none;transition:transform 0.35s var(--ease);color:rgba(255,255,255,0.45);stroke-width:2.5;}
+  .mob-acc.open svg.mob-caret{transform:rotate(180deg);}
+  .mob-acc-panel{max-height:0;overflow:hidden;transition:max-height 0.45s var(--ease);display:flex;flex-direction:column;}
+  .mob-acc.open .mob-acc-panel{max-height:700px;}
+  .mob-acc-panel .mn{font-family:var(--serif);font-style:italic;color:var(--gold);font-size:14px;min-width:18px;flex:none;}
+  .mob-acc-panel .pin{width:13px;height:13px;color:var(--gold);flex:none;}
+
+  /* ---- Page Hero ---- */
+  .page-hero{background:var(--navy-dark);position:relative;overflow:hidden;padding:90px 0 80px;}
+  .page-hero-bg{position:absolute;inset:0;background-image:url("assets/bath-master.jpeg");background-size:cover;background-position:center;opacity:0.15;}
+  .page-hero .wrap{position:relative;z-index:2;}
+  .breadcrumb{display:flex;align-items:center;gap:8px;font-size:13px;font-weight:600;letter-spacing:0.06em;color:rgba(255,255,255,0.5);margin-bottom:28px;}
+  .breadcrumb a{color:rgba(255,255,255,0.5);transition:color .3s;}
+  .breadcrumb a:hover{color:var(--gold);}
+  .breadcrumb span{color:rgba(255,255,255,0.25);}
+  .breadcrumb .current{color:var(--gold);}
+  .page-hero h1{font-size:clamp(42px,5.5vw,70px);color:#fff;margin:18px 0 20px;}
+  .page-hero p{font-size:19px;color:rgba(255,255,255,0.75);max-width:600px;font-weight:400;}
+
+  /* ---- Contact Section ---- */
+  .contact-section{background:var(--gray);padding:100px 0 120px;}
+  .contact-grid{display:grid;grid-template-columns:0.9fr 1.1fr;gap:80px;}
+
+  /* Left: contact info */
+  .contact-left .section-title{margin:22px 0 22px;}
+  .contact-left>p{color:var(--muted);font-size:17px;margin-bottom:36px;line-height:1.8;}
+  .qc-list{display:flex;flex-direction:column;}
+  .qc-item{display:flex;align-items:center;gap:18px;padding:18px 0;border-bottom:1px solid var(--gray-line);}
+  .qc-item:first-child{border-top:1px solid var(--gray-line);}
+  .qc-icon{width:44px;height:44px;flex:none;display:flex;align-items:center;justify-content:center;background:var(--navy);color:var(--gold);}
+  .qc-icon svg{width:20px;height:20px;}
+  .qc-label{font-size:12px;letter-spacing:0.12em;text-transform:uppercase;color:var(--muted);font-weight:700;}
+  .qc-value{font-size:17px;font-weight:600;color:var(--navy);}
+  .qc-value a{color:var(--navy);transition:color .3s;}
+  .qc-value a:hover{color:var(--gold);}
+  .social-row{margin-top:32px;display:flex;align-items:center;gap:12px;}
+  .social-btn{width:44px;height:44px;border-radius:50%;border:1px solid var(--gray-line);background:#fff;display:flex;align-items:center;justify-content:center;color:var(--ink);transition:all .3s var(--ease);}
+  .social-btn:hover{background:var(--navy);color:#fff;border-color:var(--navy);}
+  .social-btn svg{width:18px;height:18px;}
+  .hours-block{margin-top:36px;background:#fff;padding:28px 30px;border:1px solid var(--gray-line);}
+  .hours-block h4{font-family:var(--sans);font-size:12px;letter-spacing:0.14em;text-transform:uppercase;font-weight:700;color:var(--navy);margin-bottom:16px;}
+  .hour-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--gray-line);font-size:15px;}
+  .hour-row:last-child{border-bottom:none;}
+  .hour-row .day{color:var(--muted);font-weight:600;}
+  .hour-row .time{color:var(--navy);font-weight:700;}
+
+  /* Right: form */
+  .quote-form{background:#fff;padding:50px 48px;box-shadow:0 30px 70px rgba(16,42,86,0.1);}
+  .form-row{display:grid;grid-template-columns:1fr 1fr;gap:22px;}
+  .field{margin-bottom:22px;display:flex;flex-direction:column;}
+  .field label{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;color:var(--navy);margin-bottom:9px;}
+  .field input,.field select,.field textarea{font-family:var(--sans);font-size:15px;color:var(--ink);border:1px solid var(--gray-line);background:var(--gray);padding:14px 16px;transition:all 0.3s var(--ease);width:100%;}
+  .field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--navy);background:#fff;box-shadow:0 0 0 3px rgba(16,42,86,0.08);}
+  .field textarea{resize:vertical;min-height:120px;}
+  .quote-form .btn{width:100%;margin-top:8px;}
+  .form-note{font-size:12.5px;color:var(--muted);margin-top:16px;text-align:center;}
+  .pill-label{font-size:12px;letter-spacing:0.1em;text-transform:uppercase;font-weight:700;color:var(--navy);margin-bottom:12px;display:block;}
+  .pill-group{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px;}
+  .pill-btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:999px;border:1px solid var(--gray-line);background:var(--gray);font-family:var(--sans);font-size:11.5px;font-weight:700;letter-spacing:0.13em;text-transform:uppercase;color:var(--ink);cursor:pointer;transition:all 0.22s var(--ease);user-select:none;white-space:nowrap;}
+  .pill-btn:hover{border-color:var(--navy);background:#fff;color:var(--navy);}
+  .pill-btn.active{background:rgba(184,153,104,0.18);border-color:var(--gold);color:var(--navy);}
+
+  /* Success message */
+  .form-success{display:none;text-align:center;padding:48px 32px;}
+  .form-success svg{width:56px;height:56px;color:var(--gold);margin:0 auto 20px;}
+  .form-success h3{font-family:var(--serif);font-size:32px;color:var(--navy);margin-bottom:12px;}
+  .form-success p{color:var(--muted);font-size:16px;}
+
+  /* ---- Footer ---- */
+  footer{background:var(--navy-dark);color:rgba(255,255,255,0.6);}
+  .footer-top{padding:80px 0 64px;}
+  .footer-grid{display:grid;grid-template-columns:210px 1fr 1fr 280px;gap:60px;}
+  .foot-logo{height:72px;width:auto;margin-bottom:22px;display:block;}
+  .footer-brand p{font-size:14.5px;line-height:1.85;max-width:240px;color:rgba(255,255,255,0.6);}
+  .footer-col h5{font-family:var(--sans);font-size:11.5px;letter-spacing:0.18em;text-transform:uppercase;color:#fff;font-weight:700;margin-bottom:22px;}
+  .footer-col ul{list-style:none;display:flex;flex-direction:column;gap:13px;}
+  .footer-col ul a{font-size:14.5px;color:rgba(255,255,255,0.6);transition:color 0.3s var(--ease);}
+  .footer-col ul a:hover{color:rgba(255,255,255,0.95);}
+  .footer-col-zones{display:flex;flex-direction:column;gap:38px;}
+  .fci{display:flex;align-items:center;gap:15px;margin-bottom:14px;}
+  .fci-icon{width:36px;height:36px;border-radius:50%;background:rgba(184,153,104,0.18);border:1px solid rgba(184,153,104,0.3);display:flex;align-items:center;justify-content:center;flex:none;}
+  .fci-icon svg{width:16px;height:16px;color:var(--gold);}
+  .fci a,.fci span{font-size:14.5px;font-weight:600;color:rgba(255,255,255,0.82);transition:color .3s var(--ease);}
+  .fci a:hover{color:var(--gold);}
+  .foot-cta{display:block;width:100%;margin-top:26px;text-align:center;padding:16px 24px;background:var(--gold);color:var(--navy-dark);font-family:var(--sans);font-weight:700;font-size:13px;letter-spacing:0.1em;text-transform:uppercase;border:none;cursor:pointer;transition:background .3s var(--ease);}
+  .foot-cta:hover{background:#a9885a;color:var(--navy-dark);}
+  .footer-bottom{border-top:1px solid rgba(255,255,255,0.1);padding:22px 0;font-size:13px;}
+  .footer-bottom .wrap{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;gap:20px;}
+  .foot-bottom-right{justify-self:end;display:flex;align-items:center;gap:20px;}
+  .foot-socials{display:flex;align-items:center;gap:12px;}
+  .foot-socials a{width:32px;height:32px;border-radius:50%;border:1px solid rgba(255,255,255,0.2);display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,0.6);transition:all .3s var(--ease);}
+  .foot-socials a:hover{background:var(--gold);border-color:var(--gold);color:var(--navy-dark);}
+  .foot-socials svg{width:15px;height:15px;}
+
+  /* ---- Reveal ---- */
+  .reveal{opacity:0;transform:translateY(28px);transition:opacity 0.9s var(--ease),transform 0.9s var(--ease);}
+  .reveal.in{opacity:1;transform:none;}
+
+  /* ---- Responsive ---- */
+  @media(max-width:1080px){nav.menu,.nav-right .btn-header{display:none;}.menu-toggle{display:block;}}
+  @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:56px;}.footer-grid{grid-template-columns:1fr 1fr;gap:36px;}}
+  @media(max-width:720px){.wrap{padding:0 24px;}.brand-text{display:none;}.topbar .wrap{justify-content:center;}.form-row{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}.footer-bottom .wrap{grid-template-columns:1fr;text-align:center;}.foot-bottom-right{justify-self:center;}.contact-section{padding:70px 0 90px;}.quote-form{padding:36px 26px;}}
 </style>
 </head>
-<body class="bg-surface text-on-surface antialiased selection:bg-primary-container selection:text-on-primary-container flex flex-col min-h-screen">
+<body>
 
-<!-- Nav -->
-<nav class="bg-surface w-full top-0 sticky border-b border-outline-variant z-50 transition-colors duration-300">
-  <div class="flex justify-between items-center h-20 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
-    <a class="flex items-center gap-4 group" href="index.html">
-      <img alt="Abhii Builds" class="h-12 w-auto object-contain rounded-md" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvBaKbEN3g8Ym6KHlwgMuL1K0mc3C22WUK2BuQt9YLuNiU8iyEn5k1UWyN9bLRM4EvyvvsWt5Dm_8Zcbwt8EfVeDQSvENn3mU2CQiXCD7r4kgnDrJzqMQFZ21Aup-afS41ONA-topRm8vhurO7ONRqLAsw4zrwHmuxfRt2rtR7aJYMR3HxDeiVl743CJ931jizO9ANvPOLlj34zk6iIuzqz2Nd7_3MiiClO6L1iyDJ8A50NfWsFwukEHjDUr6pWuRsEBfEPUL4Uw">
-    </a>
-    <div class="hidden md:flex items-center gap-8">
-      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="index.html">Home</a>
-      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="services.html">Services</a>
-      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="projects.html">Projects</a>
-      <a class="text-secondary font-nav-link text-nav-link hover:text-primary transition-colors duration-300" href="about.html">About</a>
-      <a class="text-primary border-b-2 border-primary pb-1 font-nav-link text-nav-link opacity-80" href="contact.html">Contact</a>
-    </div>
-    <div class="hidden md:block">
-      <a class="inline-flex items-center justify-center px-6 py-3 bg-primary-container text-on-primary rounded-lg font-nav-link text-nav-link hover:bg-surface-tint transition-colors duration-300" href="contact.html">Free Consultation</a>
-    </div>
-    <button id="mobile-menu-btn" class="md:hidden text-on-surface p-2">
-      <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0;">menu</span>
-    </button>
-  </div>
-  <!-- Mobile menu -->
-  <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-outline-variant px-margin-mobile py-4 flex flex-col gap-4">
-    <a class="text-secondary font-nav-link text-nav-link" href="index.html">Home</a>
-    <a class="text-secondary font-nav-link text-nav-link" href="services.html">Services</a>
-    <a class="text-secondary font-nav-link text-nav-link" href="projects.html">Projects</a>
-    <a class="text-secondary font-nav-link text-nav-link" href="about.html">About</a>
-    <a class="text-primary font-nav-link text-nav-link" href="contact.html">Contact</a>
-    <a class="inline-flex items-center justify-center px-6 py-3 bg-primary-container text-on-primary rounded-lg font-nav-link text-nav-link mt-2" href="contact.html">Free Consultation</a>
-  </div>
-</nav>
-
-<!-- Main Content -->
-<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-16 md:py-section-gap">
-  <div class="grid grid-cols-1 md:grid-cols-12 gap-gutter lg:gap-16">
-    <!-- Left Column -->
-    <div class="md:col-span-5 flex flex-col justify-start">
-      <h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg text-on-surface mb-6">Request Your Free Consultation</h1>
-      <p class="font-body-lg text-body-lg text-secondary mb-12 max-w-md">Take the first step toward realizing your vision. Serving the Greater Montreal area with unparalleled craftsmanship, transparency, and architectural integrity.</p>
-      <div class="w-full h-64 md:h-80 bg-surface-container rounded-lg mb-12 overflow-hidden relative border border-surface-variant">
-        <img alt="High-end residential interior" class="w-full h-full object-cover opacity-90" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD7OgXTz51HVDvvjV7l3r9VfwC0bcFL7wtCfrd-hj6DnfbGARvKMgSfvI_27_FOmiG3uAO_QW2EfxY0TclmZVc82yN_b4Tgmr__5YA2hMC_XZPnBGcRKFg0-5HFzaPrcGBBO5xsw4vUjfdj6Q5ClJRhiZx8bv6IiWLHogCU2b8tmGXER5uEOQQpU686EXLlJVjkeNjsxmVbkiFXRYPnsTNE-X0bPBup_Y3QLQh29bChReYvSL3qrSnoXNPmkgMhMv3EFtlYtsHKqg">
-      </div>
-      <div class="space-y-8 mt-auto">
-        <div class="flex items-start gap-4">
-          <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings:'wght' 300;">call</span>
-          <div>
-            <h3 class="font-label-caps text-label-caps text-secondary mb-1">PHONE</h3>
-            <a class="font-headline-md text-headline-md text-on-surface hover:text-primary transition-colors duration-300 block" href="tel:514-867-2244">514-867-ABHI (2244)</a>
-          </div>
-        </div>
-        <div class="w-full h-px bg-tertiary-fixed-dim"></div>
-        <div class="flex items-start gap-4">
-          <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings:'wght' 300;">mail</span>
-          <div>
-            <h3 class="font-label-caps text-label-caps text-secondary mb-1">EMAIL</h3>
-            <a class="font-body-lg text-body-lg text-on-surface hover:text-primary transition-colors duration-300 block" href="mailto:Abhiibuilds@hotmail.com">Abhiibuilds@hotmail.com</a>
-          </div>
-        </div>
-        <div class="w-full h-px bg-tertiary-fixed-dim"></div>
-        <div class="flex items-start gap-4">
-          <span class="material-symbols-outlined text-primary mt-1" style="font-variation-settings:'wght' 300;">location_on</span>
-          <div>
-            <h3 class="font-label-caps text-label-caps text-secondary mb-1">SERVICE AREA</h3>
-            <span class="font-body-lg text-body-lg text-on-surface block">Greater Montreal Region</span>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Right Column: Form -->
-    <div class="md:col-span-7 mt-12 md:mt-0">
-      <div class="bg-surface-container-lowest rounded-lg border border-surface-variant p-8 md:p-12 shadow-[0_30px_60px_-15px_rgba(0,0,0,0.04)]">
-        <form action="#" class="space-y-8" method="POST">
-          <!-- Name Row -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="relative group">
-              <input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface placeholder-transparent peer transition-colors duration-300" id="first_name" name="first_name" placeholder="First Name" required type="text">
-              <label class="absolute left-0 top-3 font-body-md text-body-md text-secondary transition-all duration-300 peer-focus:-top-4 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-primary peer-valid:-top-4 peer-valid:text-label-caps peer-valid:font-label-caps cursor-text" for="first_name">First Name</label>
-            </div>
-            <div class="relative group">
-              <input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface placeholder-transparent peer transition-colors duration-300" id="last_name" name="last_name" placeholder="Last Name" required type="text">
-              <label class="absolute left-0 top-3 font-body-md text-body-md text-secondary transition-all duration-300 peer-focus:-top-4 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-primary peer-valid:-top-4 peer-valid:text-label-caps peer-valid:font-label-caps cursor-text" for="last_name">Last Name</label>
-            </div>
-          </div>
-          <!-- Contact Row -->
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="relative group">
-              <input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface placeholder-transparent peer transition-colors duration-300" id="phone" name="phone" placeholder="Phone Number" required type="tel">
-              <label class="absolute left-0 top-3 font-body-md text-body-md text-secondary transition-all duration-300 peer-focus:-top-4 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-primary peer-valid:-top-4 peer-valid:text-label-caps peer-valid:font-label-caps cursor-text" for="phone">Phone Number</label>
-            </div>
-            <div class="relative group">
-              <input class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface placeholder-transparent peer transition-colors duration-300" id="email" name="email" placeholder="Email Address" required type="email">
-              <label class="absolute left-0 top-3 font-body-md text-body-md text-secondary transition-all duration-300 peer-focus:-top-4 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-primary peer-valid:-top-4 peer-valid:text-label-caps peer-valid:font-label-caps cursor-text" for="email">Email Address</label>
-            </div>
-          </div>
-          <!-- Property Type -->
-          <div class="pt-4">
-            <label class="font-label-caps text-label-caps text-secondary block mb-4">PROPERTY TYPE</label>
-            <div class="flex flex-wrap gap-3">
-              <label class="cursor-pointer"><input checked class="peer sr-only" name="property_type" type="radio" value="Single Family"><div class="bg-surface-container px-4 py-2 rounded-full border border-transparent peer-checked:bg-tertiary-fixed peer-checked:border-tertiary-fixed-dim peer-checked:text-on-tertiary-fixed font-label-caps text-label-caps text-on-surface-variant transition-all duration-300">SINGLE FAMILY</div></label>
-              <label class="cursor-pointer"><input class="peer sr-only" name="property_type" type="radio" value="Condo"><div class="bg-surface-container px-4 py-2 rounded-full border border-transparent peer-checked:bg-tertiary-fixed peer-checked:border-tertiary-fixed-dim peer-checked:text-on-tertiary-fixed font-label-caps text-label-caps text-on-surface-variant transition-all duration-300">CONDO</div></label>
-              <label class="cursor-pointer"><input class="peer sr-only" name="property_type" type="radio" value="Duplex"><div class="bg-surface-container px-4 py-2 rounded-full border border-transparent peer-checked:bg-tertiary-fixed peer-checked:border-tertiary-fixed-dim peer-checked:text-on-tertiary-fixed font-label-caps text-label-caps text-on-surface-variant transition-all duration-300">DUPLEX</div></label>
-              <label class="cursor-pointer"><input class="peer sr-only" name="property_type" type="radio" value="Other"><div class="bg-surface-container px-4 py-2 rounded-full border border-transparent peer-checked:bg-tertiary-fixed peer-checked:border-tertiary-fixed-dim peer-checked:text-on-tertiary-fixed font-label-caps text-label-caps text-on-surface-variant transition-all duration-300">OTHER</div></label>
-            </div>
-          </div>
-          <!-- Project Type -->
-          <div class="pt-2">
-            <label class="font-label-caps text-label-caps text-secondary block mb-4">PROJECT SCOPE</label>
-            <div class="relative">
-              <select class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface appearance-none cursor-pointer transition-colors duration-300" name="project_type">
-                <option disabled selected value="">Select Primary Project Type</option>
-                <option value="Full Renovation">Full Home Renovation</option>
-                <option value="Kitchen">Luxury Kitchen Remodel</option>
-                <option value="Bathroom">Bathroom Renovation</option>
-                <option value="Basement">Basement Finishing</option>
-                <option value="Addition">Home Addition</option>
-                <option value="Other">Other / Multiple</option>
-              </select>
-              <span class="material-symbols-outlined absolute right-0 top-3 text-secondary pointer-events-none">expand_more</span>
-            </div>
-          </div>
-          <!-- Timeline -->
-          <div class="pt-2">
-            <div class="relative group">
-              <select class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface appearance-none cursor-pointer peer transition-colors duration-300" name="timeline" required>
-                <option class="text-secondary" disabled selected value="">Expected Timeline</option>
-                <option value="ASAP">As Soon As Possible</option>
-                <option value="1-3 Months">1-3 Months</option>
-                <option value="3-6 Months">3-6 Months</option>
-                <option value="6+ Months">6+ Months</option>
-              </select>
-              <label class="absolute left-0 -top-4 font-label-caps text-label-caps text-secondary opacity-0 peer-focus:opacity-100 peer-valid:opacity-100 transition-opacity duration-300">TIMELINE</label>
-              <span class="material-symbols-outlined absolute right-0 top-3 text-secondary pointer-events-none">schedule</span>
-            </div>
-          </div>
-          <!-- Project Details -->
-          <div class="pt-4 relative group">
-            <textarea class="w-full bg-transparent border-0 border-b border-outline-variant focus:border-primary focus:ring-0 px-0 py-3 font-body-md text-body-md text-on-surface placeholder-transparent peer resize-none transition-colors duration-300" id="project_details" name="project_details" placeholder="Briefly describe your vision..." required rows="4"></textarea>
-            <label class="absolute left-0 top-3 font-body-md text-body-md text-secondary transition-all duration-300 peer-focus:-top-4 peer-focus:text-label-caps peer-focus:font-label-caps peer-focus:text-primary peer-valid:-top-4 peer-valid:text-label-caps peer-valid:font-label-caps cursor-text" for="project_details">Briefly describe your vision or current space...</label>
-          </div>
-          <!-- Photo Upload -->
-          <div class="pt-2">
-            <label class="font-label-caps text-label-caps text-secondary block mb-2">REFERENCE PHOTOS (OPTIONAL)</label>
-            <div class="w-full border-2 border-dashed border-outline-variant hover:border-primary rounded-lg p-6 flex flex-col items-center justify-center bg-surface-container-low transition-colors duration-300 cursor-pointer group">
-              <span class="material-symbols-outlined text-secondary group-hover:text-primary mb-2 transition-colors duration-300" style="font-variation-settings:'wght' 200; font-size:32px;">cloud_upload</span>
-              <span class="font-body-md text-body-md text-secondary group-hover:text-primary transition-colors duration-300">Click to upload or drag and drop</span>
-              <span class="font-label-caps text-label-caps text-secondary mt-1">JPG, PNG up to 10MB</span>
-              <input accept="image/png, image/jpeg" class="hidden" multiple type="file">
-            </div>
-          </div>
-          <!-- Submit -->
-          <div class="pt-6">
-            <button class="w-full bg-primary text-on-primary font-nav-link text-nav-link py-4 rounded-lg hover:bg-surface-tint transition-colors duration-300 flex items-center justify-center gap-2" type="submit">
-              Request My Free Consultation
-              <span class="material-symbols-outlined text-[18px]">arrow_forward</span>
-            </button>
-            <p class="font-label-caps text-label-caps text-secondary text-center mt-4 tracking-widest">NO OBLIGATION. SECURE &amp; CONFIDENTIAL.</p>
-          </div>
-        </form>
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-inner">
+        <a href="tel:5148672244" class="tb-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg><span>514-867-ABHII (2244)</span></a>
+        <span class="tb-sep">|</span>
+        <a href="mailto:Abhiibuilds@gmail.com" class="tb-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg><span>Abhiibuilds@gmail.com</span></a>
+        <span class="tb-socials">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </span>
       </div>
     </div>
   </div>
-</main>
-
-<!-- Footer -->
-<footer class="bg-surface-container-highest w-full border-t border-outline-variant">
-  <div class="py-16 px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto grid grid-cols-1 md:grid-cols-4 gap-gutter">
-    <div class="flex flex-col gap-6 col-span-1 md:col-span-2">
-      <a class="inline-block" href="index.html">
-        <img alt="Abhii Builds Logo" class="h-16 w-auto object-contain rounded-md filter grayscale hover:grayscale-0 luxury-transition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDvBaKbEN3g8Ym6KHlwgMuL1K0mc3C22WUK2BuQt9YLuNiU8iyEn5k1UWyN9bLRM4EvyvvsWt5Dm_8Zcbwt8EfVeDQSvENn3mU2CQiXCD7r4kgnDrJzqMQFZ21Aup-afS41ONA-topRm8vhurO7ONRqLAsw4zrwHmuxfRt2rtR7aJYMR3HxDeiVl743CJ931jizO9ANvPOLlj34zk6iIuzqz2Nd7_3MiiClO6L1iyDJ8A50NfWsFwukEHjDUr6pWuRsEBfEPUL4Uw">
+  <div class="navbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-logo"><img src="assets/logo-n.png" alt="ABHII Rénovations" /></span>
+        <span class="brand-text"><span class="brand-name">ABHII Rénovations Inc.</span><span class="brand-sub">Entrepreneur Général</span></span>
       </a>
-      <p class="font-body-md text-body-md text-on-surface max-w-sm">Premium general contracting and luxury renovation services, dedicated to craftsmanship and client satisfaction in Greater Montreal.</p>
+      <nav class="menu">
+        <div class="nav-item"><a href="index.html" data-i18n="navHome">Accueil</a></div>
+        <div class="nav-item has-dd">
+          <a href="services.html"><span data-i18n="navServices">Services</span><svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="dd-panel">
+            <a href="services.html#cuisine"><span class="dd-num">01</span><span data-i18n="serv1t">Rénovation de cuisine</span></a>
+            <a href="services.html#sdb"><span class="dd-num">02</span><span data-i18n="serv2t">Rénovation de salle de bain</span></a>
+            <a href="services.html#sousol"><span class="dd-num">03</span><span data-i18n="serv3t">Finition de sous-sol</span></a>
+            <a href="services.html#planchers"><span class="dd-num">04</span><span data-i18n="serv4t">Installation de planchers</span></a>
+            <a href="services.html#ceramique"><span class="dd-num">05</span><span data-i18n="serv7t">Céramique &amp; dosseret</span></a>
+            <a href="services.html#gypse"><span class="dd-num">06</span><span data-i18n="serv5t">Gypse &amp; peinture</span></a>
+            <a href="services.html#menuiserie"><span class="dd-num">07</span><span data-i18n="serv6t">Menuiserie sur mesure</span></a>
+            <a href="services.html#construction"><span class="dd-num">08</span><span data-i18n="serv8t">Construction</span></a>
+            <a href="services.html#charpente"><span class="dd-num">09</span><span data-i18n="serv9t">Charpente</span></a>
+          </div>
+        </div>
+        <div class="nav-item has-dd">
+          <a href="zone.html"><span data-i18n="navAbout">Zone</span><svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="dd-panel" style="min-width:420px;grid-template-columns:1fr 1fr">
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Salaberry-de-Valleyfield</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Beauharnois</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Châteauguay</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Vaudreuil-Dorion</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Lazare</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Cèdres</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Hudson</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Rigaud</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Mercier</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>La Prairie</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Longueuil</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Brossard</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Candiac</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Constant</span></a>
+            <a href="zone.html"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>40+ villes →</span></a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="projects.html" data-i18n="navProjects">Réalisations</a></div>
+        <div class="nav-item active"><a href="contact.html" data-i18n="navContact">Contact</a></div>
+      </nav>
+      <div class="nav-right">
+        <div class="lang">
+          <button data-lang="fr" class="active" onclick="setLang('fr')">FR</button>
+          <button data-lang="en" onclick="setLang('en')">EN</button>
+        </div>
+        <a href="contact.html" class="btn btn-header" data-i18n="navQuote">Demander une soumission</a>
+        <button class="menu-toggle" onclick="toggleMobile(true)" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
     </div>
-    <div class="flex flex-col gap-4">
-      <h4 class="font-label-caps text-label-caps text-on-surface tracking-widest uppercase">Navigation</h4>
-      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="index.html">Home</a>
-      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="services.html">Services</a>
-      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="projects.html">Projects</a>
-      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="about.html">About</a>
-      <a class="text-secondary font-body-md text-body-md hover:text-primary hover:underline transition-all duration-300" href="contact.html">Contact</a>
+  </div>
+</header>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-head">
+    <img src="assets/logo-w.png" alt="ABHII" />
+    <button class="close" onclick="toggleMobile(false)">&times;</button>
+  </div>
+  <nav>
+    <a href="index.html" onclick="toggleMobile(false)" data-i18n="navHome">Accueil</a>
+    <div class="mob-acc">
+      <button class="mob-acc-toggle" type="button"><span data-i18n="navServices">Services</span><svg class="mob-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mob-acc-panel">
+        <a href="services.html#cuisine" onclick="toggleMobile(false)"><span class="mn">01</span><span data-i18n="serv1t">Rénovation de cuisine</span></a>
+        <a href="services.html#sdb" onclick="toggleMobile(false)"><span class="mn">02</span><span data-i18n="serv2t">Rénovation de salle de bain</span></a>
+        <a href="services.html#sousol" onclick="toggleMobile(false)"><span class="mn">03</span><span data-i18n="serv3t">Finition de sous-sol</span></a>
+        <a href="services.html#planchers" onclick="toggleMobile(false)"><span class="mn">04</span><span data-i18n="serv4t">Installation de planchers</span></a>
+        <a href="services.html#ceramique" onclick="toggleMobile(false)"><span class="mn">05</span><span data-i18n="serv7t">Céramique &amp; dosseret</span></a>
+        <a href="services.html#gypse" onclick="toggleMobile(false)"><span class="mn">06</span><span data-i18n="serv5t">Gypse &amp; peinture</span></a>
+        <a href="services.html#menuiserie" onclick="toggleMobile(false)"><span class="mn">07</span><span data-i18n="serv6t">Menuiserie sur mesure</span></a>
+        <a href="services.html#construction" onclick="toggleMobile(false)"><span class="mn">08</span><span data-i18n="serv8t">Construction</span></a>
+        <a href="services.html#charpente" onclick="toggleMobile(false)"><span class="mn">09</span><span data-i18n="serv9t">Charpente</span></a>
+      </div>
     </div>
-    <div class="col-span-1 md:col-span-4 mt-8 pt-8 border-t border-outline-variant/30 flex justify-between items-center text-sm text-secondary">
-      <p>© 2024 Abhii Builds. Licensed RBQ &amp; Fully Insured.</p>
-      <div class="flex gap-4">
-        <a class="hover:text-primary luxury-transition" href="mailto:Abhiibuilds@hotmail.com"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0;">mail</span></a>
-        <a class="hover:text-primary luxury-transition" href="tel:514-867-2244"><span class="material-symbols-outlined" style="font-variation-settings:'FILL' 0;">call</span></a>
+    <div class="mob-acc">
+      <button class="mob-acc-toggle" type="button"><span data-i18n="navAbout">Zone</span><svg class="mob-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg></button>
+      <div class="mob-acc-panel">
+        <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Salaberry-de-Valleyfield</a>
+        <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Châteauguay</a>
+        <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Vaudreuil-Dorion</a>
+        <a href="zone.html" onclick="toggleMobile(false)" style="color:var(--gold);font-family:var(--serif);font-style:italic;letter-spacing:0">40+ villes →</a>
+      </div>
+    </div>
+    <a href="projects.html" onclick="toggleMobile(false)" data-i18n="navProjects">Réalisations</a>
+    <a href="contact.html" onclick="toggleMobile(false)" data-i18n="navContact">Contact</a>
+  </nav>
+  <a href="contact.html" class="btn btn-gold mobile-cta" onclick="toggleMobile(false)" data-i18n="navQuote">Demander une soumission</a>
+  <div class="mobile-lang">
+    <button data-lang="fr" class="active" onclick="setLang('fr')">FR</button>
+    <button data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="index.html" data-i18n="breadHome">Accueil</a>
+      <span>›</span>
+      <span class="current" data-i18n="breadCurrent">Contact</span>
+    </div>
+    <span class="eyebrow" data-i18n="heroEyebrow">Soumission gratuite</span>
+    <h1 data-i18n="heroTitle">Parlons de<br />votre projet</h1>
+    <p data-i18n="heroLead">Décrivez-nous votre projet — nous vous répondons dans les 24h avec une estimation détaillée et sans engagement.</p>
+  </div>
+</section>
+
+<!-- ===== CONTACT SECTION ===== -->
+<section class="contact-section" id="form">
+  <div class="wrap">
+    <div class="contact-grid">
+
+      <!-- LEFT: Contact info -->
+      <div class="contact-left reveal">
+        <span class="eyebrow" data-i18n="infoEyebrow">Nous joindre</span>
+        <h2 class="section-title" data-i18n="infoTitle">Contactez-nous directement.</h2>
+        <p data-i18n="infoLead">Disponibles par téléphone, courriel ou réseaux sociaux. N'hésitez pas à nous appeler pour discuter de votre projet.</p>
+        <div class="qc-list">
+          <div class="qc-item">
+            <span class="qc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span>
+            <div><div class="qc-label" data-i18n="qcPhone">Téléphone</div><div class="qc-value"><a href="tel:5148672244">514-867-ABHII (2244)</a></div></div>
+          </div>
+          <div class="qc-item">
+            <span class="qc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></span>
+            <div><div class="qc-label" data-i18n="qcEmail">Courriel</div><div class="qc-value"><a href="mailto:Abhiibuilds@gmail.com">Abhiibuilds@gmail.com</a></div></div>
+          </div>
+          <div class="qc-item">
+            <span class="qc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span>
+            <div><div class="qc-label" data-i18n="qcInsta">Instagram</div><div class="qc-value"><a href="https://www.instagram.com/abhiibuilds" target="_blank" rel="noopener">@AbhiiBuilds</a></div></div>
+          </div>
+
+          <div class="qc-item">
+            <span class="qc-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <div><div class="qc-label" data-i18n="qcRbq">Licence RBQ</div><div class="qc-value">5874-7882-01</div></div>
+          </div>
+        </div>
+        <div class="social-row">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.instagram.com/abhiibuilds" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: Form -->
+      <div class="reveal">
+        <form class="quote-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="field"><label data-i18n="fName">Nom</label><input type="text" data-i18n-ph="phName" placeholder="Votre nom complet" required /></div>
+            <div class="field"><label data-i18n="fPhone">Téléphone</label><input type="tel" data-i18n-ph="phPhone" placeholder="514-000-0000" /></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label data-i18n="fEmail">Courriel</label><input type="email" data-i18n-ph="phEmail" placeholder="vous@courriel.com" required /></div>
+            <div class="field"><label data-i18n="fCity">Ville</label><input type="text" data-i18n-ph="phCity" placeholder="Valleyfield" /></div>
+          </div>
+          <div class="field" style="margin-bottom:4px">
+            <span class="pill-label" data-i18n="fPropType">Type de propriété</span>
+            <div class="pill-group" id="pillPropType">
+              <button type="button" class="pill-btn" data-value="unifamiliale" data-i18n="propUni">Maison unifamiliale</button>
+              <button type="button" class="pill-btn" data-value="condo" data-i18n="propCondo">Condo</button>
+              <button type="button" class="pill-btn" data-value="duplex" data-i18n="propDuplex">Duplex / Triplex</button>
+              <button type="button" class="pill-btn" data-value="commercial" data-i18n="propComm">Commercial</button>
+              <button type="button" class="pill-btn" data-value="autre" data-i18n="propAutre">Autre</button>
+            </div>
+            <input type="hidden" id="propTypeVal" name="propType" />
+          </div>
+          <div class="form-row">
+            <div class="field"><label data-i18n="fType">Type de projet</label>
+              <select>
+                <option data-i18n="optKitchen">Rénovation de cuisine</option>
+                <option data-i18n="optBath">Rénovation de salle de bain</option>
+                <option data-i18n="optBasement">Finition de sous-sol</option>
+                <option data-i18n="optFloor">Installation de planchers</option>
+                <option data-i18n="optCeramic">Céramique &amp; dosseret</option>
+                <option data-i18n="optDrywall">Gypse &amp; peinture</option>
+                <option data-i18n="optCarpentry">Menuiserie sur mesure</option>
+                <option data-i18n="optConstruction">Construction</option>
+                <option data-i18n="optFraming">Charpente</option>
+                <option data-i18n="optOther">Autre</option>
+              </select>
+            </div>
+            <div class="field"><label data-i18n="fBudget">Budget</label>
+              <select>
+                <option data-i18n="optB1">Moins de 10 000 $</option>
+                <option data-i18n="optB2">10 000 $ – 25 000 $</option>
+                <option data-i18n="optB3">25 000 $ – 50 000 $</option>
+                <option data-i18n="optB4">50 000 $ et plus</option>
+              </select>
+            </div>
+          </div>
+          <div class="field"><label data-i18n="fDesc">Description du projet</label><textarea data-i18n-ph="phDesc" placeholder="Décrivez votre projet de rénovation..." required></textarea></div>
+          <button type="submit" class="btn btn-primary" data-i18n="fSubmit">Envoyer ma demande</button>
+          <p class="form-note" data-i18n="fNote">Réponse sous 24-48h ouvrables • Estimation gratuite et sans engagement</p>
+        </form>
+        <div class="quote-form form-success" id="formSuccess">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          <h3 data-i18n="successTitle">Message envoyé !</h3>
+          <p data-i18n="successText">Merci pour votre demande. Nous vous contacterons dans les 24-48h ouvrables.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-top">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html"><img class="foot-logo" src="assets/logo-w.png" alt="ABHII Rénovations" /></a>
+          <p data-i18n="footAbout">Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.</p>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footServices">Services</h5>
+          <ul>
+            <li><a href="services.html#cuisine" data-i18n="serv1t">Rénovation de cuisine</a></li>
+            <li><a href="services.html#sdb" data-i18n="serv2t">Salle de bain</a></li>
+            <li><a href="services.html#sousol" data-i18n="serv3t">Finition de sous-sol</a></li>
+            <li><a href="services.html#planchers" data-i18n="serv4t">Installation de planchers</a></li>
+            <li><a href="services.html#gypse" data-i18n="serv5t">Gypse &amp; peinture</a></li>
+            <li><a href="services.html#menuiserie" data-i18n="serv6t">Menuiserie sur mesure</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-zones">
+            <div>
+              <h5 data-i18n="footNav">Navigation</h5>
+              <ul>
+                <li><a href="index.html" data-i18n="navHome">Accueil</a></li>
+                <li><a href="services.html" data-i18n="navServices">Services</a></li>
+                <li><a href="projects.html" data-i18n="navProjects">Réalisations</a></li>
+                <li><a href="zone.html" data-i18n="navAbout">Zone</a></li>
+                <li><a href="contact.html" data-i18n="navContact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footContact">Contactez-nous</h5>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><a href="tel:5148672244">514-867-ABHII (2244)</a></div>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></span><a href="mailto:Abhiibuilds@gmail.com">Abhiibuilds@gmail.com</a></div>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span><a href="https://instagram.com/abhiibuilds" target="_blank" rel="noopener">@AbhiiBuilds</a></div>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><span>RBQ 5874-7882-01</span></div>
+          <a href="contact.html" class="foot-cta" data-i18n="navQuote">Demander une soumission</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span style="color:rgba(255,255,255,0.55)">© <span id="year"></span> ABHII Rénovations Inc.</span>
+      <img src="assets/certifications.png" alt="RBQ · CCQ · APCHQ" style="height:68px;display:block;filter:brightness(0) invert(1);opacity:0.85;" />
+      <div class="foot-bottom-right">
+        <div class="foot-socials">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+        <span style="color:rgba(255,255,255,0.45)" data-i18n="footRights">Tous droits réservés.</span>
       </div>
     </div>
   </div>
 </footer>
 
 <script>
-  document.getElementById('mobile-menu-btn').addEventListener('click', function() {
-    document.getElementById('mobile-menu').classList.toggle('hidden');
-  });
-  document.querySelectorAll('input, textarea').forEach(element => {
-    element.addEventListener('blur', (e) => {
-      if (e.target.value !== '') e.target.classList.add('valid');
-      else e.target.classList.remove('valid');
+  const I18N = {
+    fr: {
+      navHome:'Accueil', navServices:'Services', navProjects:'Réalisations', navAbout:'Zone', navContact:'Contact', navQuote:'Demander une soumission',
+      serv1t:'Rénovation de cuisine', serv2t:'Rénovation de salle de bain', serv3t:'Finition de sous-sol',
+      serv4t:'Installation de planchers', serv5t:'Gypse &amp; peinture', serv6t:'Menuiserie sur mesure',
+      serv7t:'Céramique &amp; dosseret', serv8t:'Construction', serv9t:'Charpente',
+      footAbout:'Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.',
+      footNav:'Navigation', footServices:'Services', footContact:'Contactez-nous', footRights:'Tous droits réservés.',
+      breadHome:'Accueil', breadCurrent:'Contact',
+      heroEyebrow:'Soumission gratuite', heroTitle:'Parlons de<br />votre projet',
+      heroLead:'Décrivez-nous votre projet — nous vous répondons dans les 24h avec une estimation détaillée et sans engagement.',
+      infoEyebrow:'Nous joindre', infoTitle:'Contactez-nous directement.',
+      infoLead:'Disponibles par téléphone, courriel ou réseaux sociaux. N\'hésitez pas à nous appeler pour discuter de votre projet.',
+      qcPhone:'Téléphone', qcEmail:'Courriel', qcInsta:'Instagram', qcLocation:'Localisation', qcRbq:'Licence RBQ',
+      hoursTitle:'Heures de disponibilité',
+      dayMF:'Lun – Ven', daySat:'Samedi', daySun:'Dimanche', daySunTime:'Sur rendez-vous',
+      fName:'Nom', fPhone:'Téléphone', fEmail:'Courriel', fCity:'Ville', fType:'Type de projet', fBudget:'Budget', fDesc:'Description du projet',
+      fPropType:'Type de propriété', propUni:'Maison unifamiliale', propCondo:'Condo', propDuplex:'Duplex / Triplex', propComm:'Commercial', propAutre:'Autre',
+      phName:'Votre nom complet', phPhone:'514-000-0000', phEmail:'vous@courriel.com', phCity:'Valleyfield', phDesc:'Décrivez votre projet de rénovation...',
+      optKitchen:'Rénovation de cuisine', optBath:'Rénovation de salle de bain', optBasement:'Finition de sous-sol', optFloor:'Installation de planchers',
+      optCeramic:'Céramique &amp; dosseret', optDrywall:'Gypse &amp; peinture', optCarpentry:'Menuiserie sur mesure', optConstruction:'Construction', optFraming:'Charpente', optOther:'Autre',
+      optB1:'Moins de 10 000 $', optB2:'10 000 $ – 25 000 $', optB3:'25 000 $ – 50 000 $', optB4:'50 000 $ et plus',
+      fSubmit:'Envoyer ma demande', fNote:'Réponse sous 24-48h ouvrables • Estimation gratuite et sans engagement',
+      successTitle:'Message envoyé !', successText:'Merci pour votre demande. Nous vous contacterons dans les 24-48h ouvrables.'
+    },
+    en: {
+      navHome:'Home', navServices:'Services', navProjects:'Projects', navAbout:'Zone', navContact:'Contact', navQuote:'Request a Quote',
+      serv1t:'Kitchen Renovations', serv2t:'Bathroom Renovations', serv3t:'Basement Finishing',
+      serv4t:'Flooring Installation', serv5t:'Drywall &amp; Painting', serv6t:'Custom Carpentry',
+      serv7t:'Ceramics &amp; Backsplash', serv8t:'Construction', serv9t:'Framing',
+      footAbout:'Certified and insured residential general contractor, serving homeowners in the Valleyfield region and the South Shore for over 5 years.',
+      footNav:'Navigation', footServices:'Services', footContact:'Contact Us', footRights:'All rights reserved.',
+      breadHome:'Home', breadCurrent:'Contact',
+      heroEyebrow:'Free estimate', heroTitle:'Let\'s talk about<br />your project',
+      heroLead:'Tell us about your project — we\'ll get back to you within 24 hours with a detailed, no-obligation estimate.',
+      infoEyebrow:'Get in touch', infoTitle:'Contact us directly.',
+      infoLead:'Available by phone, email or social media. Don\'t hesitate to call us to discuss your project.',
+      qcPhone:'Phone', qcEmail:'Email', qcInsta:'Instagram', qcLocation:'Location', qcRbq:'RBQ License',
+      hoursTitle:'Availability',
+      dayMF:'Mon – Fri', daySat:'Saturday', daySun:'Sunday', daySunTime:'By appointment',
+      fName:'Name', fPhone:'Phone', fEmail:'Email', fCity:'City', fType:'Project Type', fBudget:'Budget', fDesc:'Project Description',
+      fPropType:'Property Type', propUni:'Single Family', propCondo:'Condo', propDuplex:'Duplex / Triplex', propComm:'Commercial', propAutre:'Other',
+      phName:'Your full name', phPhone:'514-000-0000', phEmail:'you@email.com', phCity:'Valleyfield', phDesc:'Describe your renovation project...',
+      optKitchen:'Kitchen Renovation', optBath:'Bathroom Renovation', optBasement:'Basement Finishing', optFloor:'Flooring Installation',
+      optCeramic:'Ceramics &amp; Backsplash', optDrywall:'Drywall &amp; Painting', optCarpentry:'Custom Carpentry', optConstruction:'Construction', optFraming:'Framing', optOther:'Other',
+      optB1:'Under $10,000', optB2:'$10,000 – $25,000', optB3:'$25,000 – $50,000', optB4:'$50,000 and up',
+      fSubmit:'Send My Request', fNote:'Reply within 24-48 business hours • Free, no-obligation estimate',
+      successTitle:'Message sent!', successText:'Thank you for your request. We will contact you within 24-48 business hours.'
+    }
+  };
+
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    const d = I18N[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (d[key] !== undefined) el.innerHTML = d[key];
+    });
+    document.querySelectorAll('[data-i18n-ph]').forEach(el => {
+      const key = el.dataset.i18nPh;
+      if (d[key] !== undefined) el.setAttribute('placeholder', d[key]);
+    });
+    document.querySelectorAll('.lang button, .mobile-lang button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    try { localStorage.setItem('abhii_lang', lang); } catch(e) {}
+  }
+
+  function toggleMobile(open) {
+    document.getElementById('mobileMenu').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  function handleSubmit(e) {
+    e.preventDefault();
+    document.getElementById('contactForm').style.display = 'none';
+    document.getElementById('formSuccess').style.display = 'block';
+  }
+
+  // Pill selectors
+  document.querySelectorAll('.pill-group').forEach(group => {
+    group.querySelectorAll('.pill-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        group.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const hidden = group.closest('.field').querySelector('input[type="hidden"]');
+        if (hidden) hidden.value = btn.dataset.value;
+      });
     });
   });
+
+  // Mobile accordion
+  document.querySelectorAll('.mob-acc-toggle').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.mob-acc').classList.toggle('open'));
+  });
+
+  // Reveal
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20));
+  document.getElementById('year').textContent = new Date().getFullYear();
+
+  let saved = 'fr';
+  try { saved = localStorage.getItem('abhii_lang') || 'fr'; } catch(e) {}
+  setLang(saved);
 </script>
-</body></html>
+</body>
+</html>

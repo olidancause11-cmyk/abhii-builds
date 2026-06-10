@@ -1,0 +1,698 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Zone desservie — ABHII Rénovations Inc.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Mulish:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --navy: #102A56; --navy-2: #1E3D72; --navy-dark: #0C1730;
+    --white: #FFFFFF; --gray: #F3F4F7; --gray-line: #E2E5EC;
+    --ink: #1A2438; --muted: #5C6577; --gold: #B89968;
+    --serif: "Cormorant Garamond", Georgia, serif;
+    --sans: "Mulish", -apple-system, system-ui, sans-serif;
+    --ease: cubic-bezier(0.22, 1, 0.36, 1); --maxw: 1240px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body { font-family: var(--sans); color: var(--ink); background: var(--white); font-weight: 400; line-height: 1.65; -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; text-decoration: none; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 40px; }
+  .eyebrow { font-family: var(--sans); font-weight: 700; font-size: 12px; letter-spacing: 0.28em; text-transform: uppercase; color: var(--gold); display: inline-flex; align-items: center; gap: 14px; }
+  .eyebrow::before { content: ""; width: 32px; height: 1px; background: var(--gold); display: inline-block; }
+  .eyebrow.center::after { content: ""; width: 32px; height: 1px; background: var(--gold); display: inline-block; }
+  h1,h2,h3 { font-family: var(--serif); font-weight: 500; line-height: 1.08; letter-spacing: -0.01em; text-wrap: balance; }
+  .section-title { font-size: clamp(34px, 4.2vw, 56px); color: var(--navy); }
+  .section-lead { font-size: 18px; color: var(--muted); max-width: 620px; font-weight: 400; }
+  .btn { display: inline-flex; align-items: center; justify-content: center; gap: 12px; font-family: var(--sans); font-weight: 700; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; padding: 17px 32px; border: 1px solid transparent; cursor: pointer; transition: all 0.4s var(--ease); white-space: nowrap; }
+  .btn-primary { background: var(--navy); color: #fff; border-color: var(--navy); }
+  .btn-primary:hover { background: var(--navy-dark); border-color: var(--navy-dark); }
+  .btn-gold { background: var(--gold); color: var(--navy-dark); border-color: var(--gold); }
+  .btn-gold:hover { background: #a9885a; border-color: #a9885a; }
+  .btn-ghost { background: transparent; color: #fff; border-color: rgba(255,255,255,0.5); }
+  .btn-ghost:hover { background: #fff; color: var(--navy); border-color: #fff; }
+  .btn-outline { background: transparent; color: var(--navy); border-color: var(--navy); }
+  .btn-outline:hover { background: var(--navy); color: #fff; }
+
+  /* ---- Header ---- */
+  header { position: relative; z-index: 100; }
+  .topbar { background: var(--navy-dark); color: rgba(255,255,255,0.78); font-size: 13px; }
+  .topbar .wrap { display: flex; justify-content: flex-end; align-items: center; height: 44px; }
+  .topbar-inner { display: flex; align-items: center; gap: 16px; }
+  .tb-item { display: inline-flex; align-items: center; gap: 8px; color: rgba(255,255,255,0.82); font-weight: 600; letter-spacing: 0.02em; transition: color .3s var(--ease); }
+  .tb-item svg { width: 15px; height: 15px; color: var(--gold); }
+  .tb-item:hover { color: #fff; }
+  .tb-sep { color: rgba(255,255,255,0.25); }
+  .tb-socials { display: inline-flex; align-items: center; gap: 9px; margin-left: 6px; padding-left: 16px; border-left: 1px solid rgba(255,255,255,0.16); }
+  .tb-socials a { width: 28px; height: 28px; display: flex; align-items: center; justify-content: center; border-radius: 50%; color: rgba(255,255,255,0.85); border: 1px solid rgba(255,255,255,0.2); transition: all .3s var(--ease); }
+  .tb-socials a:hover { background: var(--gold); color: var(--navy-dark); border-color: var(--gold); }
+  .tb-socials svg { width: 15px; height: 15px; }
+  .navbar { background: #fff; border-bottom: 1px solid var(--gray-line); position: sticky; top: 0; z-index: 90; transition: box-shadow .4s var(--ease); }
+  .navbar .wrap { display: flex; align-items: center; justify-content: space-between; height: 88px; }
+  header.scrolled .navbar { box-shadow: 0 8px 30px rgba(16,42,86,0.08); }
+  .brand { display: flex; flex-direction: row; align-items: center; gap: 14px; }
+  .brand-logo img { height: 48px; width: auto; }
+  .brand-text { display: flex; flex-direction: column; line-height: 1; white-space: nowrap; }
+  .brand-name { font-family: var(--serif); font-weight: 600; font-size: 23px; letter-spacing: 0.02em; color: var(--navy); }
+  .brand-sub { font-family: var(--sans); font-weight: 700; font-size: 9.5px; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold); margin-top: 7px; }
+  nav.menu { display: flex; align-items: center; gap: 32px; white-space: nowrap; }
+  .nav-item { position: relative; }
+  .nav-item > a { font-family: var(--sans); font-size: 14px; font-weight: 600; letter-spacing: 0.04em; color: var(--ink); display: inline-flex; align-items: center; gap: 7px; padding: 8px 0; transition: color .3s var(--ease); position: relative; }
+  .nav-item > a::after { content: ""; position: absolute; left: 0; bottom: 2px; width: 0; height: 1px; background: var(--gold); transition: width .3s var(--ease); }
+  .nav-item:hover > a { color: var(--navy); }
+  .nav-item:hover > a::after { width: 100%; }
+  .nav-item .caret { width: 11px; height: 11px; transition: transform .3s var(--ease); }
+  .nav-item.has-dd:hover .caret { transform: rotate(180deg); }
+  .nav-item.active > a { color: var(--navy); }
+  .nav-item.active > a::after { width: 100%; background: var(--gold); }
+  .dd-panel { position: absolute; top: calc(100% + 16px); left: 50%; transform: translateX(-50%) translateY(8px); min-width: 520px; background: #fff; border: 1px solid var(--gray-line); box-shadow: 0 24px 50px rgba(16,42,86,0.16); padding: 12px; display: grid; grid-template-columns: 1fr 1fr; opacity: 0; visibility: hidden; transition: all .28s var(--ease); z-index: 60; }
+  .dd-panel::before { content: ""; position: absolute; top: -7px; left: 50%; transform: translateX(-50%) rotate(45deg); width: 12px; height: 12px; background: #fff; border-left: 1px solid var(--gray-line); border-top: 1px solid var(--gray-line); }
+  .nav-item.has-dd:hover .dd-panel { opacity: 1; visibility: visible; transform: translateX(-50%) translateY(0); }
+  .dd-panel a { display: flex; align-items: center; gap: 14px; padding: 12px 16px; font-size: 14px; font-weight: 600; color: var(--ink); transition: all .25s var(--ease); }
+  .dd-panel a .dd-num { font-family: var(--serif); font-style: italic; font-size: 13px; color: var(--gold); width: 18px; }
+  .dd-panel a:hover { background: var(--gray); color: var(--navy); }
+  .nav-right { display: flex; align-items: center; gap: 18px; }
+  .lang { display: inline-flex; align-items: center; border: 1px solid var(--gray-line); border-radius: 999px; padding: 4px; }
+  .lang button { background: none; border: none; cursor: pointer; font-family: var(--sans); font-weight: 700; font-size: 12.5px; letter-spacing: 0.04em; color: var(--muted); padding: 6px 15px; border-radius: 999px; transition: all .3s var(--ease); }
+  .lang button.active { background: var(--navy); color: #fff; }
+  .btn-header { padding: 14px 28px; font-size: 12px; background: var(--gold); color: var(--navy-dark); border-color: var(--gold); }
+  .btn-header:hover { background: #a9885a; border-color: #a9885a; }
+  .menu-toggle { display: none; background: none; border: none; cursor: pointer; padding: 8px; }
+  .menu-toggle span { display: block; width: 26px; height: 2px; background: var(--navy); margin: 5px 0; transition: 0.3s; }
+
+  /* ---- Mobile menu ---- */
+  .mobile-menu { position: fixed; inset: 0; background: var(--navy-dark); z-index: 200; display: flex; flex-direction: column; padding: 30px 40px; transform: translateX(100%); transition: transform 0.45s var(--ease); overflow-y: auto; overflow-x: hidden; pointer-events: none; }
+  .mobile-menu.open { transform: translateX(0); pointer-events: auto; }
+  .mobile-menu-head { display: flex; justify-content: space-between; align-items: center; }
+  .mobile-menu-head img { height: 44px; }
+  .mobile-menu-head .close { background: none; border: none; color: #fff; font-size: 34px; cursor: pointer; line-height: 1; }
+  .mobile-menu nav { display: flex; flex-direction: column; gap: 6px; margin-top: 50px; }
+  .mobile-menu nav a { color: #fff; font-family: var(--serif); font-size: 30px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .mobile-menu nav > a { color: #fff; font-family: var(--serif); font-size: 30px; padding: 14px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .mobile-menu nav .mob-acc-panel a { color: rgba(255,255,255,0.72); font-family: var(--sans); font-size: 13.5px; padding: 11px 0 11px 14px; border-bottom: 1px solid rgba(255,255,255,0.06); font-weight: 600; letter-spacing: 0.06em; }
+  .mobile-menu .mobile-cta { width: 100%; margin-top: 34px; }
+  .mobile-menu .mobile-lang { margin-top: auto; display: flex; gap: 8px; align-items: center; }
+  .mobile-menu .mobile-lang button { background: none; border: 1px solid rgba(255,255,255,0.3); color: rgba(255,255,255,0.7); padding: 10px 20px; font-weight: 700; cursor: pointer; font-family: var(--sans); }
+  .mobile-menu .mobile-lang button.active { background: var(--gold); color: var(--navy-dark); border-color: var(--gold); }
+  .mob-acc-toggle { width:100%; display:flex; justify-content:space-between; align-items:center; background:none; border:none; cursor:pointer; padding:14px 0; border-bottom:1px solid rgba(255,255,255,0.1); color:#fff; font-family:var(--serif); font-size:30px; text-align:left; }
+  .mob-acc-toggle > span { font-family:var(--serif); font-weight:500; }
+  .mob-acc svg.mob-caret { width:20px; height:20px; flex:none; transition:transform 0.35s var(--ease); color:rgba(255,255,255,0.45); stroke-width:2.5; }
+  .mob-acc.open svg.mob-caret { transform:rotate(180deg); }
+  .mob-acc-panel { max-height:0; overflow:hidden; transition:max-height 0.45s var(--ease); display:flex; flex-direction:column; }
+  .mob-acc.open .mob-acc-panel { max-height:700px; }
+  .mob-acc-panel .mn { font-family:var(--serif); font-style:italic; color:var(--gold); font-size:14px; min-width:18px; flex:none; }
+  .mob-acc-panel .pin { width:13px; height:13px; color:var(--gold); flex:none; }
+
+  /* ---- Page Hero ---- */
+  .page-hero { background: var(--navy-dark); position: relative; overflow: hidden; padding: 90px 0 80px; }
+  .page-hero-bg { position: absolute; inset: 0; background-image: url("assets/bath-round.jpeg"); background-size: cover; background-position: center; opacity: 0.16; }
+  .page-hero .wrap { position: relative; z-index: 2; }
+  .breadcrumb { display: flex; align-items: center; gap: 8px; font-size: 13px; font-weight: 600; letter-spacing: 0.06em; color: rgba(255,255,255,0.5); margin-bottom: 28px; }
+  .breadcrumb a { color: rgba(255,255,255,0.5); transition: color .3s; }
+  .breadcrumb a:hover { color: var(--gold); }
+  .breadcrumb span { color: rgba(255,255,255,0.25); }
+  .breadcrumb .current { color: var(--gold); }
+  .page-hero h1 { font-size: clamp(42px, 5.5vw, 70px); color: #fff; margin: 18px 0 20px; }
+  .page-hero p { font-size: 19px; color: rgba(255,255,255,0.75); max-width: 600px; font-weight: 400; }
+
+  /* ---- Stats ---- */
+  .stats-band { background: var(--navy); }
+  .stats-band .wrap { display: grid; grid-template-columns: repeat(3, 1fr); }
+  .stat-item { padding: 40px 36px; border-right: 1px solid rgba(255,255,255,0.1); color: #fff; display: flex; align-items: center; gap: 20px; }
+  .stat-item:last-child { border-right: none; }
+  .stat-icon { flex: none; width: 48px; height: 48px; display: flex; align-items: center; justify-content: center; color: var(--gold); }
+  .stat-icon svg { width: 36px; height: 36px; }
+  .stat-val { font-family: var(--serif); font-size: 38px; font-weight: 600; line-height: 1; display: block; }
+  .stat-label { font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(255,255,255,0.6); font-weight: 600; margin-top: 4px; display: block; }
+
+  /* ---- Intro ---- */
+  .zone-intro { background: var(--white); }
+  .zone-intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .zone-intro-text .section-title { margin: 22px 0 22px; }
+  .zone-intro-text p { color: var(--muted); font-size: 17px; line-height: 1.8; margin-bottom: 20px; }
+  .zone-intro-text p:last-of-type { margin-bottom: 36px; }
+  .zone-visual { position: relative; }
+  .zone-visual-inner { background: var(--navy-dark); padding: 60px; display: flex; align-items: center; justify-content: center; min-height: 480px; position: relative; overflow: hidden; }
+  .zone-visual-inner::before { content: ""; position: absolute; inset: 0; background-image: url("assets/bath-master.jpeg"); background-size: cover; background-position: center; opacity: 0.12; }
+  .zone-circle { position: relative; z-index: 2; }
+  .zone-circle svg { width: 320px; height: 320px; }
+  .zone-frame { position: absolute; inset: -18px auto auto -18px; width: 55%; height: 55%; border: 1px solid var(--gold); z-index: -1; }
+
+  /* ---- Cities Grid ---- */
+  .cities-section { background: var(--gray); }
+  .sec-head { margin-bottom: 56px; }
+  .sec-head.center { text-align: center; display: flex; flex-direction: column; align-items: center; }
+  .sec-head .section-title { margin: 22px 0 18px; }
+  .cities-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+  .city-card { background: #fff; padding: 28px 26px; display: flex; align-items: flex-start; gap: 16px; transition: all 0.35s var(--ease); border: 1px solid var(--gray-line); }
+  .city-card:hover { box-shadow: 0 16px 40px rgba(16,42,86,0.1); border-color: var(--gold); transform: translateY(-3px); }
+  .city-pin { flex: none; width: 40px; height: 40px; background: var(--navy); display: flex; align-items: center; justify-content: center; margin-top: 2px; }
+  .city-pin svg { width: 18px; height: 18px; color: var(--gold); }
+  .city-name { font-family: var(--serif); font-size: 20px; font-weight: 500; color: var(--navy); line-height: 1.2; }
+  .city-region { font-size: 11.5px; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-top: 5px; }
+
+  /* ---- Why section ---- */
+  .why-section { background: var(--navy-dark); color: #fff; position: relative; overflow: hidden; }
+  .why-bg { position: absolute; inset: 0; background-image: url("assets/kitchen.jpeg"); background-size: cover; background-position: center; opacity: 0.1; }
+  .why-section .wrap { position: relative; z-index: 2; }
+  .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
+  .why-text .section-title { color: #fff; margin: 22px 0 24px; }
+  .why-text p { color: rgba(255,255,255,0.78); font-size: 17px; line-height: 1.8; margin-bottom: 36px; }
+  .why-points { display: flex; flex-direction: column; gap: 0; }
+  .why-point { display: flex; align-items: flex-start; gap: 20px; padding: 22px 0; border-bottom: 1px solid rgba(255,255,255,0.1); }
+  .why-point:first-child { border-top: 1px solid rgba(255,255,255,0.1); }
+  .why-icon { flex: none; width: 44px; height: 44px; background: rgba(184,153,104,0.18); border: 1px solid rgba(184,153,104,0.3); display: flex; align-items: center; justify-content: center; }
+  .why-icon svg { width: 20px; height: 20px; color: var(--gold); }
+  .why-point h4 { font-family: var(--sans); font-size: 16px; font-weight: 700; color: #fff; letter-spacing: 0.02em; }
+  .why-point p { color: rgba(255,255,255,0.65); font-size: 14.5px; margin-top: 4px; margin-bottom: 0; }
+  .why-img { position: relative; }
+  .why-img img { width: 100%; height: 540px; object-fit: cover; }
+  .why-img .frame { position: absolute; inset: -16px -16px auto auto; width: 50%; height: 50%; border: 1px solid var(--gold); z-index: -1; }
+
+  /* ---- CTA ---- */
+  .cta-band { background: var(--navy); padding: 80px 0; }
+  .cta-band .wrap { display: flex; align-items: center; justify-content: space-between; gap: 40px; flex-wrap: wrap; }
+  .cta-band h2 { font-size: clamp(30px, 3.5vw, 46px); color: #fff; max-width: 560px; }
+  .cta-band p { color: rgba(255,255,255,0.72); font-size: 17px; max-width: 440px; margin-top: 12px; }
+  .cta-band-btns { display: flex; gap: 16px; flex-wrap: wrap; flex: none; }
+
+  /* ---- Footer ---- */
+  footer { background: var(--navy-dark); color: rgba(255,255,255,0.6); }
+  .footer-top { padding: 80px 0 64px; }
+  .footer-grid { display: grid; grid-template-columns: 210px 1fr 1fr 280px; gap: 60px; }
+  .foot-logo { height: 72px; width: auto; margin-bottom: 22px; display: block; }
+  .footer-brand p { font-size: 14.5px; line-height: 1.85; max-width: 240px; color: rgba(255,255,255,0.6); }
+  .footer-col h5 { font-family: var(--sans); font-size: 11.5px; letter-spacing: 0.18em; text-transform: uppercase; color: #fff; font-weight: 700; margin-bottom: 22px; }
+  .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 13px; }
+  .footer-col ul a { font-size: 14.5px; color: rgba(255,255,255,0.6); transition: color 0.3s var(--ease); }
+  .footer-col ul a:hover { color: rgba(255,255,255,0.95); }
+  .footer-col-zones { display: flex; flex-direction: column; gap: 38px; }
+  .fci { display: flex; align-items: center; gap: 15px; margin-bottom: 14px; }
+  .fci-icon { width: 36px; height: 36px; border-radius: 50%; background: rgba(184,153,104,0.18); border: 1px solid rgba(184,153,104,0.3); display: flex; align-items: center; justify-content: center; flex: none; }
+  .fci-icon svg { width: 16px; height: 16px; color: var(--gold); }
+  .fci a, .fci span { font-size: 14.5px; font-weight: 600; color: rgba(255,255,255,0.82); transition: color .3s var(--ease); }
+  .fci a:hover { color: var(--gold); }
+  .foot-cta { display: block; width: 100%; margin-top: 26px; text-align: center; padding: 16px 24px; background: var(--gold); color: var(--navy-dark); font-family: var(--sans); font-weight: 700; font-size: 13px; letter-spacing: 0.1em; text-transform: uppercase; border: none; cursor: pointer; transition: background .3s var(--ease); }
+  .foot-cta:hover { background: #a9885a; color: var(--navy-dark); }
+  .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding: 22px 0; font-size: 13px; }
+  .footer-bottom .wrap { display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 20px; }
+  .foot-bottom-right { justify-self: end; display: flex; align-items: center; gap: 20px; }
+  .foot-socials { display: flex; align-items: center; gap: 12px; }
+  .foot-socials a { width: 32px; height: 32px; border-radius: 50%; border: 1px solid rgba(255,255,255,0.2); display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6); transition: all .3s var(--ease); }
+  .foot-socials a:hover { background: var(--gold); border-color: var(--gold); color: var(--navy-dark); }
+  .foot-socials svg { width: 15px; height: 15px; }
+
+  /* ---- Reveal ---- */
+  .reveal { opacity: 0; transform: translateY(28px); transition: opacity 0.9s var(--ease), transform 0.9s var(--ease); }
+  .reveal.in { opacity: 1; transform: none; }
+  .pad { padding: 120px 0; }
+
+  /* ---- Responsive ---- */
+  @media (max-width: 1080px) { nav.menu, .nav-right .btn-header { display: none; } .menu-toggle { display: block; } }
+  @media (max-width: 900px) { .zone-intro-grid, .why-grid { grid-template-columns: 1fr; gap: 48px; } .why-img img { height: 360px; } .why-img .frame { display: none; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } .cta-band .wrap { flex-direction: column; text-align: center; } .cta-band-btns { justify-content: center; } .stats-band .wrap { grid-template-columns: 1fr; } .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); } .cities-grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 720px) { .wrap { padding: 0 24px; } .brand-text { display: none; } .topbar .wrap { justify-content: center; } .footer-grid { grid-template-columns: 1fr; gap: 28px; } .footer-bottom .wrap { grid-template-columns: 1fr; text-align: center; } .foot-bottom-right { justify-self: center; } .pad { padding: 80px 0; } .cities-grid { grid-template-columns: 1fr; } }
+</style>
+</head>
+<body>
+
+<!-- ===== HEADER ===== -->
+<header id="header">
+  <div class="topbar">
+    <div class="wrap">
+      <div class="topbar-inner">
+        <a href="tel:5148672244" class="tb-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          <span>514-867-ABHII (2244)</span>
+        </a>
+        <span class="tb-sep">|</span>
+        <a href="mailto:Abhiibuilds@gmail.com" class="tb-item">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg>
+          <span>Abhiibuilds@gmail.com</span>
+        </a>
+        <span class="tb-socials">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </span>
+      </div>
+    </div>
+  </div>
+  <div class="navbar">
+    <div class="wrap">
+      <a href="index.html" class="brand">
+        <span class="brand-logo"><img src="assets/logo-n.png" alt="ABHII Rénovations" /></span>
+        <span class="brand-text">
+          <span class="brand-name">ABHII Rénovations Inc.</span>
+          <span class="brand-sub">Entrepreneur Général</span>
+        </span>
+      </a>
+      <nav class="menu">
+        <div class="nav-item"><a href="index.html" data-i18n="navHome">Accueil</a></div>
+        <div class="nav-item has-dd">
+          <a href="services.html"><span data-i18n="navServices">Services</span><svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="dd-panel">
+            <a href="services.html#cuisine"><span class="dd-num">01</span><span data-i18n="serv1t">Rénovation de cuisine</span></a>
+            <a href="services.html#sdb"><span class="dd-num">02</span><span data-i18n="serv2t">Rénovation de salle de bain</span></a>
+            <a href="services.html#sousol"><span class="dd-num">03</span><span data-i18n="serv3t">Finition de sous-sol</span></a>
+            <a href="services.html#planchers"><span class="dd-num">04</span><span data-i18n="serv4t">Installation de planchers</span></a>
+            <a href="services.html#ceramique"><span class="dd-num">05</span><span data-i18n="serv7t">Céramique &amp; dosseret</span></a>
+            <a href="services.html#gypse"><span class="dd-num">06</span><span data-i18n="serv5t">Gypse &amp; peinture</span></a>
+            <a href="services.html#menuiserie"><span class="dd-num">07</span><span data-i18n="serv6t">Menuiserie sur mesure</span></a>
+            <a href="services.html#construction"><span class="dd-num">08</span><span data-i18n="serv8t">Construction</span></a>
+            <a href="services.html#charpente"><span class="dd-num">09</span><span data-i18n="serv9t">Charpente</span></a>
+          </div>
+        </div>
+        <div class="nav-item has-dd active">
+          <a href="zone.html"><span data-i18n="navAbout">Zone</span><svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
+          <div class="dd-panel" style="min-width:420px;grid-template-columns:1fr 1fr">
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Salaberry-de-Valleyfield</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Beauharnois</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Châteauguay</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Vaudreuil-Dorion</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Lazare</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Cèdres</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Hudson</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Rigaud</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Sainte-Martine</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Mercier</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Candiac</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Constant</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>La Prairie</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Delson</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Isidore</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Léry</span></a>
+          </div>
+        </div>
+        <div class="nav-item"><a href="projects.html" data-i18n="navProjects">Réalisations</a></div>
+        <div class="nav-item"><a href="contact.html" data-i18n="navContact">Contact</a></div>
+      </nav>
+      <div class="nav-right">
+        <div class="lang">
+          <button data-lang="fr" class="active" onclick="setLang('fr')">FR</button>
+          <button data-lang="en" onclick="setLang('en')">EN</button>
+        </div>
+        <a href="contact.html" class="btn btn-header" data-i18n="navQuote">Demander une soumission</a>
+        <button class="menu-toggle" onclick="toggleMobile(true)" aria-label="Menu"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ===== MOBILE MENU ===== -->
+<div class="mobile-menu" id="mobileMenu">
+  <div class="mobile-menu-head">
+    <img src="assets/logo-w.png" alt="ABHII" />
+    <button class="close" onclick="toggleMobile(false)">&times;</button>
+  </div>
+  <nav>
+    <a href="index.html" onclick="toggleMobile(false)" data-i18n="navHome">Accueil</a>
+    <div class="mob-acc">
+      <button class="mob-acc-toggle" type="button">
+        <span data-i18n="navServices">Services</span>
+        <svg class="mob-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mob-acc-panel">
+        <a href="services.html#cuisine" onclick="toggleMobile(false)"><span class="mn">01</span><span data-i18n="serv1t">Rénovation de cuisine</span></a>
+        <a href="services.html#sdb" onclick="toggleMobile(false)"><span class="mn">02</span><span data-i18n="serv2t">Rénovation de salle de bain</span></a>
+        <a href="services.html#sousol" onclick="toggleMobile(false)"><span class="mn">03</span><span data-i18n="serv3t">Finition de sous-sol</span></a>
+        <a href="services.html#planchers" onclick="toggleMobile(false)"><span class="mn">04</span><span data-i18n="serv4t">Installation de planchers</span></a>
+        <a href="services.html#ceramique" onclick="toggleMobile(false)"><span class="mn">05</span><span data-i18n="serv7t">Céramique &amp; dosseret</span></a>
+        <a href="services.html#gypse" onclick="toggleMobile(false)"><span class="mn">06</span><span data-i18n="serv5t">Gypse &amp; peinture</span></a>
+        <a href="services.html#menuiserie" onclick="toggleMobile(false)"><span class="mn">07</span><span data-i18n="serv6t">Menuiserie sur mesure</span></a>
+        <a href="services.html#construction" onclick="toggleMobile(false)"><span class="mn">08</span><span data-i18n="serv8t">Construction</span></a>
+        <a href="services.html#charpente" onclick="toggleMobile(false)"><span class="mn">09</span><span data-i18n="serv9t">Charpente</span></a>
+      </div>
+    </div>
+    <div class="mob-acc">
+      <button class="mob-acc-toggle" type="button">
+        <span data-i18n="navAbout">Zone</span>
+        <svg class="mob-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg>
+      </button>
+      <div class="mob-acc-panel">
+        <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Salaberry-de-Valleyfield</a>
+        <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Beauharnois</a>
+        <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Châteauguay</a>
+        <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Vaudreuil-Dorion</a>
+        <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Saint-Lazare</a>
+        <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Les Cèdres</a>
+        <a href="#cities" onclick="toggleMobile(false)" style="color:var(--gold);font-family:var(--serif);font-style:italic;letter-spacing:0">+ 10 autres villes</a>
+      </div>
+    </div>
+    <a href="index.html#turnkey" onclick="toggleMobile(false)" data-i18n="navProjects">Réalisations</a>
+    <a href="contact.html" onclick="toggleMobile(false)" data-i18n="navContact">Contact</a>
+  </nav>
+  <a href="contact.html" class="btn btn-gold mobile-cta" onclick="toggleMobile(false)" data-i18n="navQuote">Demander une soumission</a>
+  <div class="mobile-lang">
+    <button data-lang="fr" class="active" onclick="setLang('fr')">FR</button>
+    <button data-lang="en" onclick="setLang('en')">EN</button>
+  </div>
+</div>
+
+<!-- ===== PAGE HERO ===== -->
+<section class="page-hero">
+  <div class="page-hero-bg"></div>
+  <div class="wrap">
+    <div class="breadcrumb">
+      <a href="index.html" data-i18n="breadHome">Accueil</a>
+      <span>›</span>
+      <span class="current" data-i18n="breadCurrent">Zone desservie</span>
+    </div>
+    <span class="eyebrow" data-i18n="heroEyebrow">Rive-Sud &amp; environs</span>
+    <h1 data-i18n="heroTitle">Notre zone<br />de service</h1>
+    <p data-i18n="heroLead">Basés à Salaberry-de-Valleyfield, nous intervenons dans un rayon d'environ 50 km — de la Rive-Sud de Montréal au Haut-Saint-Laurent.</p>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="stats-band">
+  <div class="wrap">
+    <div class="stat-item">
+      <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
+      <span><span class="stat-val">40+</span><span class="stat-label" data-i18n="stat1">Villes desservies</span></span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></span>
+      <span><span class="stat-val">~50 km</span><span class="stat-label" data-i18n="stat2">Rayon de service</span></span>
+    </div>
+    <div class="stat-item">
+      <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M3 21h18"/><path d="M5 21V7l7-4 7 4v14"/><path d="M9 21v-6h6v6"/></svg></span>
+      <span><span class="stat-val">75+</span><span class="stat-label" data-i18n="stat3">Projets réalisés dans la région</span></span>
+    </div>
+  </div>
+</section>
+
+<!-- ===== INTRO ===== -->
+<section class="zone-intro pad">
+  <div class="wrap">
+    <div class="zone-intro-grid">
+      <div class="zone-intro-text reveal">
+        <span class="eyebrow" data-i18n="introEyebrow">Notre territoire</span>
+        <h2 class="section-title" data-i18n="introTitle">Au cœur de la Rive-Sud depuis plus de 5 ans.</h2>
+        <p data-i18n="introP1">Basés à Salaberry-de-Valleyfield, nous desservons les propriétaires de la Rive-Sud de Montréal et du Haut-Saint-Laurent. Que vous soyez à Châteauguay, Vaudreuil-Dorion ou La Prairie, notre équipe se déplace chez vous.</p>
+        <p data-i18n="introP2">Notre zone couvre un rayon d'environ 50 km autour de Valleyfield — des rives du fleuve jusqu'aux banlieues de Montréal. Contactez-nous pour confirmer la disponibilité dans votre secteur.</p>
+        <a href="contact.html" class="btn btn-primary" data-i18n="introCta">Vérifier ma zone</a>
+      </div>
+      <div class="zone-visual reveal">
+        <div class="zone-frame"></div>
+        <div class="zone-visual-inner">
+          <div class="zone-circle">
+            <svg viewBox="0 0 320 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <!-- Outer ring -->
+              <circle cx="160" cy="160" r="150" stroke="rgba(184,153,104,0.25)" stroke-width="1" stroke-dasharray="8 6"/>
+              <!-- Mid ring -->
+              <circle cx="160" cy="160" r="110" stroke="rgba(184,153,104,0.35)" stroke-width="1" stroke-dasharray="4 4"/>
+              <!-- Inner ring -->
+              <circle cx="160" cy="160" r="70" stroke="rgba(184,153,104,0.5)" stroke-width="1"/>
+              <!-- Center fill -->
+              <circle cx="160" cy="160" r="12" fill="#B89968"/>
+              <!-- Center dot -->
+              <circle cx="160" cy="160" r="5" fill="#0C1730"/>
+              <!-- Crosshairs -->
+              <line x1="160" y1="10" x2="160" y2="310" stroke="rgba(184,153,104,0.15)" stroke-width="1"/>
+              <line x1="10" y1="160" x2="310" y2="160" stroke="rgba(184,153,104,0.15)" stroke-width="1"/>
+              <!-- City dots -->
+              <circle cx="160" cy="160" r="4" fill="#B89968"/>
+              <circle cx="118" cy="135" r="5" fill="rgba(184,153,104,0.8)"/>
+              <circle cx="195" cy="148" r="5" fill="rgba(184,153,104,0.8)"/>
+              <circle cx="175" cy="195" r="5" fill="rgba(184,153,104,0.8)"/>
+              <circle cx="138" cy="190" r="5" fill="rgba(184,153,104,0.8)"/>
+              <circle cx="220" cy="172" r="4" fill="rgba(184,153,104,0.6)"/>
+              <circle cx="102" cy="160" r="4" fill="rgba(184,153,104,0.6)"/>
+              <circle cx="168" cy="115" r="4" fill="rgba(184,153,104,0.6)"/>
+              <circle cx="200" cy="210" r="4" fill="rgba(184,153,104,0.6)"/>
+              <!-- Labels -->
+              <text x="155" y="172" fill="white" font-size="10" font-family="Georgia, serif" font-style="italic" text-anchor="middle">Valleyfield</text>
+              <text x="113" y="128" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">Beauharnois</text>
+              <text x="198" y="140" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">Châteauguay</text>
+              <text x="178" y="210" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">La Prairie</text>
+              <text x="130" y="208" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">Mercier</text>
+              <!-- 50km label -->
+              <text x="242" y="158" fill="rgba(184,153,104,0.8)" font-size="9" font-family="Mulish, sans-serif" font-weight="700" letter-spacing="0.08em">~50 KM</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CITIES GRID ===== -->
+<section class="cities-section pad" id="cities">
+  <div class="wrap">
+    <div class="sec-head center reveal">
+      <span class="eyebrow center" data-i18n="citiesEyebrow">Villes desservies</span>
+      <h2 class="section-title" data-i18n="citiesTitle">40+ municipalités sur la Rive-Sud</h2>
+      <p class="section-lead" data-i18n="citiesLead">De Valleyfield à Boucherville, nous réalisons des projets de rénovation et construction dans tout le territoire de la Rive-Sud.</p>
+    </div>
+    <div class="cities-grid reveal">
+      <!-- Beauharnois-Salaberry -->
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Salaberry-de-Valleyfield</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Beauharnois</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Léry</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Sainte-Martine</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Chrysostome</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Étienne-de-Beauharnois</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Louis-de-Gonzague</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Stanislas-de-Kostka</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Urbain-Premier</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
+      <!-- Vaudreuil-Soulanges -->
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Vaudreuil-Dorion</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Lazare</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Les Cèdres</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Hudson</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Rigaud</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Coteau-du-Lac</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Les Coteaux</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Pincourt</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">L'Île-Perrot</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Notre-Dame-de-l'Île-Perrot</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Terrasse-Vaudreuil</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Clet</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <!-- Roussillon -->
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Châteauguay</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Mercier</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Candiac</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Constant</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">La Prairie</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Delson</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Isidore</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Sainte-Catherine</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Mathieu</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Philippe</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <!-- Longueuil -->
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Longueuil</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Brossard</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Lambert</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Boucherville</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Bruno-de-Montarville</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
+      <!-- Jardins-de-Napierville -->
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Rémi</div><div class="city-region" data-i18n="regionJN">Jardins-de-Napierville</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Napierville</div><div class="city-region" data-i18n="regionJN">Jardins-de-Napierville</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Michel</div><div class="city-region" data-i18n="regionJN">Jardins-de-Napierville</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Édouard</div><div class="city-region" data-i18n="regionJN">Jardins-de-Napierville</div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== WHY ===== -->
+<section class="why-section pad">
+  <div class="why-bg"></div>
+  <div class="wrap">
+    <div class="why-grid">
+      <div class="why-text reveal">
+        <span class="eyebrow" data-i18n="whyEyebrow">Pourquoi ABHII</span>
+        <h2 class="section-title" data-i18n="whyTitle">Un entrepreneur local que vous pouvez appeler.</h2>
+        <p data-i18n="whyLead">Choisir ABHII, c'est faire confiance à un entrepreneur certifié RBQ, ancré dans la communauté, qui connaît les normes municipales et les défis propres aux maisons de la région.</p>
+        <div class="why-points">
+          <div class="why-point">
+            <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span>
+            <div><h4 data-i18n="why1t">Certifié &amp; assuré (RBQ 5874-7882-01)</h4><p data-i18n="why1d">Licence RBQ valide, assurance responsabilité complète sur tous les chantiers.</p></div>
+          </div>
+          <div class="why-point">
+            <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
+            <div><h4 data-i18n="why2t">Réponse rapide dans votre secteur</h4><p data-i18n="why2d">Nous répondons dans les 24h et pouvons nous déplacer rapidement dans toute la zone.</p></div>
+          </div>
+          <div class="why-point">
+            <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <div><h4 data-i18n="why3t">Connaissance du marché local</h4><p data-i18n="why3d">5 ans d'expérience sur la Rive-Sud, avec plus de 75 projets réalisés dans la région.</p></div>
+          </div>
+        </div>
+      </div>
+      <div class="why-img reveal">
+        <div class="frame"></div>
+        <img src="assets/bath-marble-tub.jpeg" alt="Rénovation ABHII Rive-Sud" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="cta-band">
+  <div class="wrap">
+    <div>
+      <span class="eyebrow" style="color:var(--gold)" data-i18n="ctaEyebrow">Votre ville est sur la liste ?</span>
+      <h2 style="margin-top:16px" data-i18n="ctaTitle">Démarrons votre projet<br />dès aujourd'hui.</h2>
+      <p data-i18n="ctaText">Soumission gratuite et sans engagement. Nous nous déplaçons chez vous pour évaluer votre projet.</p>
+    </div>
+    <div class="cta-band-btns">
+      <a href="contact.html" class="btn btn-gold" data-i18n="ctaBtn">Demander une soumission</a>
+      <a href="tel:5148672244" class="btn btn-ghost">514-867-2244</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+  <div class="footer-top">
+    <div class="wrap">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html"><img class="foot-logo" src="assets/logo-w.png" alt="ABHII Rénovations" /></a>
+          <p data-i18n="footAbout">Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.</p>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footServices">Services</h5>
+          <ul>
+            <li><a href="services.html#cuisine" data-i18n="serv1t">Rénovation de cuisine</a></li>
+            <li><a href="services.html#sdb" data-i18n="serv2t">Salle de bain</a></li>
+            <li><a href="services.html#sousol" data-i18n="serv3t">Finition de sous-sol</a></li>
+            <li><a href="services.html#planchers" data-i18n="serv4t">Installation de planchers</a></li>
+            <li><a href="services.html#gypse" data-i18n="serv5t">Gypse &amp; peinture</a></li>
+            <li><a href="services.html#menuiserie" data-i18n="serv6t">Menuiserie sur mesure</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <div class="footer-col-zones">
+            <div>
+              <h5 data-i18n="footNav">Navigation</h5>
+              <ul>
+                <li><a href="index.html" data-i18n="navHome">Accueil</a></li>
+                <li><a href="services.html" data-i18n="navServices">Services</a></li>
+                <li><a href="projects.html" data-i18n="navProjects">Réalisations</a></li>
+                <li><a href="zone.html" data-i18n="navAbout">Zone</a></li>
+                <li><a href="contact.html" data-i18n="navContact">Contact</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h5 data-i18n="footContact">Contactez-nous</h5>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.91.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg></span><a href="tel:5148672244">514-867-ABHII (2244)</a></div>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg></span><a href="mailto:Abhiibuilds@gmail.com">Abhiibuilds@gmail.com</a></div>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></span><a href="https://instagram.com/abhiibuilds" target="_blank" rel="noopener">@AbhiiBuilds</a></div>
+          <div class="fci"><span class="fci-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg></span><span>RBQ 5874-7882-01</span></div>
+          <a href="contact.html" class="foot-cta" data-i18n="navQuote">Demander une soumission</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span style="color:rgba(255,255,255,0.55)">© <span id="year"></span> ABHII Rénovations Inc.</span>
+      <img src="assets/certifications.png" alt="Régie du bâtiment Québec · CCQ · APCHQ" style="height:68px;display:block;filter:brightness(0) invert(1);opacity:0.85;" />
+      <div class="foot-bottom-right">
+        <div class="foot-socials">
+          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        </div>
+        <span style="color:rgba(255,255,255,0.45)" data-i18n="footRights">Tous droits réservés.</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  const I18N = {
+    fr: {
+      navHome:'Accueil', navServices:'Services', navProjects:'Réalisations', navAbout:'Zone', navContact:'Contact', navQuote:'Demander une soumission',
+      serv1t:'Rénovation de cuisine', serv2t:'Rénovation de salle de bain', serv3t:'Finition de sous-sol',
+      serv4t:'Installation de planchers', serv5t:'Gypse &amp; peinture', serv6t:'Menuiserie sur mesure',
+      serv7t:'Céramique &amp; dosseret', serv8t:'Construction', serv9t:'Charpente',
+      footAbout:'Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.',
+      footNav:'Navigation', footServices:'Services', footContact:'Contactez-nous', footRights:'Tous droits réservés.',
+      breadHome:'Accueil', breadCurrent:'Zone desservie',
+      heroEyebrow:'Rive-Sud &amp; environs', heroTitle:'Notre zone<br />de service',
+      heroLead:'Basés à Salaberry-de-Valleyfield, nous intervenons dans un rayon d\'environ 50 km — de la Rive-Sud de Montréal au Haut-Saint-Laurent.',
+      stat1:'Villes desservies', stat2:'Rayon de service', stat3:'Projets réalisés dans la région',
+      introEyebrow:'Notre territoire', introTitle:'Au cœur de la Rive-Sud depuis plus de 5 ans.',
+      introP1:'Basés à Salaberry-de-Valleyfield, nous desservons les propriétaires de la Rive-Sud de Montréal et du Haut-Saint-Laurent. Que vous soyez à Châteauguay, Vaudreuil-Dorion ou La Prairie, notre équipe se déplace chez vous.',
+      introP2:'Notre zone couvre un rayon d\'environ 50 km autour de Valleyfield — des rives du fleuve jusqu\'aux banlieues de Montréal. Contactez-nous pour confirmer la disponibilité dans votre secteur.',
+      introCta:'Vérifier ma zone',
+      citiesEyebrow:'Villes desservies', citiesTitle:'40+ municipalités sur la Rive-Sud',
+      citiesLead:'De Valleyfield à La Prairie, nous réalisons des projets de rénovation et construction dans tout le territoire de la Rive-Sud.',
+      regionHSL:'Haut-Saint-Laurent', regionRS:'Rive-Sud', regionVS:'Vaudreuil-Soulanges', regionJN:'Jardins-de-Napierville',
+      whyEyebrow:'Pourquoi ABHII', whyTitle:'Un entrepreneur local que vous pouvez appeler.',
+      whyLead:'Choisir ABHII, c\'est faire confiance à un entrepreneur certifié RBQ, ancré dans la communauté, qui connaît les normes municipales et les défis propres aux maisons de la région.',
+      why1t:'Certifié &amp; assuré (RBQ 5874-7882-01)', why1d:'Licence RBQ valide, assurance responsabilité complète sur tous les chantiers.',
+      why2t:'Réponse rapide dans votre secteur', why2d:'Nous répondons dans les 24h et pouvons nous déplacer rapidement dans toute la zone.',
+      why3t:'Connaissance du marché local', why3d:'5 ans d\'expérience sur la Rive-Sud, avec plus de 75 projets réalisés dans la région.',
+      ctaEyebrow:'Votre ville est sur la liste ?', ctaTitle:'Démarrons votre projet<br />dès aujourd\'hui.',
+      ctaText:'Soumission gratuite et sans engagement. Nous nous déplaçons chez vous pour évaluer votre projet.', ctaBtn:'Demander une soumission'
+    },
+    en: {
+      navHome:'Home', navServices:'Services', navProjects:'Projects', navAbout:'Zone', navContact:'Contact', navQuote:'Request a Quote',
+      serv1t:'Kitchen Renovations', serv2t:'Bathroom Renovations', serv3t:'Basement Finishing',
+      serv4t:'Flooring Installation', serv5t:'Drywall &amp; Painting', serv6t:'Custom Carpentry',
+      serv7t:'Ceramics &amp; Backsplash', serv8t:'Construction', serv9t:'Framing',
+      footAbout:'Certified and insured residential general contractor, serving homeowners in the Valleyfield region and the South Shore for over 5 years.',
+      footNav:'Navigation', footServices:'Services', footContact:'Contact Us', footRights:'All rights reserved.',
+      breadHome:'Home', breadCurrent:'Service Area',
+      heroEyebrow:'South Shore &amp; surroundings', heroTitle:'Our service<br />area',
+      heroLead:'Based in Salaberry-de-Valleyfield, we serve homeowners within a ~50 km radius — from Montreal\'s South Shore to Haut-Saint-Laurent.',
+      stat1:'Cities served', stat2:'Service radius', stat3:'Projects completed in the region',
+      introEyebrow:'Our territory', introTitle:'At the heart of the South Shore for over 5 years.',
+      introP1:'Based in Salaberry-de-Valleyfield, we serve homeowners across the South Shore of Montreal and Haut-Saint-Laurent. Whether you\'re in Châteauguay, Vaudreuil-Dorion or La Prairie, our team comes to you.',
+      introP2:'Our territory covers a ~50 km radius around Valleyfield — from the river shores to the suburbs of Montreal. Contact us to confirm availability in your area.',
+      introCta:'Check my area',
+      citiesEyebrow:'Cities served', citiesTitle:'40+ municipalities on the South Shore',
+      citiesLead:'From Valleyfield to La Prairie, we complete renovation and construction projects throughout the South Shore territory.',
+      regionHSL:'Haut-Saint-Laurent', regionRS:'South Shore', regionVS:'Vaudreuil-Soulanges', regionJN:'Jardins-de-Napierville',
+      whyEyebrow:'Why ABHII', whyTitle:'A local contractor you can call.',
+      whyLead:'Choosing ABHII means trusting a certified RBQ contractor rooted in the community, who knows local building codes and the challenges specific to homes in the region.',
+      why1t:'Certified &amp; insured (RBQ 5874-7882-01)', why1d:'Valid RBQ license, full liability insurance on every project.',
+      why2t:'Fast response in your area', why2d:'We respond within 24 hours and can quickly travel to any location in our zone.',
+      why3t:'Local market expertise', why3d:'5 years of experience on the South Shore, with over 75 completed projects in the region.',
+      ctaEyebrow:'Your city is on the list?', ctaTitle:'Let\'s start your project<br />today.',
+      ctaText:'Free, no-obligation quote. We visit your home to assess your project.', ctaBtn:'Request a Quote'
+    }
+  };
+
+  function setLang(lang) {
+    document.documentElement.lang = lang;
+    const d = I18N[lang];
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+      const key = el.dataset.i18n;
+      if (d[key] !== undefined) el.innerHTML = d[key];
+    });
+    document.querySelectorAll('.lang button, .mobile-lang button').forEach(b => b.classList.toggle('active', b.dataset.lang === lang));
+    try { localStorage.setItem('abhii_lang', lang); } catch(e) {}
+  }
+
+  function toggleMobile(open) {
+    document.getElementById('mobileMenu').classList.toggle('open', open);
+    document.body.style.overflow = open ? 'hidden' : '';
+  }
+
+  // Init
+  document.getElementById('year').textContent = new Date().getFullYear();
+  const header = document.getElementById('header');
+  window.addEventListener('scroll', () => header.classList.toggle('scrolled', window.scrollY > 20));
+
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+  }, { threshold: 0.1 });
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.mob-acc-toggle').forEach(btn => {
+    btn.addEventListener('click', () => btn.closest('.mob-acc').classList.toggle('open'));
+  });
+
+  let saved = 'fr';
+  try { saved = localStorage.getItem('abhii_lang') || 'fr'; } catch(e) {}
+  setLang(saved);
+</script>
+</body>
+</html>
