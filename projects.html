@@ -77,7 +77,7 @@
   .brand-text{display:flex;flex-direction:column;line-height:1;white-space:nowrap;}
   .brand-name{font-family:var(--serif);font-weight:600;font-size:23px;letter-spacing:0.02em;color:var(--navy);}
   .brand-sub{font-family:var(--sans);font-weight:700;font-size:9.5px;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold);margin-top:7px;}
-  nav.menu{display:flex;align-items:center;gap:32px;white-space:nowrap;}
+  nav.menu{display:flex;align-items:center;gap:26px;white-space:nowrap;}
   .nav-item{position:relative;}
   .nav-item>a{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:0.04em;color:var(--ink);display:inline-flex;align-items:center;gap:7px;padding:8px 0;transition:color .3s var(--ease);position:relative;}
   .nav-item>a::after{content:"";position:absolute;left:0;bottom:2px;width:0;height:1px;background:var(--gold);transition:width .3s var(--ease);}
@@ -218,9 +218,9 @@
   .reveal.in{opacity:1;transform:none;}
 
   /* ---- Responsive ---- */
-  @media(max-width:1080px){nav.menu,.nav-right .btn-header{display:none;}.menu-toggle{display:block;}}
+  @media(max-width:1260px){nav.menu,.nav-right .btn-header{display:none;}.menu-toggle{display:block;}}
   @media(max-width:900px){.gallery-grid{grid-template-columns:1fr 1fr;}.footer-grid{grid-template-columns:1fr 1fr;gap:36px;}.cta-band .wrap{flex-direction:column;text-align:center;}.cta-band-btns{justify-content:center;}}
-  @media(max-width:720px){.wrap{padding:0 24px;}.brand-text{display:none;}.topbar .wrap{justify-content:center;}.gallery-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}.footer-bottom .wrap{grid-template-columns:1fr;text-align:center;}.foot-bottom-right{justify-self:center;}.lb-nav{display:none;}}
+  @media(max-width:720px){.wrap{padding:0 24px;}.brand-text{display:none;}.topbar .wrap{justify-content:center;}.topbar-inner>a.tb-item:nth-of-type(2),.topbar .tb-sep{display:none;}.gallery-grid{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}.footer-bottom .wrap{grid-template-columns:1fr;text-align:center;}.foot-bottom-right{justify-self:center;}.lb-nav{display:none;}}
 </style>
 </head>
 <body>
@@ -234,7 +234,7 @@
         <span class="tb-sep">|</span>
         <a href="mailto:Abhiibuilds@gmail.com" class="tb-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg><span>Abhiibuilds@gmail.com</span></a>
         <span class="tb-socials">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61590303875258" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
           <a href="https://www.instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </span>
       </div>
@@ -266,20 +266,27 @@
           <a href="zone.html"><span data-i18n="navAbout">Zone</span><svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <div class="dd-panel" style="min-width:420px;grid-template-columns:1fr 1fr">
             <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Salaberry-de-Valleyfield</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Beauharnois</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Châteauguay</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Vaudreuil-Dorion</span></a>
             <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Lazare</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Cèdres</span></a>
             <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Hudson</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Rigaud</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Mercier</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>La Prairie</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Candiac</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Longueuil</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Brossard</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Constant</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>40+ villes</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Zotique</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Coteaux</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Coteau-du-Lac</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Cèdres</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pointe-des-Cascades</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Vaudreuil-Dorion</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Sainte-Anne-de-Bellevue</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pincourt</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>L'Île-Perrot</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Baie-D'Urfé</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Beaconsfield</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>L'Île-Bizard</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pierrefonds</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Kirkland</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pointe-Claire</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Dollard-des-Ormeaux</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Dorval</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Montréal</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Laval</span></a>
           </div>
         </div>
         <div class="nav-item active"><a href="projects.html" data-i18n="navProjects">Réalisations</a></div>
@@ -323,10 +330,10 @@
       <button class="mob-acc-toggle" type="button"><span data-i18n="navAbout">Zone</span><svg class="mob-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="mob-acc-panel">
         <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Salaberry-de-Valleyfield</a>
-        <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Châteauguay</a>
+        <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Dollard-des-Ormeaux</a>
         <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Vaudreuil-Dorion</a>
         <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>La Prairie</a>
-        <a href="zone.html" onclick="toggleMobile(false)" style="color:var(--gold);font-family:var(--serif);font-style:italic;letter-spacing:0">40+ villes →</a>
+        <a href="zone.html" onclick="toggleMobile(false)" style="color:var(--gold);font-family:var(--serif);font-style:italic;letter-spacing:0">+ 16 villes →</a>
       </div>
     </div>
     <a href="projects.html" onclick="toggleMobile(false)" data-i18n="navProjects">Réalisations</a>
@@ -350,18 +357,19 @@
     </div>
     <span class="eyebrow" data-i18n="heroEyebrow">Nos projets</span>
     <h1 data-i18n="heroTitle">Nos réalisations</h1>
-    <p data-i18n="heroLead">Chaque projet est unique. Découvrez quelques-unes de nos réalisations récentes sur la Rive-Sud — salles de bain, cuisines, buanderies et plus encore.</p>
+    <p data-i18n="heroLead">Chaque projet est unique. Découvrez quelques-unes de nos réalisations récentes dans le Grand Montréal — salles de bain, cuisines, buanderies et plus encore.</p>
   </div>
 </section>
 
 <!-- ===== FILTERS ===== -->
 <div class="filters">
   <div class="wrap">
-    <button class="filter-btn active" data-filter="all" onclick="filterGallery('all')"><span data-i18n="filterAll">Tout</span> <span class="count">13</span></button>
-    <button class="filter-btn" data-filter="sdb" onclick="filterGallery('sdb')"><span data-i18n="filterSDB">Salle de bain</span> <span class="count">8</span></button>
-    <button class="filter-btn" data-filter="cuisine" onclick="filterGallery('cuisine')"><span data-i18n="filterKitchen">Cuisine</span> <span class="count">1</span></button>
-    <button class="filter-btn" data-filter="buanderie" onclick="filterGallery('buanderie')"><span data-i18n="filterLaundry">Buanderie</span> <span class="count">3</span></button>
-    <button class="filter-btn" data-filter="sousol" onclick="filterGallery('sousol')"><span data-i18n="filterBasement">Sous-sol</span> <span class="count">1</span></button>
+    <button class="filter-btn active" data-filter="all" onclick="filterGallery('all')"><span data-i18n="filterAll">Tout</span> <span class="count">50</span></button>
+    <button class="filter-btn" data-filter="sdb" onclick="filterGallery('sdb')"><span data-i18n="filterSDB">Salle de bain</span> <span class="count">17</span></button>
+    <button class="filter-btn" data-filter="cuisine" onclick="filterGallery('cuisine')"><span data-i18n="filterKitchen">Cuisine</span> <span class="count">10</span></button>
+    <button class="filter-btn" data-filter="plancher" onclick="filterGallery('plancher')"><span data-i18n="filterFloor">Plancher</span> <span class="count">9</span></button>
+    <button class="filter-btn" data-filter="menuiserie" onclick="filterGallery('menuiserie')"><span data-i18n="filterCarpentry">Menuiserie sur mesure</span> <span class="count">9</span></button>
+    <button class="filter-btn" data-filter="buanderie" onclick="filterGallery('buanderie')"><span data-i18n="filterLaundry">Buanderie</span> <span class="count">5</span></button>
   </div>
 </div>
 
@@ -370,94 +378,353 @@
   <div class="wrap" style="max-width:100%;padding:0;">
     <div class="gallery-grid" id="gallery">
 
-      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Marbre &amp; bois" data-title-en="Bathroom — Marble &amp; wood" onclick="openLightbox(0)">
-        <img src="uploads/IMG_0106.jpeg" alt="Salle de bain marbre bois" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Marbre &amp; bois naturel</div></div>
-        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      </div>
-
-      <div class="gallery-item" data-cat="buanderie" data-title="Buanderie — Noir &amp; blanc" data-title-en="Laundry room — Black &amp; white" onclick="openLightbox(1)">
-        <img src="uploads/IMG_0299.jpeg" alt="Buanderie noir blanc" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="info"><div class="info-cat" data-i18n="filterLaundry">Buanderie</div><div class="info-title">Noir &amp; blanc graphique</div></div>
-        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      </div>
-
-      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Bois &amp; bain autoportant" data-title-en="Bathroom — Wood &amp; freestanding tub" onclick="openLightbox(2)">
-        <img src="uploads/IMG_0597.jpeg" alt="Salle de bain bois bain autoportant" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Bain autoportant &amp; céramique bois</div></div>
-        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      </div>
-
-      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain maître — Terrazzo" data-title-en="Master bathroom — Terrazzo" onclick="openLightbox(3)">
-        <img src="uploads/IMG_0911.jpeg" alt="Salle de bain maître terrazzo" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Grande maîtresse — terrazzo</div></div>
-        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      </div>
-
-      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Zellige &amp; or" data-title-en="Bathroom — Zellige &amp; gold" onclick="openLightbox(4)">
-        <img src="uploads/IMG_1039.jpeg" alt="Salle de bain zellige or" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Zellige &amp; robinetterie dorée</div></div>
-        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      </div>
-
-      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Marbre noir" data-title-en="Bathroom — Black marble" onclick="openLightbox(5)">
-        <img src="uploads/IMG_1309.jpeg" alt="Salle de bain marbre noir" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Marbre noir &amp; plancher sombre</div></div>
-        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      </div>
-
-      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Miroirs ronds lumineux" data-title-en="Bathroom — Round lit mirrors" onclick="openLightbox(6)">
-        <img src="uploads/IMG_1451.jpeg" alt="Salle de bain miroirs ronds lumineux" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Miroirs ronds &amp; céramique texturée</div></div>
-        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      </div>
-
-      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain maître — Grande douche" data-title-en="Master bathroom — Large shower" onclick="openLightbox(7)">
-        <img src="uploads/IMG_2197.jpeg" alt="Salle de bain maître grande douche" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Maîtresse — marbre &amp; plancher noir</div></div>
-        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      </div>
-
-      <div class="gallery-item" data-cat="buanderie" data-title="Buanderie &amp; salle d'eau" data-title-en="Laundry &amp; powder room" onclick="openLightbox(8)">
-        <img src="uploads/IMG_2514.jpeg" alt="Buanderie salle eau moderne" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="info"><div class="info-cat" data-i18n="filterLaundry">Buanderie</div><div class="info-title">Buanderie &amp; salle d'eau</div></div>
-        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      </div>
-
-      <div class="gallery-item" data-cat="sousol" data-title="Salle de bain au sous-sol" data-title-en="Basement bathroom" onclick="openLightbox(9)">
-        <img src="uploads/IMG_7193.jpeg" alt="Salle de bain sous-sol" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="info"><div class="info-cat" data-i18n="filterBasement">Sous-sol</div><div class="info-title">Salle de bain sous-sol — marbre noir</div></div>
-        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      </div>
-
-      <div class="gallery-item" data-cat="buanderie" data-title="Buanderie — Bois &amp; noir" data-title-en="Laundry room — Wood &amp; black" onclick="openLightbox(10)">
-        <img src="uploads/IMG_7305.jpeg" alt="Buanderie bois noir quartz" loading="lazy" />
-        <div class="overlay"></div>
-        <div class="info"><div class="info-cat" data-i18n="filterLaundry">Buanderie</div><div class="info-title">Armoires bois &amp; comptoir quartz</div></div>
-        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
-      </div>
-
-      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Noir &amp; blanc" data-title-en="Kitchen — Black &amp; white" onclick="openLightbox(11)">
-        <img src="uploads/IMG_9357.jpeg" alt="Cuisine noir blanc îlot" loading="lazy" />
+      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Îlot central &amp; armoires bicolores" data-title-en="Kitchen — Central island &amp; two-tone cabinets" onclick="openLightbox(0)">
+        <img src="uploads/IMG_9357.jpeg" alt="Cuisine Îlot central  armoires bicolores" loading="lazy" />
         <div class="overlay"></div>
         <div class="info"><div class="info-cat" data-i18n="filterKitchen">Cuisine</div><div class="info-title">Îlot central &amp; armoires bicolores</div></div>
         <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
       </div>
 
-      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Douche italienne" data-title-en="Bathroom — Walk-in shower" onclick="openLightbox(12)">
-        <img src="uploads/IMG_9817.jpeg" alt="Salle de bain douche italienne" loading="lazy" />
+      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Calacatta or &amp; dosseret pleine hauteur" data-title-en="Kitchen — Calacatta gold &amp; full-height backsplash" onclick="openLightbox(1)">
+        <img src="uploads/cuisine/09c27031-a7c8-489a-b0b4-e527418afee5.jpeg" alt="Cuisine Calacatta or  dosseret pleine hauteur" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterKitchen">Cuisine</div><div class="info-title">Calacatta or &amp; dosseret pleine hauteur</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Îlot quartz &amp; armoires texturées" data-title-en="Kitchen — Quartz island &amp; textured cabinets" onclick="openLightbox(2)">
+        <img src="uploads/cuisine/a114e0ea-9b42-4398-abfd-9e4144c4ac0d.jpeg" alt="Cuisine Îlot quartz  armoires texturées" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterKitchen">Cuisine</div><div class="info-title">Îlot quartz &amp; armoires texturées</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Cuisine blanche &amp; îlot bleu marine" data-title-en="Kitchen — White kitchen &amp; navy island" onclick="openLightbox(3)">
+        <img src="uploads/cuisine/3a1c2816-5343-4f70-80e5-8b8c228e6339.jpeg" alt="Cuisine Cuisine blanche  îlot bleu marine" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterKitchen">Cuisine</div><div class="info-title">Cuisine blanche &amp; îlot bleu marine</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Armoires de bois &amp; comptoir blanc" data-title-en="Kitchen — Wood cabinets &amp; white countertop" onclick="openLightbox(4)">
+        <img src="uploads/cuisine/IMG_2728.jpeg" alt="Cuisine Armoires de bois  comptoir blanc" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterKitchen">Cuisine</div><div class="info-title">Armoires de bois &amp; comptoir blanc</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Cuisine chêne clair &amp; hotte sur mesure" data-title-en="Kitchen — Light oak kitchen &amp; custom hood" onclick="openLightbox(5)">
+        <img src="uploads/cuisine/IMG_2746.jpeg" alt="Cuisine Cuisine chêne clair  hotte sur mesure" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterKitchen">Cuisine</div><div class="info-title">Cuisine chêne clair &amp; hotte sur mesure</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Chêne naturel &amp; comptoir de marbre" data-title-en="Kitchen — Natural oak &amp; marble countertop" onclick="openLightbox(6)">
+        <img src="uploads/cuisine/IMG_7972.jpeg" alt="Cuisine Chêne naturel  comptoir de marbre" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterKitchen">Cuisine</div><div class="info-title">Chêne naturel &amp; comptoir de marbre</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Cuisine de bois &amp; évier de ferme" data-title-en="Kitchen — Wood kitchen &amp; farmhouse sink" onclick="openLightbox(7)">
+        <img src="uploads/cuisine/IMG_7699.jpeg" alt="Cuisine Cuisine de bois  évier de ferme" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterKitchen">Cuisine</div><div class="info-title">Cuisine de bois &amp; évier de ferme</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Cuisine bicolore &amp; bois" data-title-en="Kitchen — Two-tone &amp; wood kitchen" onclick="openLightbox(8)">
+        <img src="uploads/cuisine/IMG_7590.jpeg" alt="Cuisine Cuisine bicolore  bois" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterKitchen">Cuisine</div><div class="info-title">Cuisine bicolore &amp; bois</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="cuisine" data-title="Cuisine — Cuisine compacte chêne &amp; blanc" data-title-en="Kitchen — Compact oak &amp; white kitchen" onclick="openLightbox(9)">
+        <img src="uploads/cuisine/IMG_9096.jpeg" alt="Cuisine Cuisine compacte chêne  blanc" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterKitchen">Cuisine</div><div class="info-title">Cuisine compacte chêne &amp; blanc</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Marbre &amp; bois naturel" data-title-en="Bathroom — Marble &amp; natural wood" onclick="openLightbox(10)">
+        <img src="uploads/IMG_0106.jpeg" alt="Salle de bain Marbre  bois naturel" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Marbre &amp; bois naturel</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Bain autoportant &amp; céramique bois" data-title-en="Bathroom — Freestanding tub &amp; wood-look tile" onclick="openLightbox(11)">
+        <img src="uploads/IMG_0597.jpeg" alt="Salle de bain Bain autoportant  céramique bois" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Bain autoportant &amp; céramique bois</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Grande maîtresse — terrazzo" data-title-en="Bathroom — Large master — terrazzo" onclick="openLightbox(12)">
+        <img src="uploads/IMG_0911.jpeg" alt="Salle de bain Grande maîtresse — terrazzo" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Grande maîtresse — terrazzo</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Zellige &amp; robinetterie dorée" data-title-en="Bathroom — Zellige &amp; gold fixtures" onclick="openLightbox(13)">
+        <img src="uploads/IMG_1039.jpeg" alt="Salle de bain Zellige  robinetterie dorée" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Zellige &amp; robinetterie dorée</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Marbre noir &amp; plancher sombre" data-title-en="Bathroom — Black marble &amp; dark floor" onclick="openLightbox(14)">
+        <img src="uploads/IMG_1309.jpeg" alt="Salle de bain Marbre noir  plancher sombre" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Marbre noir &amp; plancher sombre</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Miroirs ronds &amp; céramique texturée" data-title-en="Bathroom — Round mirrors &amp; textured tile" onclick="openLightbox(15)">
+        <img src="uploads/IMG_1451.jpeg" alt="Salle de bain Miroirs ronds  céramique texturée" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Miroirs ronds &amp; céramique texturée</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Maîtresse — marbre &amp; plancher noir" data-title-en="Bathroom — Master — marble &amp; black floor" onclick="openLightbox(16)">
+        <img src="uploads/IMG_2197.jpeg" alt="Salle de bain Maîtresse — marbre  plancher noir" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Maîtresse — marbre &amp; plancher noir</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Douche vitrée &amp; marbre blanc" data-title-en="Bathroom — Glass shower &amp; white marble" onclick="openLightbox(17)">
+        <img src="uploads/salledebain/IMG_9088.jpeg" alt="Salle de bain Douche vitrée  marbre blanc" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Douche vitrée &amp; marbre blanc</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Douche coulissante noire &amp; marbre" data-title-en="Bathroom — Black sliding shower &amp; marble" onclick="openLightbox(18)">
+        <img src="uploads/salledebain/IMG_9178.jpeg" alt="Salle de bain Douche coulissante noire  marbre" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Douche coulissante noire &amp; marbre</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Marbre blanc &amp; paroi de verre" data-title-en="Bathroom — White marble &amp; glass panel" onclick="openLightbox(19)">
+        <img src="uploads/salledebain/IMG_7201.jpeg" alt="Salle de bain Marbre blanc  paroi de verre" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Marbre blanc &amp; paroi de verre</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Céramique métro &amp; douche italienne" data-title-en="Bathroom — Subway tile &amp; walk-in shower" onclick="openLightbox(20)">
+        <img src="uploads/salledebain/IMG_4631.jpeg" alt="Salle de bain Céramique métro  douche italienne" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Céramique métro &amp; douche italienne</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Douche d'angle &amp; marbre noir" data-title-en="Bathroom — Corner shower &amp; black marble" onclick="openLightbox(21)">
+        <img src="uploads/salledebain/IMG_8462.jpeg" alt="Salle de bain Douche d'angle  marbre noir" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Douche d'angle &amp; marbre noir</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Mur de marbre noir &amp; douche vitrée" data-title-en="Bathroom — Black marble wall &amp; glass shower" onclick="openLightbox(22)">
+        <img src="uploads/salledebain/IMG_8463.jpeg" alt="Salle de bain Mur de marbre noir  douche vitrée" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Mur de marbre noir &amp; douche vitrée</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Marbre noir &amp; douche d'angle" data-title-en="Bathroom — Black marble &amp; corner shower" onclick="openLightbox(23)">
+        <img src="uploads/salledebain/IMG_7193.jpeg" alt="Salle de bain Marbre noir  douche d'angle" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Marbre noir &amp; douche d'angle</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Vanité grise &amp; douche italienne" data-title-en="Bathroom — Grey vanity &amp; walk-in shower" onclick="openLightbox(24)">
+        <img src="uploads/salledebain/IMG_4857.jpeg" alt="Salle de bain Vanité grise  douche italienne" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Vanité grise &amp; douche italienne</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Douche italienne &amp; niche" data-title-en="Bathroom — Walk-in shower &amp; niche" onclick="openLightbox(25)">
+        <img src="uploads/salledebain/IMG_7199.jpeg" alt="Salle de bain Douche italienne  niche" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Douche italienne &amp; niche</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="sdb" data-title="Salle de bain — Douche italienne &amp; porte coulissante" data-title-en="Bathroom — Walk-in shower &amp; sliding door" onclick="openLightbox(26)">
+        <img src="uploads/salledebain/IMG_9817.jpeg" alt="Salle de bain Douche italienne  porte coulissante" loading="lazy" />
         <div class="overlay"></div>
         <div class="info"><div class="info-cat" data-i18n="filterSDB">Salle de bain</div><div class="info-title">Douche italienne &amp; porte coulissante</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="plancher" data-title="Plancher — Céramique en damier" data-title-en="Flooring — Checkerboard tile floor" onclick="openLightbox(27)">
+        <img src="uploads/plancher/IMG_2977.jpeg" alt="Plancher Céramique en damier" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterFloor">Plancher</div><div class="info-title">Céramique en damier</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="plancher" data-title="Plancher — Damier marbre &amp; beige" data-title-en="Flooring — Marble &amp; beige checkerboard" onclick="openLightbox(28)">
+        <img src="uploads/plancher/IMG_2979.jpeg" alt="Plancher Damier marbre  beige" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterFloor">Plancher</div><div class="info-title">Damier marbre &amp; beige</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="plancher" data-title="Plancher — Plancher de bois clair" data-title-en="Flooring — Light wood flooring" onclick="openLightbox(29)">
+        <img src="uploads/plancher/IMG_8660.jpeg" alt="Plancher Plancher de bois clair" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterFloor">Plancher</div><div class="info-title">Plancher de bois clair</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="plancher" data-title="Plancher — Vinyle de luxe — sous-sol" data-title-en="Flooring — Luxury vinyl — basement" onclick="openLightbox(30)">
+        <img src="uploads/plancher/IMG_8457.jpeg" alt="Plancher Vinyle de luxe — sous-sol" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterFloor">Plancher</div><div class="info-title">Vinyle de luxe — sous-sol</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="plancher" data-title="Plancher — Plancher chêne — aire ouverte" data-title-en="Flooring — Oak floor — open area" onclick="openLightbox(31)">
+        <img src="uploads/plancher/IMG_4690.jpeg" alt="Plancher Plancher chêne — aire ouverte" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterFloor">Plancher</div><div class="info-title">Plancher chêne — aire ouverte</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="plancher" data-title="Plancher — Époxy métallisé gris" data-title-en="Flooring — Grey metallic epoxy" onclick="openLightbox(32)">
+        <img src="uploads/plancher/IMG_7083.jpeg" alt="Plancher Époxy métallisé gris" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterFloor">Plancher</div><div class="info-title">Époxy métallisé gris</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="plancher" data-title="Plancher — Plancher de bois — sous-sol" data-title-en="Flooring — Wood floor — basement" onclick="openLightbox(33)">
+        <img src="uploads/plancher/IMG_2613.jpeg" alt="Plancher Plancher de bois — sous-sol" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterFloor">Plancher</div><div class="info-title">Plancher de bois — sous-sol</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="plancher" data-title="Plancher — Plancher &amp; escalier assortis" data-title-en="Flooring — Matching floor &amp; stairs" onclick="openLightbox(34)">
+        <img src="uploads/plancher/IMG_1192.jpeg" alt="Plancher Plancher  escalier assortis" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterFloor">Plancher</div><div class="info-title">Plancher &amp; escalier assortis</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="plancher" data-title="Plancher — Vinyle imitation bois — condo" data-title-en="Flooring — Wood-look vinyl — condo" onclick="openLightbox(35)">
+        <img src="uploads/plancher/IMG_7046.jpeg" alt="Plancher Vinyle imitation bois — condo" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterFloor">Plancher</div><div class="info-title">Vinyle imitation bois — condo</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="buanderie" data-title="Buanderie — Noir &amp; blanc graphique" data-title-en="Laundry — Graphic black &amp; white" onclick="openLightbox(36)">
+        <img src="uploads/salledelavage/IMG_0299.jpeg" alt="Buanderie Noir  blanc graphique" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterLaundry">Buanderie</div><div class="info-title">Noir &amp; blanc graphique</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="buanderie" data-title="Buanderie — Armoires bois &amp; comptoir quartz" data-title-en="Laundry — Wood cabinets &amp; quartz counter" onclick="openLightbox(37)">
+        <img src="uploads/salledelavage/IMG_7305.jpeg" alt="Buanderie Armoires bois  comptoir quartz" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterLaundry">Buanderie</div><div class="info-title">Armoires bois &amp; comptoir quartz</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="buanderie" data-title="Buanderie — Buanderie &amp; salle d'eau" data-title-en="Laundry — Laundry &amp; powder room" onclick="openLightbox(38)">
+        <img src="uploads/salledelavage/IMG_2514.jpeg" alt="Buanderie Buanderie  salle d'eau" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterLaundry">Buanderie</div><div class="info-title">Buanderie &amp; salle d'eau</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="buanderie" data-title="Buanderie — Buanderie chêne &amp; poignées dorées" data-title-en="Laundry — Oak laundry &amp; gold handles" onclick="openLightbox(39)">
+        <img src="uploads/salledelavage/IMG_8222.jpeg" alt="Buanderie Buanderie chêne  poignées dorées" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterLaundry">Buanderie</div><div class="info-title">Buanderie chêne &amp; poignées dorées</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="buanderie" data-title="Buanderie — Coin buanderie &amp; céramique fleurie" data-title-en="Laundry — Laundry nook &amp; patterned tile" onclick="openLightbox(40)">
+        <img src="uploads/salledelavage/IMG_7205.jpeg" alt="Buanderie Coin buanderie  céramique fleurie" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterLaundry">Buanderie</div><div class="info-title">Coin buanderie &amp; céramique fleurie</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="menuiserie" data-title="Menuiserie sur mesure — Escalier de bois sur mesure" data-title-en="Custom carpentry — Custom wood staircase" onclick="openLightbox(41)">
+        <img src="uploads/menuiseriesurmesure/IMG_2980.jpeg" alt="Menuiserie sur mesure Escalier de bois sur mesure" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterCarpentry">Menuiserie sur mesure</div><div class="info-title">Escalier de bois sur mesure</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="menuiserie" data-title="Menuiserie sur mesure — Marches de bois &amp; palier" data-title-en="Custom carpentry — Wood treads &amp; landing" onclick="openLightbox(42)">
+        <img src="uploads/menuiseriesurmesure/IMG_2981.jpeg" alt="Menuiserie sur mesure Marches de bois  palier" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterCarpentry">Menuiserie sur mesure</div><div class="info-title">Marches de bois &amp; palier</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="menuiserie" data-title="Menuiserie sur mesure — Escalier de bois — finition" data-title-en="Custom carpentry — Wood staircase — finishing" onclick="openLightbox(43)">
+        <img src="uploads/menuiseriesurmesure/IMG_5044.jpeg" alt="Menuiserie sur mesure Escalier de bois — finition" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterCarpentry">Menuiserie sur mesure</div><div class="info-title">Escalier de bois — finition</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="menuiserie" data-title="Menuiserie sur mesure — Marches de bois massif" data-title-en="Custom carpentry — Solid wood treads" onclick="openLightbox(44)">
+        <img src="uploads/menuiseriesurmesure/IMG_5042.jpeg" alt="Menuiserie sur mesure Marches de bois massif" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterCarpentry">Menuiserie sur mesure</div><div class="info-title">Marches de bois massif</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="menuiserie" data-title="Menuiserie sur mesure — Tablettes flottantes en chêne" data-title-en="Custom carpentry — Floating oak shelves" onclick="openLightbox(45)">
+        <img src="uploads/menuiseriesurmesure/IMG_5107.jpeg" alt="Menuiserie sur mesure Tablettes flottantes en chêne" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterCarpentry">Menuiserie sur mesure</div><div class="info-title">Tablettes flottantes en chêne</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="menuiserie" data-title="Menuiserie sur mesure — Niches &amp; tablettes encastrées" data-title-en="Custom carpentry — Built-in niches &amp; shelves" onclick="openLightbox(46)">
+        <img src="uploads/menuiseriesurmesure/IMG_4704.jpeg" alt="Menuiserie sur mesure Niches  tablettes encastrées" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterCarpentry">Menuiserie sur mesure</div><div class="info-title">Niches &amp; tablettes encastrées</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="menuiserie" data-title="Menuiserie sur mesure — Mur d'arche cannelé" data-title-en="Custom carpentry — Fluted arch wall" onclick="openLightbox(47)">
+        <img src="uploads/menuiseriesurmesure/IMG_8565.jpeg" alt="Menuiserie sur mesure Mur d'arche cannelé" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterCarpentry">Menuiserie sur mesure</div><div class="info-title">Mur d'arche cannelé</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="menuiserie" data-title="Menuiserie sur mesure — Arche &amp; mur de bois cannelé" data-title-en="Custom carpentry — Arch &amp; fluted wood wall" onclick="openLightbox(48)">
+        <img src="uploads/menuiseriesurmesure/IMG_0871.jpeg" alt="Menuiserie sur mesure Arche  mur de bois cannelé" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterCarpentry">Menuiserie sur mesure</div><div class="info-title">Arche &amp; mur de bois cannelé</div></div>
+        <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
+      </div>
+
+      <div class="gallery-item" data-cat="menuiserie" data-title="Menuiserie sur mesure — Banc &amp; foyer encastré" data-title-en="Custom carpentry — Bench &amp; built-in fireplace" onclick="openLightbox(49)">
+        <img src="uploads/menuiseriesurmesure/IMG_4795.jpeg" alt="Menuiserie sur mesure Banc  foyer encastré" loading="lazy" />
+        <div class="overlay"></div>
+        <div class="info"><div class="info-cat" data-i18n="filterCarpentry">Menuiserie sur mesure</div><div class="info-title">Banc &amp; foyer encastré</div></div>
         <div class="zoom-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/><path d="M11 8v6M8 11h6"/></svg></div>
       </div>
 
@@ -486,7 +753,7 @@
     <div>
       <span class="eyebrow" style="color:var(--gold)" data-i18n="ctaEyebrow">Votre projet, notre expertise</span>
       <h2 style="margin-top:16px" data-i18n="ctaTitle">Prêt à transformer<br />votre espace ?</h2>
-      <p data-i18n="ctaText">Contactez-nous pour une soumission gratuite. Nous réalisons des projets sur la Rive-Sud depuis plus de 5 ans.</p>
+      <p data-i18n="ctaText">Contactez-nous pour une soumission gratuite. Nous réalisons des projets dans le Grand Montréal depuis plus de 5 ans.</p>
     </div>
     <div class="cta-band-btns">
       <a href="contact.html" class="btn btn-gold" data-i18n="ctaBtn">Demander une soumission</a>
@@ -502,7 +769,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html"><img class="foot-logo" src="assets/logo-w.png" alt="ABHII Rénovations" /></a>
-          <p data-i18n="footAbout">Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.</p>
+          <p data-i18n="footAbout">Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et du Grand Montréal depuis plus de 5 ans.</p>
         </div>
         <div class="footer-col">
           <h5 data-i18n="footServices">Services</h5>
@@ -546,7 +813,7 @@
       <img src="assets/certifications.png" alt="RBQ · CCQ · APCHQ" style="height:68px;display:block;filter:brightness(0) invert(1);opacity:0.85;" />
       <div class="foot-bottom-right">
         <div class="foot-socials">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61590303875258" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
           <a href="https://instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </div>
         <span style="color:rgba(255,255,255,0.45)" data-i18n="footRights">Tous droits réservés.</span>
@@ -563,28 +830,28 @@
       serv1t:'Rénovation de cuisine', serv2t:'Rénovation de salle de bain', serv3t:'Finition de sous-sol',
       serv4t:'Installation de planchers', serv5t:'Gypse &amp; peinture', serv6t:'Menuiserie sur mesure',
       serv7t:'Céramique &amp; dosseret', serv8t:'Construction', serv9t:'Charpente',
-      footAbout:'Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.',
+      footAbout:'Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et du Grand Montréal depuis plus de 5 ans.',
       footNav:'Navigation', footServices:'Services', footContact:'Contactez-nous', footRights:'Tous droits réservés.',
       breadHome:'Accueil', breadCurrent:'Réalisations',
       heroEyebrow:'Nos projets', heroTitle:'Nos réalisations',
-      heroLead:'Chaque projet est unique. Découvrez quelques-unes de nos réalisations récentes sur la Rive-Sud — salles de bain, cuisines, buanderies et plus encore.',
-      filterAll:'Tout', filterSDB:'Salle de bain', filterKitchen:'Cuisine', filterLaundry:'Buanderie', filterBasement:'Sous-sol',
+      heroLead:'Chaque projet est unique. Découvrez quelques-unes de nos réalisations récentes dans le Grand Montréal — salles de bain, cuisines, buanderies et plus encore.',
+      filterAll:'Tout', filterSDB:'Salle de bain', filterKitchen:'Cuisine', filterLaundry:'Buanderie', filterFloor:'Plancher', filterCarpentry:'Menuiserie sur mesure',
       ctaEyebrow:'Votre projet, notre expertise', ctaTitle:'Prêt à transformer<br />votre espace ?',
-      ctaText:'Contactez-nous pour une soumission gratuite. Nous réalisons des projets sur la Rive-Sud depuis plus de 5 ans.', ctaBtn:'Demander une soumission'
+      ctaText:'Contactez-nous pour une soumission gratuite. Nous réalisons des projets dans le Grand Montréal depuis plus de 5 ans.', ctaBtn:'Demander une soumission'
     },
     en: {
       navHome:'Home', navServices:'Services', navProjects:'Projects', navAbout:'Zone', navContact:'Contact', navQuote:'Request a Quote',
       serv1t:'Kitchen Renovations', serv2t:'Bathroom Renovations', serv3t:'Basement Finishing',
       serv4t:'Flooring Installation', serv5t:'Drywall &amp; Painting', serv6t:'Custom Carpentry',
       serv7t:'Ceramics &amp; Backsplash', serv8t:'Construction', serv9t:'Framing',
-      footAbout:'Certified and insured residential general contractor, serving homeowners in the Valleyfield region and the South Shore for over 5 years.',
+      footAbout:'Certified and insured residential general contractor, serving homeowners in the Valleyfield region and Greater Montreal for over 5 years.',
       footNav:'Navigation', footServices:'Services', footContact:'Contact Us', footRights:'All rights reserved.',
       breadHome:'Home', breadCurrent:'Projects',
       heroEyebrow:'Our projects', heroTitle:'Our projects',
-      heroLead:'Every project is unique. Discover some of our recent work on the South Shore — bathrooms, kitchens, laundry rooms and more.',
-      filterAll:'All', filterSDB:'Bathroom', filterKitchen:'Kitchen', filterLaundry:'Laundry', filterBasement:'Basement',
+      heroLead:'Every project is unique. Discover some of our recent work in Greater Montreal — bathrooms, kitchens, laundry rooms and more.',
+      filterAll:'All', filterSDB:'Bathroom', filterKitchen:'Kitchen', filterLaundry:'Laundry', filterFloor:'Flooring', filterCarpentry:'Custom carpentry',
       ctaEyebrow:'Your project, our expertise', ctaTitle:'Ready to transform<br />your space?',
-      ctaText:'Contact us for a free quote. We\'ve been completing projects on the South Shore for over 5 years.', ctaBtn:'Request a Quote'
+      ctaText:'Contact us for a free quote. We\'ve been completing projects in Greater Montreal for over 5 years.', ctaBtn:'Request a Quote'
     }
   };
 

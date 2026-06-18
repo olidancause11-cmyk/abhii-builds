@@ -85,7 +85,7 @@
   .brand-text { display: flex; flex-direction: column; line-height: 1; white-space: nowrap; }
   .brand-name { font-family: var(--serif); font-weight: 600; font-size: 23px; letter-spacing: 0.02em; color: var(--navy); }
   .brand-sub { font-family: var(--sans); font-weight: 700; font-size: 9.5px; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold); margin-top: 7px; }
-  nav.menu { display: flex; align-items: center; gap: 32px; white-space: nowrap; }
+  nav.menu { display: flex; align-items: center; gap: 26px; white-space: nowrap; }
   .nav-item { position: relative; }
   .nav-item > a { font-family: var(--sans); font-size: 14px; font-weight: 600; letter-spacing: 0.04em; color: var(--ink); display: inline-flex; align-items: center; gap: 7px; padding: 8px 0; transition: color .3s var(--ease); position: relative; }
   .nav-item > a::after { content: ""; position: absolute; left: 0; bottom: 2px; width: 0; height: 1px; background: var(--gold); transition: width .3s var(--ease); }
@@ -218,7 +218,7 @@
   .mob-acc-panel .pin { width:13px; height:13px; color:var(--gold); flex:none; }
 
   /* ---- Responsive ---- */
-  @media (max-width: 1080px) {
+  @media (max-width: 1260px) {
     nav.menu, .nav-right .btn-header { display: none; }
     .menu-toggle { display: block; }
     .quick-nav { top: 88px; }
@@ -235,7 +235,7 @@
   @media (max-width: 720px) {
     .wrap { padding: 0 24px; }
     .brand-text { display: none; }
-    .topbar .wrap { justify-content: center; }
+    .topbar .wrap { justify-content: center; } .topbar-inner > a.tb-item:nth-of-type(2), .topbar .tb-sep { display: none; }
     .footer-grid { grid-template-columns: 1fr; gap: 28px; }
     .footer-bottom .wrap { flex-direction: column; gap: 10px; text-align: center; grid-template-columns: 1fr; }
     .foot-bottom-right { justify-self: center; }
@@ -261,7 +261,7 @@
           <span>Abhiibuilds@gmail.com</span>
         </a>
         <span class="tb-socials">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61590303875258" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
           <a href="https://www.instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </span>
       </div>
@@ -298,21 +298,27 @@
           <a href="zone.html"><span data-i18n="navAbout">Zone</span><svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <div class="dd-panel" style="min-width:420px;grid-template-columns:1fr 1fr">
             <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Salaberry-de-Valleyfield</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Beauharnois</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Châteauguay</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Vaudreuil-Dorion</span></a>
             <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Lazare</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Cèdres</span></a>
             <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Hudson</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Rigaud</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Sainte-Martine</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Mercier</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Candiac</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Constant</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>La Prairie</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Delson</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Isidore</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Léry</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Zotique</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Coteaux</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Coteau-du-Lac</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Cèdres</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pointe-des-Cascades</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Vaudreuil-Dorion</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Sainte-Anne-de-Bellevue</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pincourt</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>L'Île-Perrot</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Baie-D'Urfé</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Beaconsfield</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>L'Île-Bizard</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pierrefonds</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Kirkland</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pointe-Claire</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Dollard-des-Ormeaux</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Dorval</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Montréal</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Laval</span></a>
           </div>
         </div>
         <div class="nav-item"><a href="projects.html" data-i18n="navProjects">Réalisations</a></div>
@@ -362,12 +368,12 @@
       </button>
       <div class="mob-acc-panel">
         <a href="index.html#zone" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Salaberry-de-Valleyfield</a>
-        <a href="index.html#zone" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Beauharnois</a>
-        <a href="index.html#zone" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Châteauguay</a>
+        <a href="index.html#zone" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Pointe-Claire</a>
+        <a href="index.html#zone" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Dollard-des-Ormeaux</a>
         <a href="index.html#zone" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Vaudreuil-Dorion</a>
         <a href="index.html#zone" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Saint-Lazare</a>
         <a href="index.html#zone" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Les Cèdres</a>
-        <a href="index.html#zone" onclick="toggleMobile(false)" style="color:var(--gold);font-family:var(--serif);font-style:italic;letter-spacing:0">+ 10 autres villes</a>
+        <a href="index.html#zone" onclick="toggleMobile(false)" style="color:var(--gold);font-family:var(--serif);font-style:italic;letter-spacing:0">+ 16 autres villes</a>
       </div>
     </div>
     <a href="projects.html" onclick="toggleMobile(false)" data-i18n="navProjects">Réalisations</a>
@@ -390,7 +396,7 @@
     </div>
     <span class="eyebrow" style="color:var(--gold)">Nos expertises</span>
     <h1>Services de rénovation<br />et construction</h1>
-    <p>De la cuisine au sous-sol, nous réalisons chaque projet avec rigueur et une finition digne des plus belles résidences de la Rive-Sud.</p>
+    <p>De la cuisine au sous-sol, nous réalisons chaque projet avec rigueur et une finition digne des plus belles résidences du Grand Montréal.</p>
   </div>
 </section>
 
@@ -441,7 +447,7 @@
     <div class="svc-layout reverse reveal">
       <div class="svc-photo">
         <div class="svc-frame"></div>
-        <img src="assets/bath-white.jpeg" alt="Rénovation de salle de bain ABHII" />
+        <img src="assets/svc-bathroom.png" alt="Rénovation de salle de bain ABHII" />
         <div class="svc-badge"><div class="num">02</div><div class="label">Service</div></div>
       </div>
       <div class="svc-content">
@@ -467,7 +473,7 @@
     <div class="svc-layout reveal">
       <div class="svc-photo">
         <div class="svc-frame"></div>
-        <img src="assets/svc-sousol.jpg" alt="Finition de sous-sol ABHII" />
+        <img src="assets/svc-basement.png" alt="Finition de sous-sol ABHII" />
         <div class="svc-badge"><div class="num">03</div><div class="label">Service</div></div>
       </div>
       <div class="svc-content">
@@ -493,7 +499,7 @@
     <div class="svc-layout reverse reveal">
       <div class="svc-photo">
         <div class="svc-frame"></div>
-        <img src="assets/svc-floor.jpg" alt="Installation de planchers ABHII" />
+        <img src="assets/svc-ceramic.png" alt="Installation de planchers ABHII" />
         <div class="svc-badge"><div class="num">04</div><div class="label">Service</div></div>
       </div>
       <div class="svc-content">
@@ -571,7 +577,7 @@
     <div class="svc-layout reveal">
       <div class="svc-photo">
         <div class="svc-frame"></div>
-        <img src="assets/carpentry.jpg" alt="Menuiserie sur mesure ABHII" />
+        <img src="assets/svc-carpentry.png" alt="Menuiserie sur mesure ABHII" />
         <div class="svc-badge"><div class="num">07</div><div class="label">Service</div></div>
       </div>
       <div class="svc-content">
@@ -665,7 +671,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html"><img class="foot-logo" src="assets/logo-w.png" alt="ABHII Rénovations" /></a>
-          <p data-i18n="footAbout">Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.</p>
+          <p data-i18n="footAbout">Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et du Grand Montréal depuis plus de 5 ans.</p>
         </div>
         <div class="footer-col">
           <h5 data-i18n="footServices">Services</h5>
@@ -709,7 +715,7 @@
       <img src="assets/certifications.png" alt="Régie du bâtiment Québec · CCQ · APCHQ" style="height:68px;display:block;filter:brightness(0) invert(1);opacity:0.85;" />
       <div class="foot-bottom-right">
         <div class="foot-socials">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61590303875258" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
           <a href="https://instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </div>
         <span style="color:rgba(255,255,255,0.45)" data-i18n="footRights">Tous droits réservés.</span>
@@ -725,7 +731,7 @@
       navHome:'Accueil', navServices:'Services', navProjects:'Réalisations', navAbout:'Zone', navContact:'Contact', navQuote:'Demander une soumission',
       dd1:'Rénovation de cuisine', dd2:'Rénovation de salle de bain', dd3:'Finition de sous-sol', dd4:'Installation de planchers', dd5:'Céramique &amp; dosseret', dd6:'Gypse &amp; peinture', dd7:'Menuiserie sur mesure', dd8:'Construction', dd9:'Charpente',
       pageEyebrow:'Nos expertises', pageTitle:'Services de rénovation<br />et construction',
-      pageLead:'De la cuisine au sous-sol, nous réalisons chaque projet avec rigueur et une finition digne des plus belles résidences de la Rive-Sud.',
+      pageLead:'De la cuisine au sous-sol, nous réalisons chaque projet avec rigueur et une finition digne des plus belles résidences du Grand Montréal.',
       breadHome:'Accueil', breadCurrent:'Services',
       qn:['Cuisine','Salle de bain','Sous-sol','Planchers','Céramique','Gypse &amp; peinture','Menuiserie','Construction','Charpente'],
       s:[
@@ -740,7 +746,7 @@
         {eye:'Charpente', h:'Charpente', lead:'La charpente est la colonne vertébrale de toute construction. Notre expertise en charpenterie-menuiserie garantit des structures solides, aux normes et réalisées dans les délais.', f:['Charpente de toiture et structures de toit','Planchers de bois, solives et poutres','Cloisons, murs porteurs et rénovations structurales','Ouverture de murs et retraits de colonnes','Conforme au Code national du bâtiment']}
       ],
       ctaEyebrow:'Prêt à démarrer ?', ctaTitle:'Un projet en tête ?<br />Parlons-en.', ctaText:'Contactez-nous pour une soumission gratuite et sans engagement. Nous vous répondons dans les 24 heures.', ctaBtn:'Demander une soumission',
-      footAbout:'Entrepreneur général certifié RBQ au service de la Rive-Sud depuis plus de 5 ans.',
+      footAbout:'Entrepreneur général certifié RBQ au service du Grand Montréal depuis plus de 5 ans.',
       footNav:'Navigation', footServices:'Services', footContact:'Contactez-nous',
       footRights:'Tous droits réservés.',
       serv1t:'Rénovation de cuisine', serv2t:'Rénovation de salle de bain', serv3t:'Finition de sous-sol',
@@ -752,7 +758,7 @@
       navHome:'Home', navServices:'Services', navProjects:'Projects', navAbout:'Zone', navContact:'Contact', navQuote:'Request a Quote',
       dd1:'Kitchen Renovations', dd2:'Bathroom Renovations', dd3:'Basement Finishing', dd4:'Flooring Installation', dd5:'Ceramics &amp; Backsplash', dd6:'Drywall &amp; Painting', dd7:'Custom Carpentry', dd8:'Construction', dd9:'Framing',
       pageEyebrow:'Our expertise', pageTitle:'Renovation &amp; construction<br />services',
-      pageLead:'From kitchen to basement, we deliver every project with precision and finishing worthy of the finest homes on the South Shore.',
+      pageLead:'From kitchen to basement, we deliver every project with precision and finishing worthy of the finest homes in Greater Montreal.',
       breadHome:'Home', breadCurrent:'Services',
       qn:['Kitchen','Bathroom','Basement','Flooring','Ceramics','Drywall &amp; Painting','Carpentry','Construction','Framing'],
       s:[
@@ -767,7 +773,7 @@
         {eye:'Framing', h:'Framing', lead:'Framing is the backbone of any construction. Our carpentry expertise guarantees solid structures, built to code and delivered on time.', f:['Roof framing and roof structures','Wood floors, joists and beams','Partitions, load-bearing walls and structural renovations','Wall openings and column removal','Compliant with the National Building Code']}
       ],
       ctaEyebrow:'Ready to start?', ctaTitle:'Have a project in mind?<br />Let\'s talk.', ctaText:'Contact us for a free, no-obligation quote. We respond within 24 hours.', ctaBtn:'Request a Quote',
-      footAbout:'Certified RBQ general contractor serving the South Shore for over 5 years.',
+      footAbout:'Certified RBQ general contractor serving Greater Montreal for over 5 years.',
       footNav:'Navigation', footServices:'Services', footContact:'Contact Us',
       footRights:'All rights reserved.',
       serv1t:'Kitchen Renovations', serv2t:'Bathroom Renovations', serv3t:'Basement Finishing',

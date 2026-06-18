@@ -82,7 +82,7 @@
   .brand-text { display: flex; flex-direction: column; line-height: 1; white-space: nowrap; }
   .brand-name { font-family: var(--serif); font-weight: 600; font-size: 23px; letter-spacing: 0.02em; color: var(--navy); }
   .brand-sub { font-family: var(--sans); font-weight: 700; font-size: 9.5px; letter-spacing: 0.34em; text-transform: uppercase; color: var(--gold); margin-top: 7px; }
-  nav.menu { display: flex; align-items: center; gap: 32px; white-space: nowrap; }
+  nav.menu { display: flex; align-items: center; gap: 26px; white-space: nowrap; }
   .nav-item { position: relative; }
   .nav-item > a { font-family: var(--sans); font-size: 14px; font-weight: 600; letter-spacing: 0.04em; color: var(--ink); display: inline-flex; align-items: center; gap: 7px; padding: 8px 0; transition: color .3s var(--ease); position: relative; }
   .nav-item > a::after { content: ""; position: absolute; left: 0; bottom: 2px; width: 0; height: 1px; background: var(--gold); transition: width .3s var(--ease); }
@@ -235,9 +235,9 @@
   .pad { padding: 120px 0; }
 
   /* ---- Responsive ---- */
-  @media (max-width: 1080px) { nav.menu, .nav-right .btn-header { display: none; } .menu-toggle { display: block; } }
+  @media (max-width: 1260px) { nav.menu, .nav-right .btn-header { display: none; } .menu-toggle { display: block; } }
   @media (max-width: 900px) { .zone-intro-grid, .why-grid { grid-template-columns: 1fr; gap: 48px; } .why-img img { height: 360px; } .why-img .frame { display: none; } .footer-grid { grid-template-columns: 1fr 1fr; gap: 36px; } .cta-band .wrap { flex-direction: column; text-align: center; } .cta-band-btns { justify-content: center; } .stats-band .wrap { grid-template-columns: 1fr; } .stat-item { border-right: none; border-bottom: 1px solid rgba(255,255,255,0.1); } .cities-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 720px) { .wrap { padding: 0 24px; } .brand-text { display: none; } .topbar .wrap { justify-content: center; } .footer-grid { grid-template-columns: 1fr; gap: 28px; } .footer-bottom .wrap { grid-template-columns: 1fr; text-align: center; } .foot-bottom-right { justify-self: center; } .pad { padding: 80px 0; } .cities-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 720px) { .wrap { padding: 0 24px; } .brand-text { display: none; } .topbar .wrap { justify-content: center; } .topbar-inner > a.tb-item:nth-of-type(2), .topbar .tb-sep { display: none; } .footer-grid { grid-template-columns: 1fr; gap: 28px; } .footer-bottom .wrap { grid-template-columns: 1fr; text-align: center; } .foot-bottom-right { justify-self: center; } .pad { padding: 80px 0; } .cities-grid { grid-template-columns: 1fr; } }
 </style>
 </head>
 <body>
@@ -257,7 +257,7 @@
           <span>Abhiibuilds@gmail.com</span>
         </a>
         <span class="tb-socials">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61590303875258" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
           <a href="https://www.instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </span>
       </div>
@@ -292,21 +292,27 @@
           <a href="zone.html"><span data-i18n="navAbout">Zone</span><svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <div class="dd-panel" style="min-width:420px;grid-template-columns:1fr 1fr">
             <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Salaberry-de-Valleyfield</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Beauharnois</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Châteauguay</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Vaudreuil-Dorion</span></a>
             <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Lazare</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Cèdres</span></a>
             <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Hudson</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Rigaud</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Sainte-Martine</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Mercier</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Candiac</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Constant</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>La Prairie</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Delson</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Isidore</span></a>
-            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Léry</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Zotique</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Coteaux</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Coteau-du-Lac</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Cèdres</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pointe-des-Cascades</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Vaudreuil-Dorion</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Sainte-Anne-de-Bellevue</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pincourt</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>L'Île-Perrot</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Baie-D'Urfé</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Beaconsfield</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>L'Île-Bizard</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pierrefonds</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Kirkland</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pointe-Claire</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Dollard-des-Ormeaux</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Dorval</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Montréal</span></a>
+            <a href="#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Laval</span></a>
           </div>
         </div>
         <div class="nav-item"><a href="projects.html" data-i18n="navProjects">Réalisations</a></div>
@@ -356,12 +362,12 @@
       </button>
       <div class="mob-acc-panel">
         <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Salaberry-de-Valleyfield</a>
-        <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Beauharnois</a>
-        <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Châteauguay</a>
         <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Vaudreuil-Dorion</a>
         <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Saint-Lazare</a>
         <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Les Cèdres</a>
-        <a href="#cities" onclick="toggleMobile(false)" style="color:var(--gold);font-family:var(--serif);font-style:italic;letter-spacing:0">+ 10 autres villes</a>
+        <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Pointe-Claire</a>
+        <a href="#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Dollard-des-Ormeaux</a>
+        <a href="#cities" onclick="toggleMobile(false)" style="color:var(--gold);font-family:var(--serif);font-style:italic;letter-spacing:0">+ 16 autres villes</a>
       </div>
     </div>
     <a href="index.html#turnkey" onclick="toggleMobile(false)" data-i18n="navProjects">Réalisations</a>
@@ -383,9 +389,9 @@
       <span>›</span>
       <span class="current" data-i18n="breadCurrent">Zone desservie</span>
     </div>
-    <span class="eyebrow" data-i18n="heroEyebrow">Rive-Sud &amp; environs</span>
+    <span class="eyebrow" data-i18n="heroEyebrow">Grand Montréal &amp; environs</span>
     <h1 data-i18n="heroTitle">Notre zone<br />de service</h1>
-    <p data-i18n="heroLead">Basés à Salaberry-de-Valleyfield, nous intervenons dans un rayon d'environ 50 km — de la Rive-Sud de Montréal au Haut-Saint-Laurent.</p>
+    <p data-i18n="heroLead">Basés à Salaberry-de-Valleyfield, nous intervenons dans un rayon d'environ 50 km — du Haut-Saint-Laurent à l'Ouest-de-l'Île de Montréal.</p>
   </div>
 </section>
 
@@ -394,7 +400,7 @@
   <div class="wrap">
     <div class="stat-item">
       <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-      <span><span class="stat-val">40+</span><span class="stat-label" data-i18n="stat1">Villes desservies</span></span>
+      <span><span class="stat-val">22</span><span class="stat-label" data-i18n="stat1">Villes desservies</span></span>
     </div>
     <div class="stat-item">
       <span class="stat-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M2 12h2M20 12h2"/></svg></span>
@@ -413,8 +419,8 @@
     <div class="zone-intro-grid">
       <div class="zone-intro-text reveal">
         <span class="eyebrow" data-i18n="introEyebrow">Notre territoire</span>
-        <h2 class="section-title" data-i18n="introTitle">Au cœur de la Rive-Sud depuis plus de 5 ans.</h2>
-        <p data-i18n="introP1">Basés à Salaberry-de-Valleyfield, nous desservons les propriétaires de la Rive-Sud de Montréal et du Haut-Saint-Laurent. Que vous soyez à Châteauguay, Vaudreuil-Dorion ou La Prairie, notre équipe se déplace chez vous.</p>
+        <h2 class="section-title" data-i18n="introTitle">Au cœur du Grand Montréal depuis plus de 5 ans.</h2>
+        <p data-i18n="introP1">Basés à Salaberry-de-Valleyfield, nous desservons les propriétaires du Haut-Saint-Laurent, de l'Ouest-de-l'Île et du Grand Montréal. Que vous soyez à Vaudreuil-Dorion, Pointe-Claire ou Dollard-des-Ormeaux, notre équipe se déplace chez vous.</p>
         <p data-i18n="introP2">Notre zone couvre un rayon d'environ 50 km autour de Valleyfield — des rives du fleuve jusqu'aux banlieues de Montréal. Contactez-nous pour confirmer la disponibilité dans votre secteur.</p>
         <a href="contact.html" class="btn btn-primary" data-i18n="introCta">Vérifier ma zone</a>
       </div>
@@ -448,10 +454,10 @@
               <circle cx="200" cy="210" r="4" fill="rgba(184,153,104,0.6)"/>
               <!-- Labels -->
               <text x="155" y="172" fill="white" font-size="10" font-family="Georgia, serif" font-style="italic" text-anchor="middle">Valleyfield</text>
-              <text x="113" y="128" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">Beauharnois</text>
-              <text x="198" y="140" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">Châteauguay</text>
-              <text x="178" y="210" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">La Prairie</text>
-              <text x="130" y="208" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">Mercier</text>
+              <text x="110" y="128" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">Saint-Lazare</text>
+              <text x="200" y="140" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">Vaudreuil-Dorion</text>
+              <text x="180" y="210" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">Pointe-Claire</text>
+              <text x="128" y="208" fill="rgba(255,255,255,0.75)" font-size="9" font-family="Georgia, serif" text-anchor="middle">Montréal</text>
               <!-- 50km label -->
               <text x="242" y="158" fill="rgba(184,153,104,0.8)" font-size="9" font-family="Mulish, sans-serif" font-weight="700" letter-spacing="0.08em">~50 KM</text>
             </svg>
@@ -467,55 +473,37 @@
   <div class="wrap">
     <div class="sec-head center reveal">
       <span class="eyebrow center" data-i18n="citiesEyebrow">Villes desservies</span>
-      <h2 class="section-title" data-i18n="citiesTitle">40+ municipalités sur la Rive-Sud</h2>
-      <p class="section-lead" data-i18n="citiesLead">De Valleyfield à Boucherville, nous réalisons des projets de rénovation et construction dans tout le territoire de la Rive-Sud.</p>
+      <h2 class="section-title" data-i18n="citiesTitle">22 municipalités dans le Grand Montréal</h2>
+      <p class="section-lead" data-i18n="citiesLead">De Valleyfield à Montréal, nous réalisons des projets de rénovation et construction dans tout le Grand Montréal.</p>
     </div>
     <div class="cities-grid reveal">
-      <!-- Beauharnois-Salaberry -->
+      <!-- Haut-Saint-Laurent -->
       <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Salaberry-de-Valleyfield</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Beauharnois</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Léry</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Sainte-Martine</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Chrysostome</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Étienne-de-Beauharnois</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Louis-de-Gonzague</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Stanislas-de-Kostka</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Urbain-Premier</div><div class="city-region" data-i18n="regionHSL">Haut-Saint-Laurent</div></div></div>
       <!-- Vaudreuil-Soulanges -->
       <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Vaudreuil-Dorion</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
       <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Lazare</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Les Cèdres</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
       <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Hudson</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Rigaud</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Coteau-du-Lac</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Zotique</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
       <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Les Coteaux</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Coteau-du-Lac</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Les Cèdres</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Pointe-des-Cascades</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
       <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Pincourt</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
       <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">L'Île-Perrot</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Notre-Dame-de-l'Île-Perrot</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Terrasse-Vaudreuil</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Clet</div><div class="city-region" data-i18n="regionVS">Vaudreuil-Soulanges</div></div></div>
-      <!-- Roussillon -->
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Châteauguay</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Mercier</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Candiac</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Constant</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">La Prairie</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Delson</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Isidore</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Sainte-Catherine</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Mathieu</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Philippe</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <!-- Longueuil -->
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Longueuil</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Brossard</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Lambert</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Boucherville</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Bruno-de-Montarville</div><div class="city-region" data-i18n="regionRS">Rive-Sud</div></div></div>
-      <!-- Jardins-de-Napierville -->
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Rémi</div><div class="city-region" data-i18n="regionJN">Jardins-de-Napierville</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Napierville</div><div class="city-region" data-i18n="regionJN">Jardins-de-Napierville</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Michel</div><div class="city-region" data-i18n="regionJN">Jardins-de-Napierville</div></div></div>
-      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Saint-Édouard</div><div class="city-region" data-i18n="regionJN">Jardins-de-Napierville</div></div></div>
+      <!-- Ouest-de-l'Île -->
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Sainte-Anne-de-Bellevue</div><div class="city-region">Ouest-de-l'Île</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Baie-D'Urfé</div><div class="city-region">Ouest-de-l'Île</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Beaconsfield</div><div class="city-region">Ouest-de-l'Île</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">L'Île-Bizard</div><div class="city-region">Ouest-de-l'Île</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Pierrefonds</div><div class="city-region">Ouest-de-l'Île</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Kirkland</div><div class="city-region">Ouest-de-l'Île</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Pointe-Claire</div><div class="city-region">Ouest-de-l'Île</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Dollard-des-Ormeaux</div><div class="city-region">Ouest-de-l'Île</div></div></div>
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Dorval</div><div class="city-region">Ouest-de-l'Île</div></div></div>
+      <!-- Montréal -->
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Montréal</div><div class="city-region">Montréal</div></div></div>
+      <!-- Laval -->
+      <div class="city-card"><span class="city-pin"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><div><div class="city-name">Laval</div><div class="city-region">Laval</div></div></div>
     </div>
   </div>
 </section>
@@ -540,13 +528,13 @@
           </div>
           <div class="why-point">
             <span class="why-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
-            <div><h4 data-i18n="why3t">Connaissance du marché local</h4><p data-i18n="why3d">5 ans d'expérience sur la Rive-Sud, avec plus de 75 projets réalisés dans la région.</p></div>
+            <div><h4 data-i18n="why3t">Connaissance du marché local</h4><p data-i18n="why3d">5 ans d'expérience dans la région, avec plus de 75 projets réalisés dans la région.</p></div>
           </div>
         </div>
       </div>
       <div class="why-img reveal">
         <div class="frame"></div>
-        <img src="assets/bath-marble-tub.jpeg" alt="Rénovation ABHII Rive-Sud" />
+        <img src="assets/bath-marble-tub.jpeg" alt="Rénovation ABHII Grand Montréal" />
       </div>
     </div>
   </div>
@@ -574,7 +562,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html"><img class="foot-logo" src="assets/logo-w.png" alt="ABHII Rénovations" /></a>
-          <p data-i18n="footAbout">Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.</p>
+          <p data-i18n="footAbout">Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et du Grand Montréal depuis plus de 5 ans.</p>
         </div>
         <div class="footer-col">
           <h5 data-i18n="footServices">Services</h5>
@@ -618,7 +606,7 @@
       <img src="assets/certifications.png" alt="Régie du bâtiment Québec · CCQ · APCHQ" style="height:68px;display:block;filter:brightness(0) invert(1);opacity:0.85;" />
       <div class="foot-bottom-right">
         <div class="foot-socials">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61590303875258" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
           <a href="https://instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </div>
         <span style="color:rgba(255,255,255,0.45)" data-i18n="footRights">Tous droits réservés.</span>
@@ -634,24 +622,24 @@
       serv1t:'Rénovation de cuisine', serv2t:'Rénovation de salle de bain', serv3t:'Finition de sous-sol',
       serv4t:'Installation de planchers', serv5t:'Gypse &amp; peinture', serv6t:'Menuiserie sur mesure',
       serv7t:'Céramique &amp; dosseret', serv8t:'Construction', serv9t:'Charpente',
-      footAbout:'Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.',
+      footAbout:'Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et du Grand Montréal depuis plus de 5 ans.',
       footNav:'Navigation', footServices:'Services', footContact:'Contactez-nous', footRights:'Tous droits réservés.',
       breadHome:'Accueil', breadCurrent:'Zone desservie',
-      heroEyebrow:'Rive-Sud &amp; environs', heroTitle:'Notre zone<br />de service',
-      heroLead:'Basés à Salaberry-de-Valleyfield, nous intervenons dans un rayon d\'environ 50 km — de la Rive-Sud de Montréal au Haut-Saint-Laurent.',
+      heroEyebrow:'Grand Montréal &amp; environs', heroTitle:'Notre zone<br />de service',
+      heroLead:'Basés à Salaberry-de-Valleyfield, nous intervenons dans un rayon d\'environ 50 km — du Haut-Saint-Laurent à l\'Ouest-de-l\'Île de Montréal.',
       stat1:'Villes desservies', stat2:'Rayon de service', stat3:'Projets réalisés dans la région',
-      introEyebrow:'Notre territoire', introTitle:'Au cœur de la Rive-Sud depuis plus de 5 ans.',
-      introP1:'Basés à Salaberry-de-Valleyfield, nous desservons les propriétaires de la Rive-Sud de Montréal et du Haut-Saint-Laurent. Que vous soyez à Châteauguay, Vaudreuil-Dorion ou La Prairie, notre équipe se déplace chez vous.',
+      introEyebrow:'Notre territoire', introTitle:'Au cœur du Grand Montréal depuis plus de 5 ans.',
+      introP1:'Basés à Salaberry-de-Valleyfield, nous desservons les propriétaires du Haut-Saint-Laurent, de l\'Ouest-de-l\'Île et du Grand Montréal. Que vous soyez à Vaudreuil-Dorion, Pointe-Claire ou Dollard-des-Ormeaux, notre équipe se déplace chez vous.',
       introP2:'Notre zone couvre un rayon d\'environ 50 km autour de Valleyfield — des rives du fleuve jusqu\'aux banlieues de Montréal. Contactez-nous pour confirmer la disponibilité dans votre secteur.',
       introCta:'Vérifier ma zone',
-      citiesEyebrow:'Villes desservies', citiesTitle:'40+ municipalités sur la Rive-Sud',
-      citiesLead:'De Valleyfield à La Prairie, nous réalisons des projets de rénovation et construction dans tout le territoire de la Rive-Sud.',
-      regionHSL:'Haut-Saint-Laurent', regionRS:'Rive-Sud', regionVS:'Vaudreuil-Soulanges', regionJN:'Jardins-de-Napierville',
+      citiesEyebrow:'Villes desservies', citiesTitle:'22 municipalités dans le Grand Montréal',
+      citiesLead:'De Valleyfield à Montréal, nous réalisons des projets de rénovation et construction dans tout le Grand Montréal.',
+      regionHSL:'Haut-Saint-Laurent', regionRS:'Grand Montréal', regionVS:'Vaudreuil-Soulanges', regionJN:'Jardins-de-Napierville',
       whyEyebrow:'Pourquoi ABHII', whyTitle:'Un entrepreneur local que vous pouvez appeler.',
       whyLead:'Choisir ABHII, c\'est faire confiance à un entrepreneur certifié RBQ, ancré dans la communauté, qui connaît les normes municipales et les défis propres aux maisons de la région.',
       why1t:'Certifié &amp; assuré (RBQ 5874-7882-01)', why1d:'Licence RBQ valide, assurance responsabilité complète sur tous les chantiers.',
       why2t:'Réponse rapide dans votre secteur', why2d:'Nous répondons dans les 24h et pouvons nous déplacer rapidement dans toute la zone.',
-      why3t:'Connaissance du marché local', why3d:'5 ans d\'expérience sur la Rive-Sud, avec plus de 75 projets réalisés dans la région.',
+      why3t:'Connaissance du marché local', why3d:'5 ans d\'expérience dans la région, avec plus de 75 projets réalisés dans la région.',
       ctaEyebrow:'Votre ville est sur la liste ?', ctaTitle:'Démarrons votre projet<br />dès aujourd\'hui.',
       ctaText:'Soumission gratuite et sans engagement. Nous nous déplaçons chez vous pour évaluer votre projet.', ctaBtn:'Demander une soumission'
     },
@@ -660,24 +648,24 @@
       serv1t:'Kitchen Renovations', serv2t:'Bathroom Renovations', serv3t:'Basement Finishing',
       serv4t:'Flooring Installation', serv5t:'Drywall &amp; Painting', serv6t:'Custom Carpentry',
       serv7t:'Ceramics &amp; Backsplash', serv8t:'Construction', serv9t:'Framing',
-      footAbout:'Certified and insured residential general contractor, serving homeowners in the Valleyfield region and the South Shore for over 5 years.',
+      footAbout:'Certified and insured residential general contractor, serving homeowners in the Valleyfield region and Greater Montreal for over 5 years.',
       footNav:'Navigation', footServices:'Services', footContact:'Contact Us', footRights:'All rights reserved.',
       breadHome:'Home', breadCurrent:'Service Area',
-      heroEyebrow:'South Shore &amp; surroundings', heroTitle:'Our service<br />area',
-      heroLead:'Based in Salaberry-de-Valleyfield, we serve homeowners within a ~50 km radius — from Montreal\'s South Shore to Haut-Saint-Laurent.',
+      heroEyebrow:'Greater Montreal &amp; surroundings', heroTitle:'Our service<br />area',
+      heroLead:'Based in Salaberry-de-Valleyfield, we serve homeowners within a ~50 km radius — from Montreal\'s West Island.',
       stat1:'Cities served', stat2:'Service radius', stat3:'Projects completed in the region',
-      introEyebrow:'Our territory', introTitle:'At the heart of the South Shore for over 5 years.',
-      introP1:'Based in Salaberry-de-Valleyfield, we serve homeowners across the South Shore of Montreal and Haut-Saint-Laurent. Whether you\'re in Châteauguay, Vaudreuil-Dorion or La Prairie, our team comes to you.',
+      introEyebrow:'Our territory', introTitle:'At the heart of Greater Montreal for over 5 years.',
+      introP1:'Based in Salaberry-de-Valleyfield, we serve homeowners across Haut-Saint-Laurent, the West Island and Greater Montreal. Whether you\'re in Vaudreuil-Dorion, Pointe-Claire or Dollard-des-Ormeaux, our team comes to you.',
       introP2:'Our territory covers a ~50 km radius around Valleyfield — from the river shores to the suburbs of Montreal. Contact us to confirm availability in your area.',
       introCta:'Check my area',
-      citiesEyebrow:'Cities served', citiesTitle:'40+ municipalities on the South Shore',
-      citiesLead:'From Valleyfield to La Prairie, we complete renovation and construction projects throughout the South Shore territory.',
-      regionHSL:'Haut-Saint-Laurent', regionRS:'South Shore', regionVS:'Vaudreuil-Soulanges', regionJN:'Jardins-de-Napierville',
+      citiesEyebrow:'Cities served', citiesTitle:'22 municipalities in Greater Montreal',
+      citiesLead:'From Valleyfield to Montreal, we complete renovation and construction projects throughout Greater Montreal.',
+      regionHSL:'Haut-Saint-Laurent', regionRS:'Greater Montreal', regionVS:'Vaudreuil-Soulanges', regionJN:'Jardins-de-Napierville',
       whyEyebrow:'Why ABHII', whyTitle:'A local contractor you can call.',
       whyLead:'Choosing ABHII means trusting a certified RBQ contractor rooted in the community, who knows local building codes and the challenges specific to homes in the region.',
       why1t:'Certified &amp; insured (RBQ 5874-7882-01)', why1d:'Valid RBQ license, full liability insurance on every project.',
       why2t:'Fast response in your area', why2d:'We respond within 24 hours and can quickly travel to any location in our zone.',
-      why3t:'Local market expertise', why3d:'5 years of experience on the South Shore, with over 75 completed projects in the region.',
+      why3t:'Local market expertise', why3d:'5 years of experience in the region, with over 75 completed projects in the region.',
       ctaEyebrow:'Your city is on the list?', ctaTitle:'Let\'s start your project<br />today.',
       ctaText:'Free, no-obligation quote. We visit your home to assess your project.', ctaBtn:'Request a Quote'
     }

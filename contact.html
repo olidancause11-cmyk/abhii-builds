@@ -78,7 +78,7 @@
   .brand-text{display:flex;flex-direction:column;line-height:1;white-space:nowrap;}
   .brand-name{font-family:var(--serif);font-weight:600;font-size:23px;letter-spacing:0.02em;color:var(--navy);}
   .brand-sub{font-family:var(--sans);font-weight:700;font-size:9.5px;letter-spacing:0.34em;text-transform:uppercase;color:var(--gold);margin-top:7px;}
-  nav.menu{display:flex;align-items:center;gap:32px;white-space:nowrap;}
+  nav.menu{display:flex;align-items:center;gap:26px;white-space:nowrap;}
   .nav-item{position:relative;}
   .nav-item>a{font-family:var(--sans);font-size:14px;font-weight:600;letter-spacing:0.04em;color:var(--ink);display:inline-flex;align-items:center;gap:7px;padding:8px 0;transition:color .3s var(--ease);position:relative;}
   .nav-item>a::after{content:"";position:absolute;left:0;bottom:2px;width:0;height:1px;background:var(--gold);transition:width .3s var(--ease);}
@@ -216,9 +216,9 @@
   .reveal.in{opacity:1;transform:none;}
 
   /* ---- Responsive ---- */
-  @media(max-width:1080px){nav.menu,.nav-right .btn-header{display:none;}.menu-toggle{display:block;}}
+  @media(max-width:1260px){nav.menu,.nav-right .btn-header{display:none;}.menu-toggle{display:block;}}
   @media(max-width:900px){.contact-grid{grid-template-columns:1fr;gap:56px;}.footer-grid{grid-template-columns:1fr 1fr;gap:36px;}}
-  @media(max-width:720px){.wrap{padding:0 24px;}.brand-text{display:none;}.topbar .wrap{justify-content:center;}.form-row{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}.footer-bottom .wrap{grid-template-columns:1fr;text-align:center;}.foot-bottom-right{justify-self:center;}.contact-section{padding:70px 0 90px;}.quote-form{padding:36px 26px;}}
+  @media(max-width:720px){.wrap{padding:0 24px;}.brand-text{display:none;}.topbar .wrap{justify-content:center;}.topbar-inner>a.tb-item:nth-of-type(2),.topbar .tb-sep{display:none;}.form-row{grid-template-columns:1fr;}.footer-grid{grid-template-columns:1fr;}.footer-bottom .wrap{grid-template-columns:1fr;text-align:center;}.foot-bottom-right{justify-self:center;}.contact-section{padding:70px 0 90px;}.quote-form{padding:36px 26px;}}
 </style>
 </head>
 <body>
@@ -232,7 +232,7 @@
         <span class="tb-sep">|</span>
         <a href="mailto:Abhiibuilds@gmail.com" class="tb-item"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M3 7l9 6 9-6"/></svg><span>Abhiibuilds@gmail.com</span></a>
         <span class="tb-socials">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61590303875258" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
           <a href="https://www.instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </span>
       </div>
@@ -264,20 +264,27 @@
           <a href="zone.html"><span data-i18n="navAbout">Zone</span><svg class="caret" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M6 9l6 6 6-6"/></svg></a>
           <div class="dd-panel" style="min-width:420px;grid-template-columns:1fr 1fr">
             <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Salaberry-de-Valleyfield</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Beauharnois</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Châteauguay</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Vaudreuil-Dorion</span></a>
             <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Lazare</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Cèdres</span></a>
             <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Hudson</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Rigaud</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Mercier</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>La Prairie</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Longueuil</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Brossard</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Candiac</span></a>
-            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Constant</span></a>
-            <a href="zone.html"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>40+ villes →</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Saint-Zotique</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Coteaux</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Coteau-du-Lac</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Les Cèdres</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pointe-des-Cascades</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Vaudreuil-Dorion</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Sainte-Anne-de-Bellevue</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pincourt</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>L'Île-Perrot</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Baie-D'Urfé</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Beaconsfield</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>L'Île-Bizard</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pierrefonds</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Kirkland</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Pointe-Claire</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Dollard-des-Ormeaux</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Dorval</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Montréal</span></a>
+            <a href="zone.html#cities"><span class="dd-num"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span><span>Laval</span></a>
           </div>
         </div>
         <div class="nav-item"><a href="projects.html" data-i18n="navProjects">Réalisations</a></div>
@@ -321,9 +328,9 @@
       <button class="mob-acc-toggle" type="button"><span data-i18n="navAbout">Zone</span><svg class="mob-caret" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M6 9l6 6 6-6"/></svg></button>
       <div class="mob-acc-panel">
         <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Salaberry-de-Valleyfield</a>
-        <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Châteauguay</a>
+        <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Dollard-des-Ormeaux</a>
         <a href="zone.html#cities" onclick="toggleMobile(false)"><svg class="pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Vaudreuil-Dorion</a>
-        <a href="zone.html" onclick="toggleMobile(false)" style="color:var(--gold);font-family:var(--serif);font-style:italic;letter-spacing:0">40+ villes →</a>
+        <a href="zone.html" onclick="toggleMobile(false)" style="color:var(--gold);font-family:var(--serif);font-style:italic;letter-spacing:0">+ 16 villes →</a>
       </div>
     </div>
     <a href="projects.html" onclick="toggleMobile(false)" data-i18n="navProjects">Réalisations</a>
@@ -381,7 +388,7 @@
           </div>
         </div>
         <div class="social-row">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61590303875258" target="_blank" rel="noopener" class="social-btn" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
           <a href="https://www.instagram.com/abhiibuilds" target="_blank" rel="noopener" class="social-btn" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </div>
 
@@ -389,14 +396,14 @@
 
       <!-- RIGHT: Form -->
       <div class="reveal">
-        <form class="quote-form" id="contactForm" onsubmit="handleSubmit(event)">
+        <form class="quote-form" id="contactForm" action="https://formsubmit.co/Abhiibuilds@gmail.com" method="POST" data-success="formSuccess">
           <div class="form-row">
-            <div class="field"><label data-i18n="fName">Nom</label><input type="text" data-i18n-ph="phName" placeholder="Votre nom complet" required /></div>
-            <div class="field"><label data-i18n="fPhone">Téléphone</label><input type="tel" data-i18n-ph="phPhone" placeholder="514-000-0000" /></div>
+            <div class="field"><label data-i18n="fName">Nom</label><input type="text" name="Nom" data-i18n-ph="phName" placeholder="Votre nom complet" required /></div>
+            <div class="field"><label data-i18n="fPhone">Téléphone</label><input type="tel" name="Téléphone" data-i18n-ph="phPhone" placeholder="514-000-0000" /></div>
           </div>
           <div class="form-row">
-            <div class="field"><label data-i18n="fEmail">Courriel</label><input type="email" data-i18n-ph="phEmail" placeholder="vous@courriel.com" required /></div>
-            <div class="field"><label data-i18n="fCity">Ville</label><input type="text" data-i18n-ph="phCity" placeholder="Valleyfield" /></div>
+            <div class="field"><label data-i18n="fEmail">Courriel</label><input type="email" name="email" data-i18n-ph="phEmail" placeholder="vous@courriel.com" required /></div>
+            <div class="field"><label data-i18n="fCity">Ville</label><input type="text" name="Ville" data-i18n-ph="phCity" placeholder="Valleyfield" /></div>
           </div>
           <div class="field" style="margin-bottom:4px">
             <span class="pill-label" data-i18n="fPropType">Type de propriété</span>
@@ -407,11 +414,11 @@
               <button type="button" class="pill-btn" data-value="commercial" data-i18n="propComm">Commercial</button>
               <button type="button" class="pill-btn" data-value="autre" data-i18n="propAutre">Autre</button>
             </div>
-            <input type="hidden" id="propTypeVal" name="propType" />
+            <input type="hidden" id="propTypeVal" name="Type de propriété" />
           </div>
           <div class="form-row">
             <div class="field"><label data-i18n="fType">Type de projet</label>
-              <select>
+              <select name="Type de projet">
                 <option data-i18n="optKitchen">Rénovation de cuisine</option>
                 <option data-i18n="optBath">Rénovation de salle de bain</option>
                 <option data-i18n="optBasement">Finition de sous-sol</option>
@@ -425,7 +432,7 @@
               </select>
             </div>
             <div class="field"><label data-i18n="fBudget">Budget</label>
-              <select>
+              <select name="Budget">
                 <option data-i18n="optB1">Moins de 10 000 $</option>
                 <option data-i18n="optB2">10 000 $ – 25 000 $</option>
                 <option data-i18n="optB3">25 000 $ – 50 000 $</option>
@@ -433,7 +440,7 @@
               </select>
             </div>
           </div>
-          <div class="field"><label data-i18n="fDesc">Description du projet</label><textarea data-i18n-ph="phDesc" placeholder="Décrivez votre projet de rénovation..." required></textarea></div>
+          <div class="field"><label data-i18n="fDesc">Description du projet</label><textarea name="Message" data-i18n-ph="phDesc" placeholder="Décrivez votre projet de rénovation..." required></textarea></div>
           <button type="submit" class="btn btn-primary" data-i18n="fSubmit">Envoyer ma demande</button>
           <p class="form-note" data-i18n="fNote">Réponse sous 24-48h ouvrables • Estimation gratuite et sans engagement</p>
         </form>
@@ -455,7 +462,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html"><img class="foot-logo" src="assets/logo-w.png" alt="ABHII Rénovations" /></a>
-          <p data-i18n="footAbout">Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.</p>
+          <p data-i18n="footAbout">Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et du Grand Montréal depuis plus de 5 ans.</p>
         </div>
         <div class="footer-col">
           <h5 data-i18n="footServices">Services</h5>
@@ -499,7 +506,7 @@
       <img src="assets/certifications.png" alt="RBQ · CCQ · APCHQ" style="height:68px;display:block;filter:brightness(0) invert(1);opacity:0.85;" />
       <div class="foot-bottom-right">
         <div class="foot-socials">
-          <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
+          <a href="https://www.facebook.com/profile.php?id=61590303875258" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 9h3V6h-3c-1.7 0-3 1.3-3 3v2H9v3h2v6h3v-6h2.5l.5-3H14V9z"/></svg></a>
           <a href="https://instagram.com/abhiibuilds" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
         </div>
         <span style="color:rgba(255,255,255,0.45)" data-i18n="footRights">Tous droits réservés.</span>
@@ -515,7 +522,7 @@
       serv1t:'Rénovation de cuisine', serv2t:'Rénovation de salle de bain', serv3t:'Finition de sous-sol',
       serv4t:'Installation de planchers', serv5t:'Gypse &amp; peinture', serv6t:'Menuiserie sur mesure',
       serv7t:'Céramique &amp; dosseret', serv8t:'Construction', serv9t:'Charpente',
-      footAbout:'Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et de la Rive-Sud depuis plus de 5 ans.',
+      footAbout:'Entrepreneur général résidentiel certifié et assuré, au service des propriétaires de la région de Valleyfield et du Grand Montréal depuis plus de 5 ans.',
       footNav:'Navigation', footServices:'Services', footContact:'Contactez-nous', footRights:'Tous droits réservés.',
       breadHome:'Accueil', breadCurrent:'Contact',
       heroEyebrow:'Soumission gratuite', heroTitle:'Parlons de<br />votre projet',
@@ -539,7 +546,7 @@
       serv1t:'Kitchen Renovations', serv2t:'Bathroom Renovations', serv3t:'Basement Finishing',
       serv4t:'Flooring Installation', serv5t:'Drywall &amp; Painting', serv6t:'Custom Carpentry',
       serv7t:'Ceramics &amp; Backsplash', serv8t:'Construction', serv9t:'Framing',
-      footAbout:'Certified and insured residential general contractor, serving homeowners in the Valleyfield region and the South Shore for over 5 years.',
+      footAbout:'Certified and insured residential general contractor, serving homeowners in the Valleyfield region and Greater Montreal for over 5 years.',
       footNav:'Navigation', footServices:'Services', footContact:'Contact Us', footRights:'All rights reserved.',
       breadHome:'Home', breadCurrent:'Contact',
       heroEyebrow:'Free estimate', heroTitle:'Let\'s talk about<br />your project',
@@ -616,6 +623,37 @@
   let saved = 'fr';
   try { saved = localStorage.getItem('abhii_lang') || 'fr'; } catch(e) {}
   setLang(saved);
+</script>
+<!-- FormSubmit AJAX wiring -->
+<script>
+(function(){
+  async function abhiiSubmit(e){
+    e.preventDefault();
+    var form = e.currentTarget;
+    var btn = form.querySelector('button[type="submit"], button.btn-primary');
+    var orig = btn ? btn.innerHTML : '';
+    if(btn){ btn.disabled = true; btn.dataset.busy = '1'; btn.textContent = 'Envoi en cours…'; }
+    try {
+      var fd = new FormData(form);
+      fd.append('_subject', 'Nouvelle demande de soumission — abhiibuilds.ca');
+      fd.append('_template', 'table');
+      var r = await fetch('https://formsubmit.co/ajax/Abhiibuilds@gmail.com', {
+        method: 'POST', headers: { 'Accept': 'application/json' }, body: fd
+      });
+      var data = {};
+      try { data = await r.json(); } catch(_) {}
+      var ok = r.ok && (data.success === undefined || data.success === true || data.success === 'true');
+      if (!ok) throw new Error((data && data.message) || ('HTTP ' + r.status));
+      var success = document.getElementById(form.dataset.success);
+      if (success){ form.style.display = 'none'; success.style.display = 'block'; success.scrollIntoView({behavior:'smooth', block:'center'}); }
+      else { form.reset(); if(btn){ btn.textContent = '✓ Message envoyé !'; } }
+    } catch(err){
+      if(btn){ btn.disabled = false; btn.innerHTML = orig; delete btn.dataset.busy; }
+      alert("Une erreur s'est produite lors de l'envoi. Réessayez ou écrivez-nous directement à Abhiibuilds@gmail.com.");
+    }
+  }
+  document.querySelectorAll('form.quote-form').forEach(function(f){ f.addEventListener('submit', abhiiSubmit); });
+})();
 </script>
 </body>
 </html>
