@@ -397,6 +397,11 @@
       <!-- RIGHT: Form -->
       <div class="reveal">
         <form class="quote-form" id="contactForm" action="https://formsubmit.co/Abhiibuilds@gmail.com" method="POST" data-success="formSuccess">
+          <input type="hidden" name="_subject" value="Nouvelle demande de soumission — abhiibuilds.ca" />
+          <input type="hidden" name="_template" value="table" />
+          <input type="hidden" name="_captcha" value="false" />
+          <input type="hidden" name="_next" value="https://www.abhiibuilds.ca/contact.html?sent=1" />
+          <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off" />
           <div class="form-row">
             <div class="field"><label data-i18n="fName">Nom</label><input type="text" name="Nom" data-i18n-ph="phName" placeholder="Votre nom complet" required /></div>
             <div class="field"><label data-i18n="fPhone">Téléphone</label><input type="tel" name="Téléphone" data-i18n-ph="phPhone" placeholder="514-000-0000" /></div>
@@ -624,35 +629,32 @@
   try { saved = localStorage.getItem('abhii_lang') || 'fr'; } catch(e) {}
   setLang(saved);
 </script>
-<!-- FormSubmit AJAX wiring -->
+<!-- FormSubmit native submit + success-return handler -->
 <script>
 (function(){
-  async function abhiiSubmit(e){
-    e.preventDefault();
-    var form = e.currentTarget;
-    var btn = form.querySelector('button[type="submit"], button.btn-primary');
-    var orig = btn ? btn.innerHTML : '';
-    if(btn){ btn.disabled = true; btn.dataset.busy = '1'; btn.textContent = 'Envoi en cours…'; }
-    try {
-      var fd = new FormData(form);
-      fd.append('_subject', 'Nouvelle demande de soumission — abhiibuilds.ca');
-      fd.append('_template', 'table');
-      var r = await fetch('https://formsubmit.co/ajax/Abhiibuilds@gmail.com', {
-        method: 'POST', headers: { 'Accept': 'application/json' }, body: fd
-      });
-      var data = {};
-      try { data = await r.json(); } catch(_) {}
-      var ok = r.ok && (data.success === undefined || data.success === true || data.success === 'true');
-      if (!ok) throw new Error((data && data.message) || ('HTTP ' + r.status));
-      var success = document.getElementById(form.dataset.success);
-      if (success){ form.style.display = 'none'; success.style.display = 'block'; success.scrollIntoView({behavior:'smooth', block:'center'}); }
-      else { form.reset(); if(btn){ btn.textContent = '✓ Message envoyé !'; } }
-    } catch(err){
-      if(btn){ btn.disabled = false; btn.innerHTML = orig; delete btn.dataset.busy; }
-      alert("Une erreur s'est produite lors de l'envoi. Réessayez ou écrivez-nous directement à Abhiibuilds@gmail.com.");
+  // Show the success message when returning from FormSubmit (?sent=1)
+  try {
+    var params = new URLSearchParams(window.location.search);
+    if (params.get('sent') === '1') {
+      var form = document.querySelector('form.quote-form');
+      if (form) {
+        var success = document.getElementById(form.dataset.success);
+        if (success) {
+          form.style.display = 'none';
+          success.style.display = 'block';
+          setTimeout(function(){ success.scrollIntoView({behavior:'smooth', block:'center'}); }, 150);
+        }
+      }
+      if (window.history && history.replaceState) history.replaceState(null, '', window.location.pathname);
     }
-  }
-  document.querySelectorAll('form.quote-form').forEach(function(f){ f.addEventListener('submit', abhiiSubmit); });
+  } catch(e) {}
+  // Loading state on submit; the native POST proceeds normally
+  document.querySelectorAll('form.quote-form').forEach(function(f){
+    f.addEventListener('submit', function(){
+      var btn = f.querySelector('button[type="submit"], button.btn-primary');
+      if (btn){ btn.textContent = 'Envoi en cours…'; }
+    });
+  });
 })();
 </script>
 </body>
